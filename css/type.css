@@ -1,0 +1,75 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro|Lato:300,400,700,300italic,400italic,700italic|Source+Code+Pro|Rosario:400,400italic,700,700italic);
+h1, h2, h3, strong, b {
+  font-weight: 700;
+}
+
+h1, h2, h3 {
+  font-style: italic;
+}
+
+.presentation {
+  font-style: normal;
+}
+
+html {
+  font-kerning: normal;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.presentation {
+  font-family: 'Lato', sans-serif;
+  color: white;
+  font-size: 4vmin;
+}
+
+h1, h2, h3 {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: .06em;
+}
+
+#intro {
+  text-align: center;
+}
+
+#intro h1 {
+  font-size: 9.953vmin;
+  text-shadow: 4px 4px 4px #000;
+}
+
+#intro h2 {
+  font-size: 6.912vmin;
+  margin-bottom: 1em;
+}
+
+#intro p {
+  font-size: 4.8vmin;
+}
+
+h1 {
+  font-size: 6.912vmin;
+  text-shadow: 4px 4px 4px #000;
+  margin: 0.25em 0 0.75em 0;
+  flex: 0 0 100%;
+}
+
+h2 {
+  font-size: 5.76vmin;
+  text-shadow: 2px 2px 2px #000;
+  margin: 0.25em 0px;
+  flex: 0 0 100%;
+}
+
+dl dt {
+  font-size: 5.76vmin;
+  text-shadow: 2px 2px 1px #000;
+}
+
+dl dd {
+  padding-bottom: .75em;
+  margin-left: 2em;
+  font-size: 4vmin;
+}
+
+/*# sourceMappingURL=type.css.map */

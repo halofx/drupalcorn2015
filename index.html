@@ -1,238 +1,1309 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-	<title>CSSS: A brief introduction</title>
-	
-	<link href="slideshow.css" rel="stylesheet" />
-	<link href="theme.css" rel="stylesheet" />
-	<link href="talk.css" rel="stylesheet" />
-	<script src="prefixfree.min.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>CSSS: A brief introduction</title>
+
+  <link href="/css/slideshow.css" rel="stylesheet" />
+  <link href="/css/theme.css" rel="stylesheet" />
+  <link href="/css/type.css" rel="stylesheet" />
+  <link href="/css/animate.css" rel="stylesheet" />
+  <script src="prefixfree.min.js"></script>
 </head>
-<body data-duration="10">
+<body>
+  <div class="presentation">
 
-<header id="intro" class="slide">
-	<h1>
-		<object data="logo.svg" width="100%" type="image/svg+xml">
-			<img src="logo.png" alt="CSSS: CSS-based SlideShow System" />
-		</object>
-	</h1>
-	<p class="attribution">By Lea Verou</p>
+
+<header id="intro" class="slide flex-column">
+  <style scoped>
+    h1 {
+      padding-top: 12%;
+    }
+  </style>
+  <h1>Intro to Flexbox</h1>
+  <h2>Scott Wilkinson</h2>
+  <p>#HaloFX</p>
+  <p>@hackmonk3y</p>
 </header>
-<section>
-	<header class="slide">
-		<h1>Introduction</h1>
-	</header>
-	
-	<section class="slide" title="CSSS: Introduction">
-		<h2>What is it?</h2>
-		<p>A simple framework for building presentations with modern web standards</p>
-		<ul>
-			<li class="delayed">An HTML file contains the whole presentation</li>
-			<li class="delayed">Themes as CSS files</li>
-			<li class="delayed">JavaScript handles what CSS can't (keyboard shortcuts etc)</li>
-		</ul>
-	</section>
-	
-	<section class="slide">
-		<h2>History</h2>
-		<ul>
-			<li class="delayed">I had to create a presentation for my talk at <a href="http://front-trends.com">Front Trends 2010</a></li>
-			<li class="delayed">The only web-based presentation systems I knew of didn't fit my needs</li>
-			<li class="delayed">&hellip;so I rolled up my own</li>
-			<li class="delayed">FT2010 attendees asked me to release it</li>
-			<li class="delayed">and here it is! ;-)</li>
-		</ul>
-	</section>
-	
-	<section class="slide" id="navigation">
-		<h2>Navigation</h2>
-		<p>Only through keyboard for now :(</p>
-		<ul>
-			<li>→ or ↓ to advance to the next slide or incrementally displayed item</li>
-			<li>← or ↑ to go to the previous slide or incrementally displayed item</li>
-			<li>Ctrl* + → or Ctrl* + ↓ to jump to the next slide</li>
-			<li>Ctrl* + ← or Ctrl* + ↑ to jump to the previous slide</li>
-			<li>Home to go to the first slide, End to go to the last</li>
-			<li>Ctrl* + G to jump to an arbitrary slide (by slide number or identifier)</li>
-		</ul>
-		<p>* Ctrl or Shift actually. Only Shift works in Opera.</p>
-	</section>
+
+<section class="slide flex-column"> <!-- 2 -->
+  <h1>Designers can't leave stuff alone</h1>
+  <pre><code lang="html">&lt;table>
+ &lt;tr colspan="3">
+  &lt;td>Header&lt;td>
+ &lt;/tr>
+ &lt;tr>
+  &lt;td width="25%">Nav&lt;/td>
+  &lt;td width="50%">Content&lt;/td>
+  &lt;td width="25%">Sidebar&lt;/td>
+ &lt;/tr>
+ &lt;tr colspan="3">
+  &lt;td>Footer&lt;/td>
+ &lt;/tr>
+&lt;/table></code></pre>
 </section>
 
-<section>
-	<header class="slide">
-		<h1>Features</h1>
-	</header>
-	
-	<section class="slide">
-		<h2>Thumbnail view</h2>
-		<p>Press Ctrl+H (or Shift+H if you're in Opera) now.</p>
-		<p class="delayed">Cool, huh? You can press Ctrl+Shift+H to see all slides (warning: can be slow!)</p>
-	</section>
-	
-	<section class="slide">
-		<h2>Timer</h2>
-		<ul>
-			<li>Timer in the form of a progress bar on the top</li>
-			<li>Define the talk duration with the attribute <code>data-duration</code> on the <code>body</code></li>
-			<li>Style the timer and the end state with the selectors <code>#timer</code> and <code>#timer.end</code> respectively.</li>
-		</ul>
-	</section>
-	
-	<section class="slide">
-		<h2>Presenter view</h2>
-		<p>This slide has presenter notes. They are only visible in presenter view (Ctrl+P or Shift+P).</p>
-		<p class="presenter-notes">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	</section>
-	
-	<section class="slide">
-		<style scoped>
-			h2 {
-				font-size: 200%;
-				font-weight: bold;
-			}
-		</style>
-		<h2><code>&lt;style scoped /&gt;</code></h2>
-		<p>You can use the HTML5 <code>scoped</code> attribute on style elements in slides, to only style the current slide or inside sections that include multiple slides to style all of them and nothing else.</p>
-		<p>For example, inspect this slide and then run <code>$$('style[scoped]')[0].sheet.cssRules[0].selectorText</code> in the console to see how the original selector gets changed.</p>
-	</section>
-	
-	<section class="slide">
-		<h2>More features</h2>
-		<ul>
-			<li class="delayed">IDs are dynamically assigned by JavaScript&hellip;</li>
-			<li class="delayed">&hellip;but you can also assign your own, bringing the best of both worlds</li>
-			<li class="delayed">Incremental display of slide contents (just add <code>class="delayed"</code>)</li>
-			<li class="delayed">Slide scaling based on window size (size everything you want to be scalable in ems)</li>
-			<li class="delayed">Document.title changing according to slide title (fetched either from the <code>title</code> attribute or the slide's heading)</li>
-		</ul>
-	</section>
-	
-	<section class="slide">
-		<h2>Drawbacks</h2>
-		<ul>
-			<li>Only supports modern browsers. Why?
-				<ul>
-					<li>More lightweight</li>
-					<li>Easier to understand code</li>	
-					<li>It's a presentation, so the environment is controlled anyway</li>
-				</ul>
-			</li>
-			<li>No mouse click to advance to the next slide. I consider it annoying.</li>
-			<li>Doesn't work in mobile :(</li>
-		</ul>
-	</section>
+<section class="slide flex-column"> <!-- 3 -->
+  <h1>We just can't have nice things</h1>
+  <pre><code lang="html">&lt;div id="wrapper">
+ &lt;div id="header">Header&lt;/div>
+ &lt;div id="center">
+  &lt;div id="col1">Nav&lt;/div>
+  &lt;div id="col2">Main&lt;/div>
+  &lt;div id="col3">Sidebar&lt;/div>
+ &lt;/div>
+ &lt;div id="footer">Footer/div>
+&lt;/div></code></pre>
 </section>
 
-<section>
-	<header class="slide">
-		<h1>Plugins</h1>
-	</header>
-	
-	<section class="slide">
-		<h2>Plugin: CSS Snippets</h2>
-		<pre>new CSSSnippet(document.getElementById('snippet'));</pre>
-		<ul>
-			<li>Dynamically edit CSS and reflect the results in any element's style
-				<ul>
-					<li>Which one? Specify a selector with the <code>data-subject</code> attribute or leave blank for the slide to be the subject</li>
-				</ul>
-			<li>Automatically prefixes CSS3 properties/values, when needed
-				<ul>
-					<li>Also does it with the style attribute (statically) if the element is not a text field (doesn't work in IE and Firefox 3.6)</li>
-				</ul>
-			</li>
-			<li>Textarea automatically adjusts rows/font-size on line break (use class <code>dont-adjust</code> to turn off)</li>
-		</ul>
-	</section>
-	
-	<section class="slide">
-		<h2>CSS Snippets demo</h2>
-		<p>Edit the following CSS code:</p>
-		<textarea class="snippet">background-color:red;
-background-image: linear-gradient(red, #600)</textarea>
-	</section>
-	
-	<section class="slide" id="animation-demo">
-		<h2>CSS Snippets: raw CSS</h2>
-		<textarea class="snippet" data-raw>@keyframes rainbow {
-	from, to { background: red }
-	16% { background: yellow }
-	33% { background: green }
-	50% { background: aqua }
-	66% { background: blue }
-	83% { background: fuchsia }
-}
-
-#animation-demo { animation: 30s rainbow infinite; }</textarea>
-	</section>
-	
-	<section class="slide">
-		<h2>Plugin: CSS Controls</h2>
-		<ul>
-			<li>Use sliders and other controls to adjust CSS values
-				<ul>
-					<li>Which one? Specify a selector with the <code>data-subject</code> attribute or leave blank for the slide to be the subject</li>
-					<li>Specify style with <code>data-style</code> (use <code>{value}</code> where the result will be)</li>
-				</ul>
-			<li>Automatically prefixes CSS3 properties/values, when needed</li>
-		</ul>
-	</section>
-	
-	<section class="slide" id="css-controls-demo">
-		<h2>CSS Controls demo</h2>
-		<label>Slide lightness: 
-			<input type="range" min="0" max="255" value="128" data-style="background-color:rgb({value}, {value}, {value});" class="css-control" />
-		</label>
-		<label>
-			border-width:
-			<input type="number" min="0" max="60" value="30" data-style="border-width: {value}px;" class="css-control" size="5" />
-		</label>
-		<label>
-			font-family:
-			<select data-style="font-family: {value};" class="css-control">
-				<option selected>sans-serif</option>
-				<option>Georgia, serif</option>
-				<option>Consolas, monospace</option>
-				<option>'Trebuchet MS', sans-serif</option>
-			</select>
-		</label>
-	</section>
-	
-	<section class="slide">
-		<h2>Plugin: Code highlight</h2>
-		<ul>
-			<li>Syntax highlighting for every <code>&lt;code&gt;</code> element with a <code>lang</code> attribute.</li>
-			<li>Only highlights when the slide becomes active, for performance</li>
-			<li>Currently only supports JavaScript, but it's easy to add any language</li>
-			<li>Styling done through easy to understand classes like <code>.string</code> or <code>.comment</code></li>
-		</ul>
-	</section>
-	
-	<section class="slide">
-		<h2>Code highlight example</h2>
-		<pre><code lang="javascript">// Comment
-document.addEventListener('DOMAttrModified',function(e) {
-  var node = e.target, attr = e.attrName;
-  if(/^input$/i.test(node.nodeName) 
-    &amp;&amp; (attr === 'placeholder' || attr === 'value')
-    || foo > 5)
-      Placeholder.update(node);
-}, false);</code></pre>
-	</section>
+<section class="slide flex-column"> <!-- 4 -->
+  <style scoped>
+  h1 {
+    padding-top: 12%;
+    font-size: 9.708vmin;
+    text-align: center;
+  }
+  </style>
+  <h1>display: flex;</h1>
 </section>
-<footer class="slide" title="The End">
-	<h2>Thank you!</h2>
-	<p>Get it or contribute at <a href="http://github.com/LeaVerou/CSSS">http://github.com/LeaVerou/CSSS</a></p>
-	<p>Credits:</p>
-	<ul>
-		<li><a href="http://lukeroberts.us/2008/12/wallpaper-colourful-wood/">Colored wood background by Luke Roberts</a></li>
-		<li>The name CSSS is actually inspired by S5, as you could probably guess ;-)</li>
-		<li>A big thanks to the community at Github for various contributions to this project</li>
-	</ul>
-</footer>
+
+<section class="slide flex-column"> <!-- 5 -->
+  <style scoped>
+  img {
+    /*padding-top: 5%;*/
+    width: 100%;
+    height: auto;
+  }
+  </style>
+  <h1>Support</h1>
+  <img src="/img/caniuse.png">
+</section>
+
+<section class="slide flex-column"><!-- 6 -->
+  <h1>3 Working Versions</h1>
+  <dl>
+    <dt>2009 old - <span class="attr-value">display: box;</span></dt>
+    <dd>Chrome 4, Firefox 2, Safari 3.1</dd>
+    <dt>2011 tweener - <span class="attr-value">display: flexbox;</span></dt>
+    <dd>Chrome 21, IE 10</dd>
+    <dt>2012 current - <span class="string">display: flex;</span></dt>
+    <dd>Chrome 31, Firefox 22, IE 11, Safari 6.1, Opera 12.1</dd>
+  </dl>
+</section>
+
+<section class="slide flex-column"> <!-- 7 -->
+  <h1>Use Autoprefixer</h1>
+  <pre><code lang="css">.flex {
+ display: -webkit-box;
+ display: -webkit-flex;
+ display: -ms-flexbox;
+ display: flex;
+ -webkit-box-orient: horizontal;
+ -webkit-box-direction: normal;
+ -webkit-flex-direction: row;
+     -ms-flex-direction: row;
+         flex-direction: row;
+ -webkit-flex-wrap: wrap;
+     -ms-flex-wrap: wrap;
+         flex-wrap: wrap;
+}</code></pre>
+</section>
+
+<section class="slide flex-column"> <!-- 8 -->
+  <h1>Family Values</h1>
+  <h2>Parent</h2>
+  <pre><code lang="css">display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+  * flex-flow: row nowrap;
+justify-content: flex-start;
+align-items: stretch;
+align-content: stretch;</code></pre>
+</section>
+
+<section class="slide flex-row"> <!-- 9 -->
+  <style scoped>
+    .flex52 {
+      flex: 0 1 56.5%;
+      margin-left: auto;
+    }
+    .prefix {
+      width: 100%;
+    }
+    pre {
+      margin-left: 0px;
+      flex: 0 0 100%;
+    }
+  </style>
+  <h1>Default</h1>
+  <div>
+    <ul class="none">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+    </ul>
+  </div>
+  <div class="flex52">
+    <div class="prefix">
+      <pre><code lang="html">&lt;ul>
+ &lt;li>1&lt;/li>
+ &lt;li>2&lt;/li>
+ &lt;li>3&lt;/li>
+ &lt;li>4&lt;/li>
+&lt;/ul></code></pre>&nbsp;<pre><code lang="css">ul {
+ height: 60vh;
+ width: 40vw;
+}</code></pre>
+    </div>
+  </div>
+</section>
+
+<section class="slide flex-row"> <!-- 10 -->
+  <style scoped>
+    ul {
+      display: flex;
+    }
+    p {
+      padding-top: 2em;
+    }
+  </style>
+  <h1>flex-direction: row</h1>
+  <div class="axis"><img src="/img/axis-row.svg"></div>
+  <div><ul class="none">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul></div>
+  <pre><code lang="css">ul {
+ display: flex;
+ /*
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+ */
+}</code></pre>
+<p>Controls direction of children on main axis.</p>
+</section>
+
+<section class="slide flex-row"> <!-- 11 -->
+  <style scoped>
+    ul {
+      display: flex;
+      flex-direction: column;
+    }
+    p {
+      padding-top: 2em;
+    }
+  </style>
+  <h1>flex-direction: column</h1>
+  <div class="axis"><img src="/img/axis-col.svg"></div>
+  <div><ul class="none">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul></div>
+  <pre><code lang="css">ul {
+ display: flex;
+ flex-direction: column;
+ /*
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+ */
+}</code></pre>
+</section>
+
+<section class="slide flex-row"> <!-- 12 -->
+  <style scoped>
+    ul {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  </style>
+  <h1>flex-direction: row-reverse</h1>
+  <div class="axis"><img src="/img/axis-row-rev.svg"></div>
+  <div><ul class="none">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul></div>
+  <pre><code lang="css">ul {
+ display: flex;
+ flex-direction: row-reverse;
+ /*
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+ */
+}</code></pre>
+</section>
+
+<section class="slide flex-row"> <!-- 13 -->
+  <style scoped>
+    ul {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  </style>
+  <h1>flex-direction: column-reverse</h1>
+  <div class="axis"><img src="/img/axis-col-rev.svg"></div>
+  <div><ul class="none">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul></div>
+  <pre><code lang="css">ul {
+ display: flex;
+ flex-direction: column-reverse;
+ /*
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+ */
+}</code></pre>
+</section>
+
+<section class="slide flex-row"> <!-- 14 -->
+  <style scoped>
+    ul {
+      display: flex;
+    }
+    p {
+      margin-top: 2em;
+    }
+
+  </style>
+  <h1>flex-wrap: nowrap</h1>
+  <div class="axis"><img src="/img/axis-row.svg"></div>
+  <div><ul class="none">
+    <li>one hundred</li>
+    <li>two hundred</li>
+    <li>three hundred</li>
+    <li>four hundred</li>
+  </ul></div>
+  <pre><code lang="css">ul {
+ display: flex;
+ /*
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+ */
+}</code></pre>
+  <p>Controls if children can wrap to a new line inside parent.</p>
+</section>
+
+<section class="slide flex-row"> <!-- 15 -->
+  <style scoped>
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  </style>
+  <h1>flex-wrap: wrap</h1>
+  <div class="axis"><img src="/img/axis-row.svg"></div>
+  <div><ul class="none">
+    <li>one hundred</li>
+    <li>two hundred</li>
+    <li>three hundred</li>
+    <li>four hundred</li>
+  </ul></div>
+  <pre><code lang="css">ul {
+ display: flex;
+ flex-wrap: wrap;
+ /*
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+ */
+}</code></pre>
+</section>
+
+<section class="slide flex-row"> <!-- 16 -->
+  <style scoped>
+    ul {
+      display: flex;
+      flex-direction: row-reverse;
+      flex-wrap: wrap;
+    }
+    p {
+      padding-top: .5em;
+    }
+  </style>
+  <h1>flex-wrap: wrap</h1>
+  <div class="axis"><img src="/img/axis-row-rev.svg"></div>
+  <div><ul class="none">
+    <li>one hundred</li>
+    <li>two hundred</li>
+    <li>three hundred</li>
+    <li>four hundred</li>
+  </ul></div>
+  <pre><code lang="css">ul {
+ display: flex;
+ flex-direction: row-reverse;
+ flex-wrap: wrap;
+ /*
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+ */
+}</code></pre>
+</section>
+
+<section class="slide flex-row"> <!-- 17 -->
+  <style scoped>
+    ul {
+      display: flex;
+      flex-direction: column;
+    }
+    li {
+      padding: 2em;
+    }
+  </style>
+  <h1>flex-wrap: wrap</h1>
+  <div class="axis"><img src="/img/axis-col.svg"></div>
+  <div>
+    <ul class="none">
+      <li>one</li>
+      <li>two</li>
+      <li>three</li>
+      <li>four</li>
+      <li>five</li>
+      <!-- <li>six</li> -->
+    </ul>
+  </div>
+  <pre><code lang="css">ul {
+ display: flex;
+ flex-direction: column;
+ /*
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+ */
+}</code></pre>
+</section>
+
+<section class="slide flex-row"> <!-- 18 -->
+  <style scoped>
+    ul {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+    li {
+      padding: 2em;
+    }
+  </style>
+  <h1>flex-wrap: wrap</h1>
+  <div class="axis"><img src="/img/axis-col.svg"></div>
+  <div>
+    <ul class="none">
+      <li>one</li>
+      <li>two</li>
+      <li>three</li>
+      <li>four</li>
+      <li>five</li>
+      <!-- <li>six</li> -->
+    </ul>
+  </div>
+  <pre><code lang="css">ul {
+ display: flex;
+ flex-direction: column;
+ flex-wrap: wrap;
+ /*
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+ */
+}</code></pre>
+</section>
+
+<section class="slide flex-row"> <!-- 19 -->
+  <style scoped>
+    ul {
+      display: flex;
+      flex-direction: column-reverse;
+      flex-wrap: wrap;
+    }
+    li {
+      padding: 2em;
+    }
+  </style>
+  <h1>flex-wrap: wrap</h1>
+  <div class="axis"><img src="/img/axis-col-rev.svg"></div>
+  <div>
+    <ul class="none">
+      <li>one</li>
+      <li>two</li>
+      <li>three</li>
+      <li>four</li>
+      <li>five</li>
+      <!-- <li>six</li> -->
+    </ul>
+  </div>
+  <pre><code lang="css">ul {
+ display: flex;
+ flex-direction: column-reverse;
+ flex-wrap: wrap;
+ /*
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+ */
+}</code></pre>
+</section>
+
+<section class="slide flex-column"> <!-- 20 -->
+  <style scoped>
+    p {
+      padding-top: .5em;
+    }</style>
+  <h1>flex-flow</h1>
+    <h2><span class="property">flex-flow</span>: row wrap;</h2>
+    <h2><span class="property">flex-flow</span>: column nowrap;</h2>
+    <h2><span class="property">flex-flow</span>: row-reverse wrap;</h2>
+    <h2><span class="property">flex-flow</span>: column-reverse nowrap;</h2>
+    <p>Shorthand for <span class="property">flex-direction</span> and <span class="property">flex-wrap</span></p>
+</section>
+
+<section class="slide flex-row"> <!-- 21 -->
+  <style scoped>
+    ul {
+      display: flex;
+      justify-content: flex-start;
+    }
+    p {
+      padding-top: 2em;
+    }
+  </style>
+  <h1>justify-content: flex-start</h1>
+  <div class="axis"><img src="/img/axis-row.svg"></div>
+  <div><ul class="none">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul></div>
+  <pre><code lang="css">ul {
+ display: flex;
+ justify-content: flex-start;
+ /*
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  align-content: stretch;
+ */
+}</code></pre>
+  <p>Controls how extra space is used along main axis.</p>
+</section>
+
+<section class="slide flex-row"> <!-- 22 -->
+  <style scoped>
+    ul {
+      display: flex;
+      justify-content: flex-end;
+    }
+  </style>
+  <h1>justify-content: flex-end</h1>
+  <div class="axis"><img src="/img/axis-row.svg"></div>
+  <div><ul class="none">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul></div>
+  <pre><code lang="css">ul {
+ display: flex;
+ justify-content: flex-end;
+ /*
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  align-content: stretch;
+ */
+}</code></pre>
+</section>
+
+<section class="slide flex-row"> <!-- 23 -->
+  <style scoped>
+    ul {
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+  <h1>justify-content: center</h1>
+  <div class="axis"><img src="/img/axis-row.svg"></div>
+  <div><ul class="none">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul></div>
+  <pre><code lang="css">ul {
+ display: flex;
+ justify-content: center;
+ /*
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  align-content: stretch;
+ */
+}</code></pre>
+</section>
+
+<section class="slide flex-row"> <!-- 24 -->
+  <style scoped>
+    ul {
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+  <h1>justify-content: space-between</h1>
+  <div class="axis"><img src="/img/axis-row.svg"></div>
+  <div><ul class="none">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul></div>
+  <pre><code lang="css">ul {
+ display: flex;
+ justify-content: space-between;
+ /*
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  align-content: stretch;
+ */
+}</code></pre>
+</section>
+
+<section class="slide flex-row"> <!-- 25 -->
+  <style scoped>
+    ul {
+      display: flex;
+      justify-content: space-around;
+    }
+  </style>
+  <h1>justify-content: space-around</h1>
+  <div class="axis"><img src="/img/axis-row.svg"></div>
+  <div><ul class="none">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul></div>
+  <pre><code lang="css">ul {
+ display: flex;
+ justify-content: space-around;
+ /*
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  align-content: stretch;
+ */
+}</code></pre>
+</section>
+
+<section class="slide flex-row"> <!-- 26 -->
+  <style scoped>
+    ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: stretch;
+    }
+    p {
+      margin-top: 2em;
+    }
+  </style>
+  <h1>align-items: stretch</h1>
+  <div class="axis"><img src="/img/axis-row.svg"></div>
+  <div><ul class="none">
+    <li>1</li>
+    <li>2<br>2</li>
+    <li>3<br>3<br>3</li>
+    <li>4<br>4<br>4<br>4</li>
+  </ul></div>
+  <pre><code lang="css">ul {
+ display: flex;
+ justify-content: space-around;
+ align-items: stretch;
+ /*
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+ */
+}</code></pre>
+  <p>Controls how children are displayed along cross axis.</p>
+</section>
+
+<section class="slide flex-row"> <!-- 27 -->
+  <style scoped>
+    ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+    }
+    p {
+      margin-top: 2em;
+    }
+  </style>
+  <h1>align-items: flex-start</h1>
+  <div class="axis"><img src="/img/axis-row.svg"></div>
+  <div><ul class="none">
+    <li>1</li>
+    <li>2<br>2</li>
+    <li>3<br>3<br>3</li>
+    <li>4<br>4<br>4<br>4</li>
+  </ul></div>
+  <pre><code lang="css">ul {
+ display: flex;
+ justify-content: space-around;
+ align-items: flex-start;
+ /*
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+ */
+}</code></pre>
+</section>
+
+<section class="slide flex-row"> <!-- 28 -->
+  <style scoped>
+    ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+    }
+    p {
+      margin-top: 2em;
+    }
+  </style>
+  <h1>align-items: flex-end</h1>
+  <div class="axis"><img src="/img/axis-row.svg"></div>
+  <div><ul class="none">
+    <li>1</li>
+    <li>2<br>2</li>
+    <li>3<br>3<br>3</li>
+    <li>4<br>4<br>4<br>4</li>
+  </ul></div>
+  <pre><code lang="css">ul {
+ display: flex;
+ justify-content: space-around;
+ align-items: flex-end;
+ /*
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+ */
+}</code></pre>
+</section>
+
+<section class="slide flex-row"> <!-- 29 -->
+  <style scoped>
+    ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    p {
+      margin-top: 2em;
+    }
+  </style>
+  <h1>align-items: center</h1>
+  <div class="axis"><img src="/img/axis-row.svg"></div>
+  <div><ul class="none">
+    <li>1</li>
+    <li>2<br>2</li>
+    <li>3<br>3<br>3</li>
+    <li>4<br>4<br>4<br>4</li>
+  </ul></div>
+  <pre><code lang="css">ul {
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ /*
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+ */
+}</code></pre>
+</section>
+
+<section class="slide flex-row"> <!-- 30 -->
+  <style scoped>
+    ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: baseline;
+    }
+    p {
+      margin-top: 2em;
+    }
+  </style>
+  <h1>align-items: baseline</h1>
+  <div class="axis"><img src="/img/axis-row.svg"></div>
+  <div><ul class="none">
+    <li style="font-size: 2em;">1</li>
+    <li>2<br>2</li>
+    <li style="font-size: 3em;">3<br>3<br>3</li>
+    <li>4<br>4<br>4<br>4</li>
+  </ul></div>
+  <pre><code lang="css">ul {
+ display: flex;
+ justify-content: space-around;
+ align-items: baseline;
+ /*
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+ */
+}</code></pre>
+</section>
+
+<section class="slide flex-row"> <!-- 31 -->
+  <style scoped>
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: stretch;
+    }
+    p {
+      margin-top: 2em;
+    }
+  </style>
+  <h1>align-content: stretch</h1>
+  <div class="axis"><img src="/img/axis-row.svg"></div>
+  <div><ul class="none">
+    <li>1</li>
+    <li>2<br>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+    <li>11</li>
+    <li>12</li>
+  </ul></div>
+  <pre><code lang="css">ul {
+ display: flex;
+ flex-wrap: wrap;
+ align-content: stretch;
+ /*
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: stretch;
+ */
+}</code></pre>
+  <p>Controls how extra space along the cross axis is used with multiple lines.</p>
+</section>
+
+<section class="slide flex-row"> <!-- 32 -->
+  <style scoped>
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+    }
+    p {
+      margin-top: 2em;
+    }
+  </style>
+  <h1>align-content: flex-start</h1>
+  <div class="axis"><img src="/img/axis-row.svg"></div>
+  <div><ul class="none">
+    <li>1</li>
+    <li>2<br>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+    <li>11</li>
+    <li>12</li>
+  </ul></div>
+  <pre><code lang="css">ul {
+ display: flex;
+ flex-wrap: wrap;
+ align-content: flex-start;
+ /*
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: stretch;
+ */
+}</code></pre>
+</section>
+
+<section class="slide flex-row"> <!-- 33 -->
+  <style scoped>
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-end;
+    }
+    p {
+      margin-top: 2em;
+    }
+  </style>
+  <h1>align-content: flex-end</h1>
+  <div class="axis"><img src="/img/axis-row.svg"></div>
+  <div><ul class="none">
+    <li>1</li>
+    <li>2<br>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+    <li>11</li>
+    <li>12</li>
+  </ul></div>
+  <pre><code lang="css">ul {
+ display: flex;
+ flex-wrap: wrap;
+ align-content: flex-end;
+ /*
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: stretch;
+ */
+}</code></pre>
+</section>
+
+<section class="slide flex-row"> <!-- 34 -->
+  <style scoped>
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+    }
+    p {
+      margin-top: 2em;
+    }
+  </style>
+  <h1>align-content: center</h1>
+  <div class="axis"><img src="/img/axis-row.svg"></div>
+  <div><ul class="none">
+    <li>1</li>
+    <li>2<br>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+    <li>11</li>
+    <li>12</li>
+  </ul></div>
+  <pre><code lang="css">ul {
+ display: flex;
+ flex-wrap: wrap;
+ align-content: center;
+ /*
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: stretch;
+ */
+}</code></pre>
+</section>
+
+<section class="slide flex-row"> <!-- 35 -->
+  <style scoped>
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-between;
+    }
+    p {
+      margin-top: 2em;
+    }
+  </style>
+  <h1>align-content: space-between</h1>
+  <div class="axis"><img src="/img/axis-row.svg"></div>
+  <div><ul class="none">
+    <li>1</li>
+    <li>2<br>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+    <li>11</li>
+    <li>12</li>
+  </ul></div>
+  <pre><code lang="css">ul {
+ display: flex;
+ flex-wrap: wrap;
+ align-content: space-between;
+ /*
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: stretch;
+ */
+}</code></pre>
+</section>
+
+<section class="slide flex-row"> <!-- 36 -->
+  <style scoped>
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-around;
+    }
+    p {
+      margin-top: 2em;
+    }
+  </style>
+  <h1>align-content: space-around</h1>
+  <div class="axis"><img src="/img/axis-row.svg"></div>
+  <div><ul class="none">
+    <li>1</li>
+    <li>2<br>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+    <li>11</li>
+    <li>12</li>
+  </ul></div>
+  <pre><code lang="css">ul {
+ display: flex;
+ flex-wrap: wrap;
+ align-content: space-around;
+ /*
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: stretch;
+ */
+}</code></pre>
+</section>
+
+<section class="slide flex-column"> <!-- 37 -->
+  <h1>Family Values</h1>
+  <h2>Children</h2>
+  <pre><code lang="css">order: 0;
+flex-grow: 0;
+flex-shrink: 1;
+flex-basis: auto;
+  * flex: 0 1 auto;
+align-self: auto;</code></pre>
+</section>
+
+<section class="slide flex-row"> <!-- 38 -->
+  <style scoped>
+    ul {display: flex;}
+    li:nth-child(1) { order: 1; }
+    li:nth-child(3) { order: -1; }
+    li:nth-child(4) { order: -2; }
+    p {
+      padding-top: 2em;
+    }
+  </style>
+  <h1>order: 0</h1>
+  <div class="axis"><img src="/img/axis-row.svg"></div>
+  <div><ul class="none">
+    <li>1<br>1</li>
+    <li>2<br>0</li>
+    <li>3<br>-1</li>
+    <li>4<br>-2</li>
+  </ul></div>
+  <pre><code lang="css">li:nth-child(1) { order: 1; }
+li:nth-child(3) { order: -1; }
+li:nth-child(4) { order: -2; }
+ /*
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto
+ */
+}</code></pre>
+  <p>Overrides source order of child inside the parent. Alters the DOM.</p>
+</section>
+
+<section class="slide flex-row"> <!-- 39 -->
+  <style scoped>
+    ul {display: flex;}
+    li { flex-basis: auto; }
+    p {
+      padding-top: 2em;
+    }
+  </style>
+  <h1>flex-basis: auto</h1>
+  <div class="axis"><img src="/img/axis-row.svg"></div>
+  <div><ul class="none">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul></div>
+  <pre><code lang="css">li { flex-basis: auto; }
+ /*
+  order: 0;
+  flex-shrink: 1;
+  flex-shrink: 0
+  align-self: auto
+ */
+}</code></pre>
+  <p>Initial size of a child before free space is distributed.</p>
+</section>
+
+<section class="slide flex-row"> <!-- 40 -->
+  <style scoped>
+    ul {display: flex;}
+    li { flex-basis: 75px; }
+    p {
+      padding-top: 2em;
+    }
+  </style>
+  <h1>flex-basis: auto</h1>
+  <div class="axis"><img src="/img/axis-row.svg"></div>
+  <div><ul class="none">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul></div>
+  <pre><code lang="css">li { flex-basis: 75px; }
+ /*
+  order: 0;
+  flex-shrink: 1;
+  flex-shrink: 0
+  align-self: auto
+ */
+}</code></pre>
+  <p>Initial size of a child before free space is distributed.</p>
+</section>
+
+
+<section class="slide flex-row"> <!--  -->
+  <style scoped>
+    ul {display: flex;}
+    li { flex-grow: 0; }
+    p {
+      padding-top: 2em;
+    }
+  </style>
+  <h1>flex-grow: 0</h1>
+  <div class="axis"><img src="/img/axis-row.svg"></div>
+  <div><ul class="none">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul></div>
+  <pre><code lang="css">li { flex-grow: 0; }
+ /*
+  order: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto
+ */
+}</code></pre>
+  <p>Controls the ability for a child to grow if extra space is available.</p>
+</section>
+
+<section class="slide flex-row"> <!--  -->
+  <style scoped>
+    ul {display: flex;}
+    li { flex-grow: 1; }
+    p {
+      padding-top: 2em;
+    }
+  </style>
+  <h1>flex-grow: 1</h1>
+  <div class="axis"><img src="/img/axis-row.svg"></div>
+  <div><ul class="none">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul></div>
+  <pre><code lang="css">li { flex-grow: 1; }
+ /*
+  order: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto
+ */
+}</code></pre>
+  <p>Each child gets an equal share of the free space in the parent.</p>
+</section>
+
+<section class="slide flex-row"> <!--  -->
+  <style scoped>
+    ul {display: flex;}
+    li:nth-child(2) { flex-grow: 1; }
+    p {
+      padding-top: 2em;
+    }
+  </style>
+  <h1>flex-grow: ratio</h1>
+  <div class="axis"><img src="/img/axis-row.svg"></div>
+  <div><ul class="none">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul></div>
+  <pre><code lang="css">li:nth-child(2) { flex-grow: 1; }
+ /*
+  order: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto
+ */
+}</code></pre>
+  <p>2nd child gets all the free space.</p>
+</section>
+
+<section class="slide flex-row"> <!--  -->
+  <style scoped>
+    ul {display: flex;}
+    li { flex-grow: 1; }
+    li:nth-child(2) { flex-grow: 2; }
+    p {
+      padding-top: 2em;
+    }
+  </style>
+  <h1>flex-grow: ratio</h1>
+  <div class="axis"><img src="/img/axis-row.svg"></div>
+  <div><ul class="none">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul></div>
+  <pre><code lang="css">li { flex-grow: 1; }
+li:nth-child(2) { flex-grow: 2; }
+ /*
+  order: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto
+ */
+}</code></pre>
+  <p>2nd child gets twice as much of the free space as other children.</p>
+</section>
+
+<section class="slide flex-row"> <!--  -->
+  <style scoped>
+    ul {display: flex;}
+    li { flex-shrink: 1; }
+    p {
+      padding-top: 2em;
+    }
+  </style>
+  <h1>flex-shrink: 1</h1>
+  <div class="axis"><img src="/img/axis-row.svg"></div>
+  <div><ul class="none">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul></div>
+  <pre><code lang="css">li { flex-shrink: 1; }
+ /*
+  order: 0;
+  flex-grow: 0;
+  flex-basis: auto;
+  align-self: auto
+ */
+}</code></pre>
+  <p>How much a child will shrink if there isn't enough space for children in parent.</p>
+</section>
+
+
+
+<section class="slide flex-row">
+  <h1>Family Values</h1>
+  <h2>Children</h2>
+  <pre><code lang="css">order: 0;
+flex-grow: 0;
+flex-shrink: 1;
+flex-basis: auto;
+  * flex: 0 1 auto;
+align-self: auto;</code></pre>
+</section>
+
+<section class="slide">
+  <h2>Code highlight example</h2>
+  <pre><code lang="html">
+  &lt;div id="wrapper">
+  &lt;div id="header">Header&lt;/div>
+  &lt;div id="center">
+    &lt;div id="col1">Nav&lt;/div>
+    &lt;div id="col2">Main&lt;/div>
+    &lt;div id="col3">Sidebar&lt;/div>
+  &lt;/div>
+  &lt;div id="footer">Footer&lt;/div>
+&lt;/div></code></pre>
+</section>
+
+<section class="slide">
+  <p>.one { display: flex; flex-flow: row wrap; }<br>
+  .a1 { flex: 100%; }<br>
+  .a2 { flex: 0 0 10em; }<br>
+  .a3 { flex: 1 0 0; }<br>
+  .a4 { flex: 0 0 10em; }<br>
+  .a5 { flex: 100%; }
+  </p>
+  <p class="presenter-notes">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</section>
+
+
+
+
+<!-- <footer class="slide" title="The End">
+  <h2>Thank you!</h2>
+  <p>Get it or contribute at <a href="http://github.com/LeaVerou/CSSS">http://github.com/LeaVerou/CSSS</a></p>
+  <p>Credits:</p>
+  <ul>
+    <li><a href="http://lukeroberts.us/2008/12/wallpaper-colourful-wood/">Colored wood background by Luke Roberts</a></li>
+    <li>The name CSSS is actually inspired by S5, as you could probably guess ;-)</li>
+    <li>A big thanks to the community at Github for various contributions to this project</li>
+  </ul>
+</footer> -->
+</div>
+<div class="footer">
+<!--   <img src="/img/dries_66.png" id="dries">
+  <img src="/img/goggles_66.png" id="goggles"> -->
+<!--   <div class="killroy"><img src="/img/DrupalCorn_66.png"></div> -->
+  <div class="trees"><img src="/img/trees.png"></div>
+  <div class="tower"><img src="/img/tower_120.png"></div>
+</div>
+</div>
 
 <script src="slideshow.js"></script>
 <script src="plugins/css-edit.js"></script>
@@ -244,14 +1315,14 @@ var slideshow = new SlideShow();
 
 var snippets = document.querySelectorAll('.snippet');
 for(var i=0; i<snippets.length; i++) {
-	new CSSSnippet(snippets[i]);
+  new CSSSnippet(snippets[i]);
 }
 
 var cssControls = document.querySelectorAll('.css-control');
 for(var i=0; i<cssControls.length; i++) {
-	new CSSControl(cssControls[i]);
+  new CSSControl(cssControls[i]);
 }
 </script>
-	
+
 </body>
 </html>

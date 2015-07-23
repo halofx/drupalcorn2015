@@ -1,0 +1,231 @@
+* {
+  padding:0;
+  margin:0;
+  font:inherit;
+  color:inherit;
+}
+
+html {
+  background: linear-gradient(#004B77,#2E8BC6); //(#00598E,#2E8BC6);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-size: 0px;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+section, header {
+  display: flex;
+  &.flex-row {
+   flex-flow: row wrap;
+   div { width: 40%; }
+    .axis {
+      width: 40vw;
+      /*height: 50vh;*/
+      z-index: 1000;
+      position: absolute;
+      left: 1vw;
+      top: 15vh;
+      img { width: 100%; }
+    }
+  }
+  &.flex-column { flex-flow: column nowrap; }
+}
+
+
+.slide ul {
+  flex: 0 1 40%;
+  border: 2px solid red;
+  height: 60vh;
+  &.none {
+    list-style: none;
+    li {
+      padding: .5em;
+      color: black;
+      font-size: 90%;
+      &:nth-child(1n) {background-color: #aaffff;}
+      &:nth-child(2n) {background-color: #aaaaff;}
+      &:nth-child(3n) {background-color: #ffaaff;}
+      &:nth-child(4n) {background-color: #ffaaaa;}
+      &:nth-child(5n) {background-color: #ffffaa;}
+      &:nth-child(6n) {background-color: #aaffaa;}
+    }
+  }
+}
+
+
+.slide.flex-row pre {
+  flex: 0 1 52%;
+  margin-left: auto;
+  font-size: 95%;
+}
+
+
+.presentation {
+  width: 90vw;
+}
+
+.footer {
+  margin-top: auto;
+  .trees {
+    margin: 0;
+    padding: 0;
+    img {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+  }
+  .tower {
+    position: absolute;
+    bottom: 0px;
+    right: 10vw;
+    img {
+      width: 3vw;
+    }
+  }
+}
+
+code, pre, style, textarea, input {
+  font-family: Consolas, 'Andale Mono', 'Courier New', monospace;
+  background:rgba(0,0,0,.6);
+}
+
+code {
+  padding:.2em .2em .1em;
+  white-space: nowrap;
+  border-radius:.2em;
+  border: 1px solid rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.25);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 12px rgba(255,255,255,0.15), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+}
+
+pre, style, textarea {
+  padding:.75em .75em;
+  margin-left: -.1em;
+  border:2px solid rgba(255, 255, 255, .1);
+  box-shadow:.1em .1em .5em black inset;
+}
+
+pre > code {
+  padding: 0;
+  white-space: pre;
+  border: 0;
+  background: 0;
+  box-shadow: none;
+}
+
+pre strong {
+  text-shadow: 0 0 .6em white;
+}
+
+.slide {
+  padding:0 5% 2%;
+  background-clip: padding-box;
+  color: white;
+  max-width: 90vw;
+  margin: 0 auto;
+}
+
+#indicator {
+  background: rgba(255, 255, 255, .6);
+  color: black;
+  text-shadow: .03em .03em .1em white;
+}
+
+
+
+/* Lists
+.slide {
+  > ul {
+    list-style:none;
+    > li:before {
+      color: #a0c12c;
+      padding-right: .2em;
+      }
+  }
+  ol {
+    margin-left:2em;
+  }
+  li {
+    margin:.2em 0;
+    li {
+    font-size:80%;
+      &:before {
+        color: #28bcbc;
+        padding-right: .2em;
+      }
+    }
+  }
+}
+
+
+Header tags added to top of section to denote
+a new primary section of the presentation.
+section > header.slide {
+  background-color: rgba(0,0,0,.4);
+  min-height: 50%;
+  height: 50%;
+  margin: auto 20%;
+}
+
+//  H1 titles for new sections.
+section > header.slide > h1 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin-top: -.6em;
+  font-size: 400%;
+  line-height: 1;
+  text-align: center;
+}
+*/
+
+/* Syntax highlighting */
+
+.comment {
+  color: #999;
+}
+
+.string {
+  color: yellow;
+}
+
+.keyword {
+  font-weight: bold;
+  color: deeppink;
+}
+
+.number, .boolean {
+  color: #0cf;
+}
+
+.regex {
+  color: orange;
+}
+
+// code:lang(html) {
+  .tag {color: #f92672;}
+  .punctuation { color: #f8f8f2; }
+  .attr-name   { color: #a6e22e; }
+  .attr-value  { color: #e6db74; }
+// }
+
+// code:lang(css) {
+  .selector { color: #a6e22e; }
+  .property { color: #66d9ef; }
+  .comment  { font-size: 90%; }
+// }
+
+
+
