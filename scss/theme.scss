@@ -29,11 +29,11 @@ section, header {
    flex-flow: row wrap;
    div { width: 40%; }
     .axis {
-      width: 40vw;
+      width: 37vw;
       /*height: 50vh;*/
-      z-index: 1000;
+      z-index: -5;
       position: absolute;
-      left: 1vw;
+      left: .75vw;
       top: 15vh;
       img { width: 100%; }
     }

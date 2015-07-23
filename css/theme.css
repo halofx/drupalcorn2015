@@ -36,11 +36,11 @@ section.flex-row div, header.flex-row div {
 }
 
 section.flex-row .axis, header.flex-row .axis {
-  width: 40vw;
+  width: 37vw;
   /*height: 50vh;*/
-  z-index: 1000;
+  z-index: -5;
   position: absolute;
-  left: 1vw;
+  left: .75vw;
   top: 15vh;
 }
 
