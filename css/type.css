@@ -73,13 +73,9 @@ dl dd {
 }
 
 textarea.live {
-  flex: 0 1 45%;
+  flex: 0 1 52%;
   margin-left: auto;
-}
-
-style[scoped][contenteditable].example {
-  display: block;
-  white-space: pre;
+  font-size: 95%;
 }
 
 /*# sourceMappingURL=type.css.map */
