@@ -72,4 +72,14 @@ dl dd {
   font-size: 4vmin;
 }
 
+textarea.live {
+  flex: 0 1 45%;
+  margin-left: auto;
+}
+
+style[scoped][contenteditable].example {
+  display: block;
+  white-space: pre;
+}
+
 /*# sourceMappingURL=type.css.map */

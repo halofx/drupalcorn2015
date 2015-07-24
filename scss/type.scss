@@ -97,3 +97,15 @@ dl {
     font-size: $small-vmin;
   }
 }
+
+
+textarea.live {
+  flex: 0 1 45%;
+  margin-left: auto;
+}
+
+
+style[scoped][contenteditable].example {
+  display: block;
+  white-space: pre;
+}
