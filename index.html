@@ -60,17 +60,15 @@
  &lt;/div>
  &lt;div id="footer">Footer/div>
 &lt;/div></code></pre>
-<pre><code lang="css">display: inline-block;
-display: table;
-display: none;
-position: absolute;
-position: fixed;
-float: left;
-clear: both;
-margin: 25%;
-margin: -25%;
-
-</code></pre>
+<pre><code lang="css">&lt;div id="wrapper">
+ &lt;div id="header">Header&lt;/div>
+ &lt;div id="center">
+  &lt;div id="col1">Nav&lt;/div>
+  &lt;div id="col2">Main&lt;/div>
+  &lt;div id="col3">Sidebar&lt;/div>
+ &lt;/div>
+ &lt;div id="footer">Footer/div>
+&lt;/div></code></pre>
 </section>
 
 <section class="slide flex-column"> <!-- 4 -->
@@ -132,6 +130,7 @@ margin: -25%;
   <pre><code lang="css">display: flex;
 flex-direction: row;
 flex-wrap: nowrap;
+  * flex-flow: row nowrap;
 justify-content: flex-start;
 align-items: stretch;
 align-content: stretch;</code></pre>
@@ -202,30 +201,6 @@ align-content: stretch;</code></pre>
   align-content: stretch;
  */
 }</code></pre>
-<p>Controls direction of children on main axis.</p>
-</section>
-
-<section class="slide flex-row"> <!-- 10 -->
-  <style scoped>
-    ul {
-      display: flex;
-    }
-    p {
-      padding-top: 2em;
-    }
-  </style>
-  <h1>flex-direction: row</h1>
-  <div class="axis"><img src="/img/axis-row.svg"></div>
-  <div><ul class="none" [data-subject]>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-  </ul></div>
-  <textarea class="snippet live">ul {
-  flex-direction: row;
-}
-</textarea>
 <p>Controls direction of children on main axis.</p>
 </section>
 

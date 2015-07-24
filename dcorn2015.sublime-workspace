@@ -1,0 +1,348 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 28169,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/Scott/AppData/Roaming/Sublime Text 2/Packages/User/GitGutter.sublime-settings",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/Scott/AppData/Roaming/Sublime Text 2/Packages/GitGutter/GitGutter.sublime-settings",
+			"settings":
+			{
+				"buffer_size": 2137,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "* {\n  padding:0;\n  margin:0;\n  font:inherit;\n  color:inherit;\n}\n\nhtml {\n  background: linear-gradient(#004B77,#2E8BC6); //(#00598E,#2E8BC6);\n  margin: 0;\n  padding: 0;\n  overflow: hidden;\n}\n\nbody {\n  margin: 0px;\n  padding: 0px;\n  font-size: 0px;\n  min-height: 100vh;\n  display: flex;\n  flex-flow: column wrap;\n  align-items: center;\n  justify-content: center;\n}\n\nsection, header {\n  display: flex;\n  &.flex-row {\n   flex-flow: row wrap;\n   div { width: 40%; }\n    .axis {\n      width: 37vw;\n      /*height: 50vh;*/\n      z-index: -5;\n      position: absolute;\n      left: .75vw;\n      top: 15vh;\n      img { width: 100%; }\n    }\n  }\n  &.flex-column { flex-flow: column nowrap; }\n}\n\n\n.slide ul {\n  flex: 0 1 40%;\n  border: 2px solid red;\n  height: 60vh;\n  &.none {\n    list-style: none;\n    li {\n      padding: .5em;\n      color: black;\n      font-size: 90%;\n      &:nth-child(1n) {background-color: #aaffff;}\n      &:nth-child(2n) {background-color: #aaaaff;}\n      &:nth-child(3n) {background-color: #ffaaff;}\n      &:nth-child(4n) {background-color: #ffaaaa;}\n      &:nth-child(5n) {background-color: #ffffaa;}\n      &:nth-child(6n) {background-color: #aaffaa;}\n    }\n  }\n}\n\n\n.slide.flex-row pre {\n  flex: 0 1 52%;\n  margin-left: auto;\n  font-size: 95%;\n}\n\n\n.presentation {\n  width: 80vw;\n}\n\n.footer {\n  margin-top: auto;\n  .trees {\n    margin: 0;\n    padding: 0;\n    img {\n      margin: 0;\n      padding: 0;\n      width: 100%;\n    }\n  }\n  .tower {\n    position: absolute;\n    bottom: 0px;\n    right: 10vw;\n    img {\n      width: 3vw;\n    }\n  }\n}\n\ncode, pre, style, textarea, input {\n  font-family: Consolas, 'Andale Mono', 'Courier New', monospace;\n  background:rgba(0,0,0,.6);\n}\n\ncode {\n  padding:.2em .2em .1em;\n  white-space: nowrap;\n  border-radius:.2em;\n  border: 1px solid rgba(0,0,0,0.5);\n  background: rgba(0,0,0,0.25);\n  box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 12px rgba(255,255,255,0.15), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);\n}\n\npre, style, textarea {\n  padding:.75em .75em;\n  margin-left: -.1em;\n  border:2px solid rgba(255, 255, 255, .1);\n  box-shadow:.1em .1em .5em black inset;\n}\n\npre > code {\n  padding: 0;\n  white-space: pre;\n  border: 0;\n  background: 0;\n  box-shadow: none;\n}\n\npre strong {\n  text-shadow: 0 0 .6em white;\n}\n\n.slide {\n  padding:0 5% 2%;\n  background-clip: padding-box;\n  color: white;\n  max-width: 80vw;\n  margin: 0 auto;\n}\n\n#indicator {\n  background: rgba(255, 255, 255, .6);\n  color: black;\n  text-shadow: .03em .03em .1em white;\n}\n\n\n\n/* Lists\n.slide {\n  > ul {\n    list-style:none;\n    > li:before {\n      color: #a0c12c;\n      padding-right: .2em;\n      }\n  }\n  ol {\n    margin-left:2em;\n  }\n  li {\n    margin:.2em 0;\n    li {\n    font-size:80%;\n      &:before {\n        color: #28bcbc;\n        padding-right: .2em;\n      }\n    }\n  }\n}\n\n\nHeader tags added to top of section to denote\na new primary section of the presentation.\nsection > header.slide {\n  background-color: rgba(0,0,0,.4);\n  min-height: 50%;\n  height: 50%;\n  margin: auto 20%;\n}\n\n//  H1 titles for new sections.\nsection > header.slide > h1 {\n  position: absolute;\n  top: 50%;\n  left: 0;\n  right: 0;\n  margin-top: -.6em;\n  font-size: 400%;\n  line-height: 1;\n  text-align: center;\n}\n*/\n\n/* Syntax highlighting */\n\n.comment {\n  color: #999;\n}\n\n.string {\n  color: yellow;\n}\n\n.keyword {\n  font-weight: bold;\n  color: deeppink;\n}\n\n.number, .boolean {\n  color: #0cf;\n}\n\n.regex {\n  color: orange;\n}\n\n// code:lang(html) {\n  .tag {color: #f92672;}\n  .punctuation { color: #f8f8f2; }\n  .attr-name   { color: #a6e22e; }\n  .attr-value  { color: #e6db74; }\n// }\n\n// code:lang(css) {\n  .selector { color: #a6e22e; }\n  .property { color: #66d9ef; }\n  .comment  { font-size: 90%; }\n// }\n\n\n\n",
+			"file": "scss/theme.scss",
+			"file_size": 3762,
+			"file_write_time": 130821825807258597,
+			"settings":
+			{
+				"buffer_size": 3762,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/theme.css",
+			"settings":
+			{
+				"buffer_size": 4001,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 127.0,
+		"selected_items":
+		[
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: IN",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 174.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Scott/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Scott/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Scott/AppData/Roaming/Sublime Text 2/Packages/Vintage/Preferences.sublime-settings",
+		"/O/var/www/csss/index.html"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 28169,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								749,
+								749
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/Users/Scott/AppData/Roaming/Sublime Text 2/Packages/User/GitGutter.sublime-settings",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/Users/Scott/AppData/Roaming/Sublime Text 2/Packages/GitGutter/GitGutter.sublime-settings",
+					"settings":
+					{
+						"buffer_size": 2137,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 3,
+					"file": "scss/theme.scss",
+					"settings":
+					{
+						"buffer_size": 3762,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								491,
+								491
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "css/theme.css",
+					"settings":
+					{
+						"buffer_size": 4001,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								75,
+								75
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 162.0,
+	"status_bar_visible": true
+}
