@@ -44,9 +44,23 @@
 &lt;/table></code></pre>
 </section>
 
-<section class="slide flex-column"> <!-- 3 -->
+<section class="slide flex-row"> <!-- 3 -->
+  <style scoped>
+  pre {
+    flex: 0 1 45%;
+  }
+  </style>
   <h1>We just can't have nice things</h1>
   <pre><code lang="html">&lt;div id="wrapper">
+ &lt;div id="header">Header&lt;/div>
+ &lt;div id="center">
+  &lt;div id="col1">Nav&lt;/div>
+  &lt;div id="col2">Main&lt;/div>
+  &lt;div id="col3">Sidebar&lt;/div>
+ &lt;/div>
+ &lt;div id="footer">Footer/div>
+&lt;/div></code></pre>
+<pre><code lang="css">&lt;div id="wrapper">
  &lt;div id="header">Header&lt;/div>
  &lt;div id="center">
   &lt;div id="col1">Nav&lt;/div>
