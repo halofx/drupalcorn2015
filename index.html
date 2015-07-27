@@ -1583,6 +1583,63 @@ li:nth-child(2) {
   </ul>
 </section>
 
+<!--  Off screen nav -- 61 --
+html, body {
+height: 100%;
+}
+.container {
+display: flex;
+min-height: 100%;
+}
+.content {
+flex: 1;
+padding: 100px 40px 40px 40px;
+transition: all .3s;
+}
+.menu {
+overflow: hidden;
+width: 0;
+height: 0;
+transition: all .3s;
+}
+.hamburger-checkbox {
+position: absolute;
+opacity: 0;
+}
+.hamburger-label {
+position: absolute;
+top: 40px;
+left: 40px;
+z-index: 1;
+display: block;
+width: 42px;
+height: 42px;
+font: 42px/42px FontAwesome;
+text-align: center;
+cursor: pointer;
+}
+
+<div class="container">
+<input id="hamburger" type="checkbox" class="hamburger-checkbox">
+<label for="hamburger" class="hamburger-label" role="button"
+aria-labelledby="menu">&#xf0c9;</label>
+<nav role="navigation" class="menu">
+<ul class="menu-list">
+<li class="menu-item">Publications</li>
+<li class="menu-item">Shop</li>
+<li class="menu-item">News</li>
+<li class="menu-item">Events</li>
+<li class="menu-item">Your Account</li>
+<li class="menu-item">Contact Us</li>
+</ul>
+</nav>
+<main role="main" class="content">
+...
+</main>
+</div>
+-->
+
+
 
 </div>
 <div class="footer">
