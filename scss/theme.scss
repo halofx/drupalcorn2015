@@ -3,6 +3,7 @@
   margin:0;
   font:inherit;
   color:inherit;
+  box-sizing: border-box;
 }
 
 html {
@@ -30,7 +31,6 @@ section, header {
    div { width: 40%; }
     .axis {
       width: 37vw;
-      /*height: 50vh;*/
       z-index: -5;
       position: absolute;
       left: .75vw;
@@ -60,6 +60,11 @@ section, header {
       &:nth-child(6n) {background-color: #aaffaa;}
     }
   }
+}
+
+.slide.demo ul {
+  border: none;
+  height: inherit;
 }
 
 
@@ -132,9 +137,14 @@ pre strong {
   padding:0 5% 2%;
   background-clip: padding-box;
   color: white;
-  max-width: 80vw;
+  max-width: 90vw;
   margin: 0 auto;
 }
+
+.slide p.note {
+  padding-top: 2.5em
+}
+
 
 #indicator {
   background: rgba(255, 255, 255, .6);
@@ -142,54 +152,6 @@ pre strong {
   text-shadow: .03em .03em .1em white;
 }
 
-
-
-/* Lists
-.slide {
-  > ul {
-    list-style:none;
-    > li:before {
-      color: #a0c12c;
-      padding-right: .2em;
-      }
-  }
-  ol {
-    margin-left:2em;
-  }
-  li {
-    margin:.2em 0;
-    li {
-    font-size:80%;
-      &:before {
-        color: #28bcbc;
-        padding-right: .2em;
-      }
-    }
-  }
-}
-
-
-Header tags added to top of section to denote
-a new primary section of the presentation.
-section > header.slide {
-  background-color: rgba(0,0,0,.4);
-  min-height: 50%;
-  height: 50%;
-  margin: auto 20%;
-}
-
-//  H1 titles for new sections.
-section > header.slide > h1 {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  margin-top: -.6em;
-  font-size: 400%;
-  line-height: 1;
-  text-align: center;
-}
-*/
 
 /* Syntax highlighting */
 

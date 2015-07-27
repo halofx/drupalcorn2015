@@ -25,6 +25,9 @@
   <h2>Scott Wilkinson</h2>
   <p>#HaloFX</p>
   <p>@hackmonk3y</p>
+  <img class="dries" src="/img/dries_66.png" width="66px" height="90px">
+  <img class="dcorn" src="/img/DrupalCorn_66.png" width="66px" height="75px">
+  <img class="goggles" src="/img/goggles_66.png" width="66px" height="73px">
 </header>
 
 <section class="slide flex-column"> <!-- 2 -->
@@ -44,10 +47,28 @@
 &lt;/table></code></pre>
 </section>
 
-<section class="slide flex-row"> <!-- 3 -->
+<section class="slide flex-column"> <!-- 3 -->
+  <h1>The things we don't discuss</h1>
+  <pre><code lang="html">&lt;table width="80" border="0" align="center">
+ &lt;tr colspan="2">
+  &lt;td>Header&lt;td>
+ &lt;/tr>
+ &lt;tr>
+  &lt;td width="200px">
+    &lt;img src="clearpixel.gif" height="1px" width="200px">
+  &lt;/td>
+  &lt;td valign="top">Content&lt;/td>
+ &lt;/tr>
+ &lt;tr colspan="2">
+  &lt;td>Footer&lt;/td>
+ &lt;/tr>
+&lt;/table></code></pre>
+</section>
+
+<section class="slide flex-row"> <!-- 4 -->
   <style scoped>
   pre {
-    flex: 0 1 45%;
+    flex: 0 1 49.5%;
   }
   </style>
   <h1>We just can't have nice things</h1>
@@ -68,12 +89,11 @@ position: fixed;
 float: left;
 clear: both;
 margin: 25%;
-margin: -25%;
-
-</code></pre>
+margin: -25%;</code></pre>
+  <p class="presenter-notes">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </section>
 
-<section class="slide flex-column"> <!-- 4 -->
+<section class="slide flex-column"> <!-- 5 -->
   <style scoped>
   h1 {
     padding-top: 12%;
@@ -84,11 +104,12 @@ margin: -25%;
   <h1>display: flex;</h1>
 </section>
 
-<section class="slide flex-column"> <!-- 5 -->
+<section class="slide flex-column"> <!-- 6 -->
   <style scoped>
   img {
     /*padding-top: 5%;*/
-    width: 100%;
+    width: 90%;
+    max-width: 1095px;
     height: auto;
   }
   </style>
@@ -96,7 +117,7 @@ margin: -25%;
   <img src="/img/caniuse.png">
 </section>
 
-<section class="slide flex-column"><!-- 6 -->
+<section class="slide flex-column"><!-- 7 -->
   <h1>3 Working Versions</h1>
   <dl>
     <dt>2009 old - <span class="attr-value">display: box;</span></dt>
@@ -108,7 +129,7 @@ margin: -25%;
   </dl>
 </section>
 
-<section class="slide flex-column"> <!-- 7 -->
+<section class="slide flex-column"> <!-- 8 -->
   <h1>Use Autoprefixer</h1>
   <pre><code lang="css">.flex {
  display: -webkit-box;
@@ -126,7 +147,40 @@ margin: -25%;
 }</code></pre>
 </section>
 
-<section class="slide flex-column"> <!-- 8 -->
+<section class="slide flex-column"><!-- 9 -->
+  <style scoped>
+    * { box-sizing: border-box}
+    .flex {
+      display: flex;
+      /*border: 2px solid red;*/
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: .5em;
+      background-color: #ffaaaa;
+      color: black;
+    }
+    p { flex: 1 0 100%; padding-bottom: .5em;}
+    .child {
+      flex: 0 1 20%;
+      border: 2px solid yellow;
+      padding: .5em;
+      background-color: #ffffaa;
+      color: black;
+    }
+  </style>
+  <h1>Parent - Child</h1>
+  <div>
+    <div class="flex">
+      <p>Parent</p>
+      <div class="child">Child</div>
+      <div class="child">Child</div>
+      <div class="child">Child</div>
+      <div class="child">Child</div>
+    </div>
+  </div>
+</section>
+
+<section class="slide flex-column"> <!-- 10 -->
   <h1>Family Values</h1>
   <h2>Parent</h2>
   <pre><code lang="css">display: flex;
@@ -137,7 +191,25 @@ align-items: stretch;
 align-content: stretch;</code></pre>
 </section>
 
-<section class="slide flex-row"> <!-- 9 -->
+<section class="slide flex-column"> <!-- 11 -->
+  <style scoped>
+  * { text-align: center; margin-bottom: 0px;}
+  h1 {
+    padding-top: 12%;
+    font-size: 9.708vmin;
+  }
+  h2 {
+    padding-top: 2%;
+    font-size: 6.912vmin;
+  }
+  </style>
+  <h1>display: flex;</h1>
+  <p>Parent is a block</p>
+  <h2>display: inline-flex;</h2>
+  <p>Parent is a inline-block</p>
+</section>
+
+<section class="slide flex-row"> <!-- 12 -->
   <style scoped>
     .flex52 {
       flex: 0 1 56.5%;
@@ -175,13 +247,10 @@ align-content: stretch;</code></pre>
   </div>
 </section>
 
-<section class="slide flex-row"> <!-- 10 -->
+<section class="slide flex-row"> <!-- 13 -->
   <style scoped>
     ul {
       display: flex;
-    }
-    p {
-      padding-top: 2em;
     }
   </style>
   <h1>flex-direction: row</h1>
@@ -202,46 +271,10 @@ align-content: stretch;</code></pre>
   align-content: stretch;
  */
 }</code></pre>
-<p>Controls direction of children on main axis.</p>
+<p class="note">Controls direction of children on main axis.</p>
 </section>
 
-<section class="slide flex-row"> <!-- 10 -->
-  <style scoped>
-    ul {
-      display: flex;
-    }
-    p {
-      padding-top: 2em;
-    }
-  </style>
-  <h1>flex-direction: row</h1>
-  <div class="axis"><img src="/img/axis-row.svg"></div>
-  <div><ul class="none" [data-subject]>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-  </ul></div>
-  <textarea class="snippet live dont-font-resize">ul {
- flex-direction: row;
-// flex-direction: row-reverse;
-// flex-direction: column;
-// flex-direction: column-reverse;
-
-// flex-wrap: nowrap;
-// flex-wrap: wrap;
-// flex-wrap: wrap-reverse;
-
-// justify-content: flex-start;
-// justify-content: flex-end;
-// justify-content: center;
-// justify-content: space-between;
-// justify-content: space-around;
-}</textarea>
-<p>Controls direction of children on main axis.</p>
-</section>
-
-<section class="slide flex-row"> <!-- 11 -->
+<section class="slide flex-row"> <!-- 14 -->
   <style scoped>
     ul {
       display: flex;
@@ -271,7 +304,7 @@ align-content: stretch;</code></pre>
 }</code></pre>
 </section>
 
-<section class="slide flex-row"> <!-- 12 -->
+<section class="slide flex-row"> <!-- 15 -->
   <style scoped>
     ul {
       display: flex;
@@ -298,7 +331,7 @@ align-content: stretch;</code></pre>
 }</code></pre>
 </section>
 
-<section class="slide flex-row"> <!-- 13 -->
+<section class="slide flex-row"> <!-- 16 -->
   <style scoped>
     ul {
       display: flex;
@@ -325,15 +358,9 @@ align-content: stretch;</code></pre>
 }</code></pre>
 </section>
 
-<section class="slide flex-row"> <!-- 14 -->
+<section class="slide flex-row"> <!-- 17 -->
   <style scoped>
-    ul {
-      display: flex;
-    }
-    p {
-      margin-top: 2em;
-    }
-
+    ul { display: flex; }
   </style>
   <h1>flex-wrap: nowrap</h1>
   <div class="axis"><img src="/img/axis-row.svg"></div>
@@ -353,10 +380,10 @@ align-content: stretch;</code></pre>
   align-content: stretch;
  */
 }</code></pre>
-  <p>Controls if children can wrap to a new line inside parent.</p>
+  <p class="note">Controls if children can wrap to a new line inside parent.</p>
 </section>
 
-<section class="slide flex-row"> <!-- 15 -->
+<section class="slide flex-row"> <!-- 18 -->
   <style scoped>
     ul {
       display: flex;
@@ -383,16 +410,14 @@ align-content: stretch;</code></pre>
 }</code></pre>
 </section>
 
-<section class="slide flex-row"> <!-- 16 -->
+<section class="slide flex-row"> <!-- 19 -->
   <style scoped>
     ul {
       display: flex;
       flex-direction: row-reverse;
       flex-wrap: wrap;
     }
-    p {
-      padding-top: .5em;
-    }
+    p { padding-top: .5em; }
   </style>
   <h1>flex-wrap: wrap</h1>
   <div class="axis"><img src="/img/axis-row-rev.svg"></div>
@@ -414,15 +439,42 @@ align-content: stretch;</code></pre>
 }</code></pre>
 </section>
 
-<section class="slide flex-row"> <!-- 17 -->
+<section class="slide flex-row"> <!-- 20 -->
+  <style scoped>
+    ul {
+      display: flex;
+      flex-direction: row-reverse;
+      flex-wrap: wrap-reverse;
+    }
+    p { padding-top: .5em; }
+  </style>
+  <h1>flex-wrap: wrap</h1>
+  <div class="axis"><img src="/img/axis-row-rev-wrap-rev.svg"></div>
+  <div><ul class="none">
+    <li>one hundred</li>
+    <li>two hundred</li>
+    <li>three hundred</li>
+    <li>four hundred</li>
+  </ul></div>
+  <pre><code lang="css">ul {
+ display: flex;
+ flex-direction: row-reverse;
+ flex-wrap: wrap-reverse;
+ /*
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+ */
+}</code></pre>
+</section>
+
+<section class="slide flex-row"> <!-- 21 -->
   <style scoped>
     ul {
       display: flex;
       flex-direction: column;
     }
-    li {
-      padding: 2em;
-    }
+    li { padding: 2em; }
   </style>
   <h1>flex-wrap: wrap</h1>
   <div class="axis"><img src="/img/axis-col.svg"></div>
@@ -433,7 +485,6 @@ align-content: stretch;</code></pre>
       <li>three</li>
       <li>four</li>
       <li>five</li>
-      <!-- <li>six</li> -->
     </ul>
   </div>
   <pre><code lang="css">ul {
@@ -448,16 +499,14 @@ align-content: stretch;</code></pre>
 }</code></pre>
 </section>
 
-<section class="slide flex-row"> <!-- 18 -->
+<section class="slide flex-row"> <!-- 22 -->
   <style scoped>
     ul {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
     }
-    li {
-      padding: 2em;
-    }
+    li { padding: 2em; }
   </style>
   <h1>flex-wrap: wrap</h1>
   <div class="axis"><img src="/img/axis-col.svg"></div>
@@ -468,7 +517,6 @@ align-content: stretch;</code></pre>
       <li>three</li>
       <li>four</li>
       <li>five</li>
-      <!-- <li>six</li> -->
     </ul>
   </div>
   <pre><code lang="css">ul {
@@ -483,16 +531,14 @@ align-content: stretch;</code></pre>
 }</code></pre>
 </section>
 
-<section class="slide flex-row"> <!-- 19 -->
+<section class="slide flex-row"> <!-- 23 -->
   <style scoped>
     ul {
       display: flex;
       flex-direction: column-reverse;
       flex-wrap: wrap;
     }
-    li {
-      padding: 2em;
-    }
+    li { padding: 2em; }
   </style>
   <h1>flex-wrap: wrap</h1>
   <div class="axis"><img src="/img/axis-col-rev.svg"></div>
@@ -503,7 +549,6 @@ align-content: stretch;</code></pre>
       <li>three</li>
       <li>four</li>
       <li>five</li>
-      <!-- <li>six</li> -->
     </ul>
   </div>
   <pre><code lang="css">ul {
@@ -518,27 +563,55 @@ align-content: stretch;</code></pre>
 }</code></pre>
 </section>
 
-<section class="slide flex-column"> <!-- 20 -->
+<section class="slide flex-row"> <!-- 24 -->
   <style scoped>
-    p {
-      padding-top: .5em;
-    }</style>
+    ul {
+      display: flex;
+      flex-direction: column-reverse;
+      flex-wrap: wrap-reverse;
+    }
+    li { padding: 2em; }
+  </style>
+  <h1>flex-wrap: wrap</h1>
+  <div class="axis"><img src="/img/axis-col-rev.svg"></div>
+  <div>
+    <ul class="none">
+      <li>one</li>
+      <li>two</li>
+      <li>three</li>
+      <li>four</li>
+      <li>five</li>
+    </ul>
+  </div>
+  <pre><code lang="css">ul {
+ display: flex;
+ flex-direction: column-reverse;
+ flex-wrap: wrap-reverse;
+ /*
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+ */
+}</code></pre>
+</section>
+
+<section class="slide flex-column"> <!-- 25 -->
+  <style scoped>
+    p { padding-top: .5em; }
+  </style>
   <h1>flex-flow</h1>
-    <h2><span class="property">flex-flow</span>: row wrap;</h2>
-    <h2><span class="property">flex-flow</span>: column nowrap;</h2>
-    <h2><span class="property">flex-flow</span>: row-reverse wrap;</h2>
-    <h2><span class="property">flex-flow</span>: column-reverse nowrap;</h2>
+    <h2><span class="property">flex-flow</span>: <span class="attr-name">row</span> <span class="attr-value">wrap</span>;</h2>
+    <h2><span class="property">flex-flow</span>: <span class="attr-name">column</span> <span class="attr-value">nowrap</span>;</h2>
+    <h2><span class="property">flex-flow</span>: <span class="attr-name">row-reverse</span> <span class="attr-value">wrap</span>;</h2>
+    <h2><span class="property">flex-flow</span>: <span class="attr-name">column</span> <span class="attr-value">wrap-reverse</span>;</h2>
     <p>Shorthand for <span class="property">flex-direction</span> and <span class="property">flex-wrap</span></p>
 </section>
 
-<section class="slide flex-row"> <!-- 21 -->
+<section class="slide flex-row"> <!-- 26 -->
   <style scoped>
     ul {
       display: flex;
       justify-content: flex-start;
-    }
-    p {
-      padding-top: 2em;
     }
   </style>
   <h1>justify-content: flex-start</h1>
@@ -559,10 +632,10 @@ align-content: stretch;</code></pre>
   align-content: stretch;
  */
 }</code></pre>
-  <p>Controls how extra space is used along main axis.</p>
+  <p class="note">Controls how extra space is used along main axis.</p>
 </section>
 
-<section class="slide flex-row"> <!-- 22 -->
+<section class="slide flex-row"> <!-- 27 -->
   <style scoped>
     ul {
       display: flex;
@@ -589,7 +662,7 @@ align-content: stretch;</code></pre>
 }</code></pre>
 </section>
 
-<section class="slide flex-row"> <!-- 23 -->
+<section class="slide flex-row"> <!-- 28 -->
   <style scoped>
     ul {
       display: flex;
@@ -616,7 +689,7 @@ align-content: stretch;</code></pre>
 }</code></pre>
 </section>
 
-<section class="slide flex-row"> <!-- 24 -->
+<section class="slide flex-row"> <!-- 29 -->
   <style scoped>
     ul {
       display: flex;
@@ -643,7 +716,7 @@ align-content: stretch;</code></pre>
 }</code></pre>
 </section>
 
-<section class="slide flex-row"> <!-- 25 -->
+<section class="slide flex-row"> <!-- 30 -->
   <style scoped>
     ul {
       display: flex;
@@ -670,15 +743,12 @@ align-content: stretch;</code></pre>
 }</code></pre>
 </section>
 
-<section class="slide flex-row"> <!-- 26 -->
+<section class="slide flex-row"> <!-- 31 -->
   <style scoped>
     ul {
       display: flex;
       justify-content: space-around;
       align-items: stretch;
-    }
-    p {
-      margin-top: 2em;
     }
   </style>
   <h1>align-items: stretch</h1>
@@ -699,19 +769,17 @@ align-content: stretch;</code></pre>
   align-content: stretch;
  */
 }</code></pre>
-  <p>Controls how children are displayed along cross axis.</p>
+  <p class="note">Controls how children are displayed along cross axis.</p>
 </section>
 
-<section class="slide flex-row"> <!-- 27 -->
+<section class="slide flex-row"> <!-- 32 -->
   <style scoped>
     ul {
       display: flex;
       justify-content: space-around;
       align-items: flex-start;
     }
-    p {
-      margin-top: 2em;
-    }
+    p { margin-top: 2em; }
   </style>
   <h1>align-items: flex-start</h1>
   <div class="axis"><img src="/img/axis-row.svg"></div>
@@ -733,16 +801,14 @@ align-content: stretch;</code></pre>
 }</code></pre>
 </section>
 
-<section class="slide flex-row"> <!-- 28 -->
+<section class="slide flex-row"> <!-- 33 -->
   <style scoped>
     ul {
       display: flex;
       justify-content: space-around;
       align-items: flex-end;
     }
-    p {
-      margin-top: 2em;
-    }
+    p { margin-top: 2em; }
   </style>
   <h1>align-items: flex-end</h1>
   <div class="axis"><img src="/img/axis-row.svg"></div>
@@ -764,16 +830,14 @@ align-content: stretch;</code></pre>
 }</code></pre>
 </section>
 
-<section class="slide flex-row"> <!-- 29 -->
+<section class="slide flex-row"> <!-- 34 -->
   <style scoped>
     ul {
       display: flex;
       justify-content: space-around;
       align-items: center;
     }
-    p {
-      margin-top: 2em;
-    }
+    p { margin-top: 2em; }
   </style>
   <h1>align-items: center</h1>
   <div class="axis"><img src="/img/axis-row.svg"></div>
@@ -795,16 +859,14 @@ align-content: stretch;</code></pre>
 }</code></pre>
 </section>
 
-<section class="slide flex-row"> <!-- 30 -->
+<section class="slide flex-row"> <!-- 35 -->
   <style scoped>
     ul {
       display: flex;
       justify-content: space-around;
       align-items: baseline;
     }
-    p {
-      margin-top: 2em;
-    }
+    p { margin-top: 2em; }
   </style>
   <h1>align-items: baseline</h1>
   <div class="axis"><img src="/img/axis-row.svg"></div>
@@ -826,15 +888,12 @@ align-content: stretch;</code></pre>
 }</code></pre>
 </section>
 
-<section class="slide flex-row"> <!-- 31 -->
+<section class="slide flex-row"> <!-- 36 -->
   <style scoped>
     ul {
       display: flex;
       flex-wrap: wrap;
       align-content: stretch;
-    }
-    p {
-      margin-top: 2em;
     }
   </style>
   <h1>align-content: stretch</h1>
@@ -863,19 +922,17 @@ align-content: stretch;</code></pre>
   align-items: stretch;
  */
 }</code></pre>
-  <p>Controls how extra space along the cross axis is used with multiple lines.</p>
+  <p class="note">Controls how extra space along the cross axis is used with multiple lines.</p>
 </section>
 
-<section class="slide flex-row"> <!-- 32 -->
+<section class="slide flex-row"> <!-- 37 -->
   <style scoped>
     ul {
       display: flex;
       flex-wrap: wrap;
       align-content: flex-start;
     }
-    p {
-      margin-top: 2em;
-    }
+    p { margin-top: 2em; }
   </style>
   <h1>align-content: flex-start</h1>
   <div class="axis"><img src="/img/axis-row.svg"></div>
@@ -905,16 +962,52 @@ align-content: stretch;</code></pre>
 }</code></pre>
 </section>
 
-<section class="slide flex-row"> <!-- 33 -->
+<section class="slide flex-row"> <!-- 38 -->
+  <style scoped>
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      align-items: flex-end;
+    }
+    p { margin-top: 2em; }
+  </style>
+  <h1>align-content: flex-start</h1>
+  <div class="axis"><img src="/img/axis-row.svg"></div>
+  <div><ul class="none">
+    <li>1</li>
+    <li>2<br>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+    <li>11</li>
+    <li>12</li>
+  </ul></div>
+  <pre><code lang="css">ul {
+ display: flex;
+ flex-wrap: wrap;
+ align-content: flex-start;
+ align-items: flex-end;
+ /*
+  flex-direction: row;
+  justify-content: stretch;
+ */
+}</code></pre>
+</section>
+
+<section class="slide flex-row"> <!-- 39 -->
   <style scoped>
     ul {
       display: flex;
       flex-wrap: wrap;
       align-content: flex-end;
     }
-    p {
-      margin-top: 2em;
-    }
+    p { margin-top: 2em; }
   </style>
   <h1>align-content: flex-end</h1>
   <div class="axis"><img src="/img/axis-row.svg"></div>
@@ -944,16 +1037,15 @@ align-content: stretch;</code></pre>
 }</code></pre>
 </section>
 
-<section class="slide flex-row"> <!-- 34 -->
+<section class="slide flex-row"> <!-- 40 -->
   <style scoped>
     ul {
       display: flex;
       flex-wrap: wrap;
       align-content: center;
+      align-items: center
     }
-    p {
-      margin-top: 2em;
-    }
+    p { margin-top: 2em; }
   </style>
   <h1>align-content: center</h1>
   <div class="axis"><img src="/img/axis-row.svg"></div>
@@ -975,24 +1067,22 @@ align-content: stretch;</code></pre>
  display: flex;
  flex-wrap: wrap;
  align-content: center;
+ align-items: center;
  /*
   flex-direction: row;
   justify-content: stretch;
-  align-items: stretch;
  */
 }</code></pre>
 </section>
 
-<section class="slide flex-row"> <!-- 35 -->
+<section class="slide flex-row"> <!-- 41 -->
   <style scoped>
     ul {
       display: flex;
       flex-wrap: wrap;
       align-content: space-between;
     }
-    p {
-      margin-top: 2em;
-    }
+    p { margin-top: 2em; }
   </style>
   <h1>align-content: space-between</h1>
   <div class="axis"><img src="/img/axis-row.svg"></div>
@@ -1022,16 +1112,14 @@ align-content: stretch;</code></pre>
 }</code></pre>
 </section>
 
-<section class="slide flex-row"> <!-- 36 -->
+<section class="slide flex-row"> <!-- 42 -->
   <style scoped>
     ul {
       display: flex;
       flex-wrap: wrap;
       align-content: space-around;
     }
-    p {
-      margin-top: 2em;
-    }
+    p { margin-top: 2em; }
   </style>
   <h1>align-content: space-around</h1>
   <div class="axis"><img src="/img/axis-row.svg"></div>
@@ -1061,34 +1149,32 @@ align-content: stretch;</code></pre>
 }</code></pre>
 </section>
 
-<section class="slide flex-column"> <!-- 37 -->
+<section class="slide flex-column"> <!-- 43 -->
   <h1>Family Values</h1>
   <h2>Children</h2>
   <pre><code lang="css">order: 0;
 flex-grow: 0;
 flex-shrink: 1;
 flex-basis: auto;
-  * flex: 0 1 auto;
 align-self: auto;</code></pre>
 </section>
 
-<section class="slide flex-row"> <!-- 38 -->
+<section class="slide flex-row"> <!-- 44 -->
   <style scoped>
     ul {display: flex;}
     li:nth-child(1) { order: 1; }
     li:nth-child(3) { order: -1; }
     li:nth-child(4) { order: -2; }
-    p {
-      padding-top: 2em;
-    }
+    li:nth-child(5) { order: -2; }
   </style>
   <h1>order: 0</h1>
   <div class="axis"><img src="/img/axis-row.svg"></div>
   <div><ul class="none">
-    <li>1<br>1</li>
-    <li>2<br>0</li>
-    <li>3<br>-1</li>
-    <li>4<br>-2</li>
+    <li>1<br><br>1</li>
+    <li>2<br><br>0</li>
+    <li>3<br><br>-1</li>
+    <li>4<br><br>-2</li>
+    <li>5<br><br>-2</li>
   </ul></div>
   <pre><code lang="css">li:nth-child(1) { order: 1; }
 li:nth-child(3) { order: -1; }
@@ -1097,19 +1183,16 @@ li:nth-child(4) { order: -2; }
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
-  align-self: auto
+  align-self: auto;
  */
 }</code></pre>
-  <p>Overrides source order of child inside the parent. Alters the DOM.</p>
+  <p class="note">Overrides source order of child inside the parent. Alters the DOM.</p>
 </section>
 
-<section class="slide flex-row"> <!-- 39 -->
+<section class="slide flex-row"> <!-- 45 -->
   <style scoped>
     ul {display: flex;}
     li { flex-basis: auto; }
-    p {
-      padding-top: 2em;
-    }
   </style>
   <h1>flex-basis: auto</h1>
   <div class="axis"><img src="/img/axis-row.svg"></div>
@@ -1122,23 +1205,20 @@ li:nth-child(4) { order: -2; }
   <pre><code lang="css">li { flex-basis: auto; }
  /*
   order: 0;
+  flex-grow: 0;
   flex-shrink: 1;
-  flex-shrink: 0
-  align-self: auto
+  align-self: auto;
  */
 }</code></pre>
-  <p>Initial size of a child before free space is distributed.</p>
+  <p class="note">Initial size of a child before free space is distributed.</p>
 </section>
 
-<section class="slide flex-row"> <!-- 40 -->
+<section class="slide flex-row"> <!-- 46 -->
   <style scoped>
     ul {display: flex;}
     li { flex-basis: 75px; }
-    p {
-      padding-top: 2em;
-    }
   </style>
-  <h1>flex-basis: auto</h1>
+  <h1>flex-basis: value</h1>
   <div class="axis"><img src="/img/axis-row.svg"></div>
   <div><ul class="none">
     <li>1</li>
@@ -1149,22 +1229,19 @@ li:nth-child(4) { order: -2; }
   <pre><code lang="css">li { flex-basis: 75px; }
  /*
   order: 0;
+  flex-grow: 0;
   flex-shrink: 1;
-  flex-shrink: 0
-  align-self: auto
+  align-self: auto;
  */
 }</code></pre>
-  <p>Initial size of a child before free space is distributed.</p>
+  <p class="note">Initial size of a child before free space is distributed.</p>
 </section>
 
 
-<section class="slide flex-row"> <!--  -->
+<section class="slide flex-row"> <!-- 47 -->
   <style scoped>
     ul {display: flex;}
     li { flex-grow: 0; }
-    p {
-      padding-top: 2em;
-    }
   </style>
   <h1>flex-grow: 0</h1>
   <div class="axis"><img src="/img/axis-row.svg"></div>
@@ -1179,19 +1256,16 @@ li:nth-child(4) { order: -2; }
   order: 0;
   flex-shrink: 1;
   flex-basis: auto;
-  align-self: auto
+  align-self: auto;
  */
 }</code></pre>
-  <p>Controls the ability for a child to grow if extra space is available.</p>
+  <p class="note">Controls the ability for a child to grow if extra space is available.</p>
 </section>
 
-<section class="slide flex-row"> <!--  -->
+<section class="slide flex-row"> <!-- 48 -->
   <style scoped>
     ul {display: flex;}
     li { flex-grow: 1; }
-    p {
-      padding-top: 2em;
-    }
   </style>
   <h1>flex-grow: 1</h1>
   <div class="axis"><img src="/img/axis-row.svg"></div>
@@ -1206,19 +1280,16 @@ li:nth-child(4) { order: -2; }
   order: 0;
   flex-shrink: 1;
   flex-basis: auto;
-  align-self: auto
+  align-self: auto;
  */
 }</code></pre>
-  <p>Each child gets an equal share of the free space in the parent.</p>
+  <p class="note">Each child gets an equal share of the free space in the parent.</p>
 </section>
 
-<section class="slide flex-row"> <!--  -->
+<section class="slide flex-row"> <!-- 49 -->
   <style scoped>
     ul {display: flex;}
     li:nth-child(2) { flex-grow: 1; }
-    p {
-      padding-top: 2em;
-    }
   </style>
   <h1>flex-grow: ratio</h1>
   <div class="axis"><img src="/img/axis-row.svg"></div>
@@ -1233,20 +1304,17 @@ li:nth-child(4) { order: -2; }
   order: 0;
   flex-shrink: 1;
   flex-basis: auto;
-  align-self: auto
+  align-self: auto;
  */
 }</code></pre>
-  <p>2nd child gets all the free space.</p>
+  <p class="note">2nd child gets all the free space.</p>
 </section>
 
-<section class="slide flex-row"> <!--  -->
+<section class="slide flex-row"> <!-- 50 -->
   <style scoped>
     ul {display: flex;}
     li { flex-grow: 1; }
     li:nth-child(2) { flex-grow: 2; }
-    p {
-      padding-top: 2em;
-    }
   </style>
   <h1>flex-grow: ratio</h1>
   <div class="axis"><img src="/img/axis-row.svg"></div>
@@ -1262,19 +1330,16 @@ li:nth-child(2) { flex-grow: 2; }
   order: 0;
   flex-shrink: 1;
   flex-basis: auto;
-  align-self: auto
+  align-self: auto;
  */
 }</code></pre>
-  <p>2nd child gets twice as much of the free space as other children.</p>
+  <p class="note">2nd child gets twice as much of the free space as other children.</p>
 </section>
 
-<section class="slide flex-row"> <!--  -->
+<section class="slide flex-row"> <!-- 51 -->
   <style scoped>
     ul {display: flex;}
     li { flex-shrink: 1; }
-    p {
-      padding-top: 2em;
-    }
   </style>
   <h1>flex-shrink: 1</h1>
   <div class="axis"><img src="/img/axis-row.svg"></div>
@@ -1289,22 +1354,234 @@ li:nth-child(2) { flex-grow: 2; }
   order: 0;
   flex-grow: 0;
   flex-basis: auto;
-  align-self: auto
+  align-self: auto;
  */
 }</code></pre>
-  <p>How much a child will shrink if there isn't enough space for children in parent.</p>
+  <p class="note">How much a child will shrink if there isn't enough space for children in parent.</p>
 </section>
 
+<section class="slide flex-row"> <!-- 52 -->
+  <style scoped>
+    ul {display: flex;}
+    li { flex-shrink: 1; flex-basis: 200px; }
+  </style>
+  <h1>flex-shrink: 1</h1>
+  <div class="axis"><img src="/img/axis-row.svg"></div>
+  <div><ul class="none">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul></div>
+  <pre><code lang="css">li {
+ flex-shrink: 1;
+ flex-basis: 200px;
+}
+ /*
+  order: 0;
+  flex-grow: 0;
+  align-self: auto;
+ */
+}</code></pre>
+  <p class="note">How much a child will shrink if there isn't enough space for children in parent.</p>
+</section>
 
+<section class="slide flex-row"> <!-- 53 -->
+  <style scoped>
+    ul {display: flex;}
+    li { flex-shrink: 1; flex-basis: 200px; }
+    li:nth-child(2) { flex-shrink: 2;}
+  </style>
+  <h1>flex-shrink: 1</h1>
+  <div class="axis"><img src="/img/axis-row.svg"></div>
+  <div><ul class="none">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul></div>
+  <pre><code lang="css">li:nth-child(2) {
+ flex-shrink: 2;
+}
+ /*
+  order: 0;
+  flex-grow: 0;
+  align-self: auto;
+ */
+}</code></pre>
+  <p class="note">How much a child will shrink if there isn't enough space for children in parent.</p>
+</section>
 
+<section class="slide flex-column"> <!-- 54 -->
+  <style scoped>
+    p { padding-top: .5em; }
+  </style>
+  <h1>flex</h1>
+    <h2><span class="property">flex</span>: <span class="attr-name">0</span> <span class="attr-value">1</span> auto;</h2>
+    <h2><span class="property">flex</span>: <span class="attr-name">1</span> <span class="attr-value">1</span> 0px;</h2>
+    <h2><span class="property">flex</span>: <span class="attr-name">1</span> <span class="attr-value">0</span> 20em;</h2>
+    <p>Shorthand for <span class="property">flex-grow</span>, <span class="property">flex-shrink</span> and <span class="property">flex-basis</span>.</p>
+    <p><span class="property">flex: none;</span> is equivilant to <span class="property">flex: 0 0 auto;</span></p>
+</section>
 
+<section class="slide flex-row"> <!-- 55 -->
+  <style scoped>
+    ul {display: flex; flex-direction: column;}
+    li { flex-basis: auto; }
+  </style>
+  <h1>align-self: auto</h1>
+  <div class="axis"><img src="/img/axis-col.svg"></div>
+  <div><ul class="none">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+  </ul></div>
+  <pre><code lang="css">ul { flex-flow: column wrap; }
+li { align-self: auto; }
+ /*
+  order: 0;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+ */
+}</code></pre>
+  <p class="note">Initial size of a child before free space is distributed.</p>
+</section>
 
-<section class="slide">
-  <h1>End - notes sample</h1>
+<section class="slide flex-row"> <!-- 56 -->
+  <style scoped>
+    ul {display: flex; flex-direction: column;}
+    li { flex-basis: auto; }
+    li:nth-child(2) { align-self: flex-start; }
+  </style>
+  <h1>align-self: flex-start</h1>
+  <div class="axis"><img src="/img/axis-col.svg"></div>
+  <div><ul class="none">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+  </ul></div>
+  <pre><code lang="css">ul { flex-flow: column wrap; }
+li:nth-child(2) {
+ align-self: flex-start;
+}
+ /*
+  order: 0;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+ */
+}</code></pre>
+  <p class="note">Initial size of a child before free space is distributed.</p>
+</section>
+
+<section class="slide flex-row"> <!-- 57 -->
+  <style scoped>
+    ul {display: flex; flex-direction: column;}
+    li { flex-basis: auto; }
+    li:nth-child(2) { align-self: flex-end; }
+  </style>
+  <h1>align-self: flex-end</h1>
+  <div class="axis"><img src="/img/axis-col.svg"></div>
+  <div><ul class="none">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+  </ul></div>
+  <pre><code lang="css">ul { flex-flow: column wrap; }
+li:nth-child(2) {
+ align-self: flex-end;
+}
+ /*
+  order: 0;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+ */
+}</code></pre>
+  <p class="note">Initial size of a child before free space is distributed.</p>
+</section>
+
+<section class="slide flex-row"> <!-- 58 -->
+  <style scoped>
+    ul {display: flex; flex-direction: column;}
+    li { flex-basis: auto; }
+    li:nth-child(2) { align-self: center; }
+  </style>
+  <h1>align-self: center</h1>
+  <div class="axis"><img src="/img/axis-col.svg"></div>
+  <div><ul class="none">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+  </ul></div>
+  <pre><code lang="css">ul { flex-flow: column wrap; }
+li:nth-child(2) {
+ align-self: start;
+}
+ /*
+  order: 0;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+ */
+}</code></pre>
+  <p class="note">Initial size of a child before free space is distributed.</p>
+</section>
+
+<section class="slide flex-column"> <!-- 59 -->
+  <style scoped>
+  h1 {
+    padding-top: 12%;
+    font-size: 9.708vmin;
+    text-align: center;
+  }
+  </style>
+  <h1>Example Uses</h1>
   <p class="presenter-notes">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </section>
 
-
+<section class="slide demo flex-column"> <!-- 60 -->
+  <style scoped>
+  ul.between {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  ul.around {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+  </style>
+  <h1>Navigation</h1>
+  <ul class="none between">
+    <li>Home</li>
+    <li>Products</li>
+    <li>Service</li>
+    <li>Location</li>
+    <li>About</li>
+    <li>Contact</li>
+  </ul>
+    <ul class="none around">
+    <li>Home</li>
+    <li>Products</li>
+    <li>Service</li>
+    <li>Location</li>
+    <li>About</li>
+    <li>Contact</li>
+  </ul>
+</section>
 
 
 <!-- <footer class="slide" title="The End">

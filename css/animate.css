@@ -23,4 +23,246 @@
   animation-fill-mode: forwards;
 }
 
+header#intro {
+  z-index: -100;
+}
+
+header#intro img {
+  position: absolute;
+}
+
+header#intro .dcorn {
+  bottom: -75px;
+  left: -66px;
+  animation: dcorn 36s infinite;
+}
+
+header#intro .dries {
+  bottom: -90px;
+  left: -66px;
+  animation: dries 36s infinite;
+}
+
+header#intro .goggles {
+  bottom: -73px;
+  left: -66px;
+  animation: goggles 36s infinite;
+}
+
+@keyframes dcorn {
+  0% {
+    transform: translate(1vw, -20px);
+  }
+  2% {
+    transform: translate(2vw, -95px);
+  }
+  5% {
+    transform: translate(3vw, -40px);
+  }
+  7% {
+    transform: translate(12vw, -60px);
+  }
+  10% {
+    transform: translate(25vw, -40px);
+  }
+  12% {
+    transform: translate(25vw, -140px);
+  }
+  15% {
+    transform: translate(25vw, -50px);
+  }
+  20% {
+    transform: translate(45vw, -50px);
+  }
+  22% {
+    transform: translate(46vw, -100px);
+  }
+  25% {
+    transform: translate(47vw, 0px);
+  }
+  26% {
+    transform: translate(60vw, -50px);
+  }
+  30% {
+    transform: translate(102vw, -55px);
+  }
+  32% {
+    transform: translate(102vw, -155px);
+  }
+  33% {
+    transform: translate(95vw, -145px);
+  }
+  34% {
+    transform: translate(102vw, -155px);
+  }
+  36% {
+    transform: translate(102vw, -35px);
+  }
+  39% {
+    transform: translate(75vw, -45px);
+  }
+  42% {
+    transform: translate(75vw, -25px);
+  }
+  45% {
+    transform: translate(60vw, -45px);
+  }
+  48% {
+    transform: translate(35vw, -25px);
+  }
+  50% {
+    transform: translate(15vw, -25px);
+  }
+  54% {
+    transform: translate(12vw, -55px);
+  }
+  55% {
+    transform: translate(10vw, -85px);
+  }
+  57% {
+    transform: translate(2vw, -20px);
+  }
+  60% {
+    transform: translate(-50vw, -25px);
+  }
+  63% {
+    transform: translate(-50vw, -1000px);
+  }
+  64% {
+    transform: translate(10vw, -1200px);
+  }
+  67% {
+    transform: translate(50vw, -5px);
+  }
+  100% {
+    transform: translate(0px, -25px);
+  }
+}
+
+@keyframes dries {
+  0% {
+    transform: translate(50vw, -20px);
+  }
+  5% {
+    transform: translate(50vw, -20px);
+  }
+  15% {
+    transform: translate(70vw, -20px);
+  }
+  17% {
+    transform: translate(74vw, -120px);
+  }
+  19% {
+    transform: translate(80vw, -20px);
+  }
+  32% {
+    transform: translate(20vw, -20px);
+  }
+  35% {
+    transform: translate(5vw, -20px);
+  }
+  37% {
+    transform: translate(1vw, -125px);
+  }
+  39% {
+    transform: translate(0vw, 0px);
+  }
+  43% {
+    transform: translate(-20vw, 0px);
+  }
+  44% {
+    transform: translate(-20vw, -100px);
+  }
+  45% {
+    transform: translate(1vw, -135px);
+  }
+  46% {
+    transform: translate(-20vw, -70px);
+  }
+  50% {
+    transform: translate(0vw, -20px);
+  }
+  58% {
+    transform: translate(60vw, -20px);
+  }
+  63% {
+    transform: translate(60vw, -120px);
+  }
+  65% {
+    transform: translate(60vw, -120px);
+  }
+  66% {
+    transform: translate(60vw, 30px);
+  }
+  68% {
+    transform: translate(60vw, -30px);
+  }
+  83% {
+    transform: translate(90vw, -45px);
+  }
+  100% {
+    transform: translate(50vw, -20px);
+  }
+}
+
+@keyframes goggles {
+  0% {
+    transform: translate(50vw, -20px);
+  }
+  4% {
+    transform: translate(40vw, -25px);
+  }
+  8% {
+    transform: translate(31vw, -30px);
+  }
+  9% {
+    transform: translate(32vw, -110px);
+  }
+  10% {
+    transform: translate(33vw, -20px);
+  }
+  20% {
+    transform: translate(3vw, -25px);
+  }
+  22% {
+    transform: translate(4vw, -105px);
+  }
+  23% {
+    transform: translate(6vw, -20px);
+  }
+  38% {
+    transform: translate(24vw, -20px);
+  }
+  41% {
+    transform: translate(24vw, -115px);
+  }
+  42% {
+    transform: translate(28vw, -20px);
+  }
+  60% {
+    transform: translate(36vw, -20px);
+  }
+  64% {
+    transform: translate(36vw, -110px);
+  }
+  65% {
+    transform: translate(36vw, -110px);
+  }
+  66% {
+    transform: translate(36vw, 30px);
+  }
+  68% {
+    transform: translate(38vw, -20px);
+  }
+  73% {
+    transform: translate(46vw, -40px);
+  }
+  83% {
+    transform: translate(66vw, -30px);
+  }
+  100% {
+    transform: translate(50vw, -20px);
+  }
+}
+
 /*# sourceMappingURL=animate.css.map */
