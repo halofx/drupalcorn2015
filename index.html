@@ -25,6 +25,9 @@
   <h2>Scott Wilkinson</h2>
   <p>#HaloFX</p>
   <p>@hackmonk3y</p>
+  <img class="dries" src="/img/dries_66.png" width="66px" height="90px">
+  <img class="dcorn" src="/img/DrupalCorn_66.png" width="66px" height="75px">
+  <img class="goggles" src="/img/goggles_66.png" width="66px" height="73px">
 </header>
 
 <section class="slide flex-column"> <!-- 2 -->
@@ -44,7 +47,25 @@
 &lt;/table></code></pre>
 </section>
 
-<section class="slide flex-row"> <!-- 3 -->
+<section class="slide flex-column"> <!-- 3 -->
+  <h1>The things we don't discuss</h1>
+  <pre><code lang="html">&lt;table width="80" border="0" align="center">
+ &lt;tr colspan="2">
+  &lt;td>Header&lt;td>
+ &lt;/tr>
+ &lt;tr>
+  &lt;td width="200px">
+    &lt;img src="clearpixel.gif" height="1px" width="200px">
+  &lt;/td>
+  &lt;td valign="top">Content&lt;/td>
+ &lt;/tr>
+ &lt;tr colspan="2">
+  &lt;td>Footer&lt;/td>
+ &lt;/tr>
+&lt;/table></code></pre>
+</section>
+
+<section class="slide flex-row"> <!-- 4 -->
   <style scoped>
   pre {
     flex: 0 1 45%;
@@ -68,23 +89,22 @@ position: fixed;
 float: left;
 clear: both;
 margin: 25%;
-margin: -25%;
-
-</code></pre>
+margin: -25%;</code></pre>
+  <p class="presenter-notes">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </section>
 
-<section class="slide flex-column"> <!-- 4 -->
+<section class="slide flex-column"> <!-- 5 -->
   <style scoped>
+  * { text-align: center; margin-bottom: 0px;}
   h1 {
     padding-top: 12%;
     font-size: 9.708vmin;
-    text-align: center;
   }
   </style>
   <h1>display: flex;</h1>
 </section>
 
-<section class="slide flex-column"> <!-- 5 -->
+<section class="slide flex-column"> <!-- 6 -->
   <style scoped>
   img {
     /*padding-top: 5%;*/
@@ -96,7 +116,7 @@ margin: -25%;
   <img src="/img/caniuse.png">
 </section>
 
-<section class="slide flex-column"><!-- 6 -->
+<section class="slide flex-column"><!-- 7 -->
   <h1>3 Working Versions</h1>
   <dl>
     <dt>2009 old - <span class="attr-value">display: box;</span></dt>
@@ -108,7 +128,7 @@ margin: -25%;
   </dl>
 </section>
 
-<section class="slide flex-column"> <!-- 7 -->
+<section class="slide flex-column"> <!-- 8 -->
   <h1>Use Autoprefixer</h1>
   <pre><code lang="css">.flex {
  display: -webkit-box;
@@ -126,7 +146,34 @@ margin: -25%;
 }</code></pre>
 </section>
 
-<section class="slide flex-column"> <!-- 8 -->
+<section class="slide flex-column"><!-- 9 -->
+  <style scoped>
+    * { box-sizing: border-box}
+    .flex {
+      display: flex;
+      border: 2px solid red;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: .5em;
+    }
+    p { flex: 1 0 100%; padding-bottom: .5em;}
+    .child { flex: 0 1 20%; border: 2px solid yellow; padding: .5em;}
+  </style>
+  <h1>Parent - Child</h1>
+  <div>
+    <div class="flex">
+      <p>Parent</p>
+      <div class="child">Child</div>
+      <div class="child">Child</div>
+      <div class="child">Child</div>
+      <div class="child">Child</div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="slide flex-column"> <!-- 9 -->
   <h1>Family Values</h1>
   <h2>Parent</h2>
   <pre><code lang="css">display: flex;
@@ -135,6 +182,24 @@ flex-wrap: nowrap;
 justify-content: flex-start;
 align-items: stretch;
 align-content: stretch;</code></pre>
+</section>
+
+<section class="slide flex-column"> <!-- 5 -->
+  <style scoped>
+  * { text-align: center; margin-bottom: 0px;}
+  h1 {
+    padding-top: 12%;
+    font-size: 9.708vmin;
+  }
+  h2 {
+    padding-top: 2%;
+    font-size: 6.912vmin;
+  }
+  </style>
+  <h1>display: flex;</h1>
+  <p>Parent is a block</p>
+  <h2>display: inline-flex;</h2>
+  <p>Parent is a inline-block</p>
 </section>
 
 <section class="slide flex-row"> <!-- 9 -->
@@ -184,7 +249,7 @@ align-content: stretch;</code></pre>
       padding-top: 2em;
     }
   </style>
-  <h1>flex-direction: row</h1>
+  <h1>flex-direction:</h1>
   <div class="axis"><img src="/img/axis-row.svg"></div>
   <div><ul class="none">
     <li>1</li>
@@ -205,7 +270,7 @@ align-content: stretch;</code></pre>
 <p>Controls direction of children on main axis.</p>
 </section>
 
-<section class="slide flex-row"> <!-- 10 -->
+<section class="slide flex-row"> <!-- 11 -->
   <style scoped>
     ul {
       display: flex;
@@ -214,7 +279,7 @@ align-content: stretch;</code></pre>
       padding-top: 2em;
     }
   </style>
-  <h1>flex-direction: row</h1>
+  <h1>flex-direction:</h1>
   <div class="axis"><img src="/img/axis-row.svg"></div>
   <div><ul class="none" [data-subject]>
     <li>1</li>
@@ -241,91 +306,7 @@ align-content: stretch;</code></pre>
 <p>Controls direction of children on main axis.</p>
 </section>
 
-<section class="slide flex-row"> <!-- 11 -->
-  <style scoped>
-    ul {
-      display: flex;
-      flex-direction: column;
-    }
-    p {
-      padding-top: 2em;
-    }
-  </style>
-  <h1>flex-direction: column</h1>
-  <div class="axis"><img src="/img/axis-col.svg"></div>
-  <div><ul class="none">
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-  </ul></div>
-  <pre><code lang="css">ul {
- display: flex;
- flex-direction: column;
- /*
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: stretch;
- */
-}</code></pre>
-</section>
-
 <section class="slide flex-row"> <!-- 12 -->
-  <style scoped>
-    ul {
-      display: flex;
-      flex-direction: row-reverse;
-    }
-  </style>
-  <h1>flex-direction: row-reverse</h1>
-  <div class="axis"><img src="/img/axis-row-rev.svg"></div>
-  <div><ul class="none">
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-  </ul></div>
-  <pre><code lang="css">ul {
- display: flex;
- flex-direction: row-reverse;
- /*
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: stretch;
- */
-}</code></pre>
-</section>
-
-<section class="slide flex-row"> <!-- 13 -->
-  <style scoped>
-    ul {
-      display: flex;
-      flex-direction: column-reverse;
-    }
-  </style>
-  <h1>flex-direction: column-reverse</h1>
-  <div class="axis"><img src="/img/axis-col-rev.svg"></div>
-  <div><ul class="none">
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-  </ul></div>
-  <pre><code lang="css">ul {
- display: flex;
- flex-direction: column-reverse;
- /*
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: stretch;
- */
-}</code></pre>
-</section>
-
-<section class="slide flex-row"> <!-- 14 -->
   <style scoped>
     ul {
       display: flex;
@@ -335,7 +316,7 @@ align-content: stretch;</code></pre>
     }
 
   </style>
-  <h1>flex-wrap: nowrap</h1>
+  <h1>flex-wrap:</h1>
   <div class="axis"><img src="/img/axis-row.svg"></div>
   <div><ul class="none">
     <li>one hundred</li>
@@ -355,6 +336,33 @@ align-content: stretch;</code></pre>
 }</code></pre>
   <p>Controls if children can wrap to a new line inside parent.</p>
 </section>
+
+<section class="slide flex-row"> <!-- 13 -->
+  <style scoped>
+    ul {
+      display: flex;
+    }
+    p {
+      padding-top: 2em;
+    }
+  </style>
+  <h1>flex-wrap:</h1>
+  <div class="axis"><img src="/img/axis-row.svg"></div>
+  <div><ul class="none">
+    <li>one hundred</li>
+    <li>two hundred</li>
+    <li>three hundred</li>
+    <li>four hundred</li>
+  </ul></div>
+  <textarea class="snippet live dont-font-resize">ul {
+// flex-wrap: nowrap;
+// flex-wrap: wrap;
+// flex-wrap: wrap-reverse;
+}</textarea>
+<p>Controls direction of children on main axis.</p>
+</section>
+
+
 
 <section class="slide flex-row"> <!-- 15 -->
   <style scoped>
@@ -1319,9 +1327,6 @@ li:nth-child(2) { flex-grow: 2; }
 </footer> -->
 </div>
 <div class="footer">
-  <!--   <img src="/img/dries_66.png" id="dries">
-    <img src="/img/goggles_66.png" id="goggles"> -->
-  <!--   <div class="killroy"><img src="/img/DrupalCorn_66.png"></div> -->
   <div class="trees"><img src="/img/trees.png"></div>
   <div class="tower"><img src="/img/tower_120.png"></div>
 </div>
