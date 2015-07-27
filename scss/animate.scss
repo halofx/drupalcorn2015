@@ -1,25 +1,99 @@
-.presentation ~ .footer .killroy {
-  position: absolute;
-  bottom: -40px;
-
-  z-index: -10;
-  animation-fill-mode: forwards;
+header#intro {
+  z-index: -100;
+  img {
+    position: absolute;
+  }
+  .dcorn {
+    bottom: -75px;
+    left: -66px;
+    animation: dcorn 36s infinite;
+  }
+  .dries {
+    bottom: -90px;
+    left: -66px;
+    animation: dries 36s infinite;
+  }
+  .goggles {
+    bottom: -73px;
+    left: -66px;
+   animation: goggles 36s infinite;
+  }
 }
 
-.presentation ~ .footer #goggles {
-  left: 5vw;
-  animation: goggles 36s infinite;
-  position: absolute;
-  bottom: -30px;
-  z-index: -10;
-  animation-fill-mode: forwards;
+@keyframes dcorn {
+  0%   { transform: translate(   1vw,   -20px); } // start down
+  2%   { transform: translate(   2vw,   -95px); } // pop up
+  5%   { transform: translate(   3vw,   -40px); } // back down
+  7%   { transform: translate(  12vw,   -60px); }// over
+  10%  { transform: translate(  25vw,   -40px); } // 3.6s move over
+  12%  { transform: translate(  25vw,  -140px); } // 4.32s pop up
+  15%  { transform: translate(  25vw,   -50px); } // back down
+  20%  { transform: translate(  45vw,   -50px); } // over to mid screen
+  22%  { transform: translate(  46vw,  -100px); } // pop up
+  25%  { transform: translate(  47vw,     0px); } //9s down fast
+  26%  { transform: translate(  60vw,   -50px); }
+  30%  { transform: translate( 102vw,   -55px); } // 10.8s move off screen right
+  32%  { transform: translate( 102vw,  -155px); } // 11.52s move up
+  33%  { transform: translate(  95vw,  -145px); } // 11.88 pop in from right
+  34%  { transform: translate( 102vw,  -155px); } //12.24s back out
+  36%  { transform: translate( 102vw,   -35px); } // 12.96s drop
+  39%  { transform: translate(  75vw,   -45px); }
+  42%  { transform: translate(  75vw,   -25px); }
+  45%  { transform: translate(  60vw,   -45px); }
+  48%  { transform: translate(  35vw,   -25px); }
+  50%  { transform: translate(  15vw,   -25px); }
+  54%  { transform: translate(  12vw,   -55px); }
+  55%  { transform: translate(  10vw,   -85px); }
+  57%  { transform: translate(   2vw,   -20px); }
+  60%  { transform: translate( -50vw,   -25px); }
+  63%  { transform: translate( -50vw, -1000px); }
+  64%  { transform: translate(  10vw, -1200px); }
+  67%  { transform: translate(  50vw,    -5px); }
+  100% { transform: translate(   0px,   -25px); }
 }
 
-.presentation ~ .footer #dries {
-  left: 5vw;
-  animation: dries 36s infinite;
-  position: absolute;
-  bottom: -55px;
-  z-index: -10;
-  animation-fill-mode: forwards;
+@keyframes dries {
+  0%    { transform: translate( 50vw,  -20px); }
+  5%    { transform: translate( 50vw,  -20px); }
+  15%   { transform: translate( 70vw,  -20px); }
+  17%   { transform: translate( 74vw, -120px); } // 6.12s 1st pop up
+  19%   { transform: translate( 80vw,  -20px); } // back down
+  32%   { transform: translate( 20vw,  -20px); } // to left
+  35%   { transform: translate(  5vw,  -20px); } // to left
+  37%   { transform: translate(  1vw, -125px); } // 13.32s pop up
+  39%   { transform: translate(  0vw,    0px); } // back down
+  43%   { transform: translate(-20vw,    0px); } // off left screen
+  44%   { transform: translate(-20vw, -100px); } // 15.84s up off left screen
+  45%   { transform: translate(  1vw, -135px); } // 16.2s in from left
+  46%   { transform: translate(-20vw,  -70px); } // 16.56s back out left
+  50%   { transform: translate(  0vw,  -20px); } // down
+  58%   { transform: translate( 60vw,  -20px); } // right to mid screen
+  63%   { transform: translate( 60vw, -120px); } // 22.68s up
+  65%   { transform: translate( 60vw, -120px); } // 23.4s wait for dcorn
+  66%   { transform: translate( 60vw,   30px); } // 23.76s duck and cover
+  68%   { transform: translate( 60vw,  -30px); }
+  83%   { transform: translate( 90vw,  -45px); } // 29.88s far right
+  100%  { transform: translate( 50vw,  -20px); }
+}
+
+@keyframes goggles {
+  0%    { transform: translate( 50vw,  -20px); }
+  4%    { transform: translate( 40vw,  -25px); }
+  8%    { transform: translate( 31vw,  -30px); }
+  9%    { transform: translate( 32vw,  -110px); } // 3.24s popup
+  10%   { transform: translate( 33vw,  -20px); }
+  20%   { transform: translate(  3vw,  -25px); }
+  22%   { transform: translate(  4vw,  -105px); } // 7.92s popup
+  23%   { transform: translate(  6vw,  -20px); }
+  38%   { transform: translate( 24vw,  -20px); }
+  41%   { transform: translate( 24vw, -115px); } // 14.76s popup
+  42%   { transform: translate( 28vw,  -20px); }
+  60%   { transform: translate( 36vw,  -20px); }
+  64%   { transform: translate( 36vw, -110px); } // 23.04s popup
+  65%   { transform: translate( 36vw, -110px); } // wait
+  66%   { transform: translate( 36vw,   30px); } // duck and cover
+  68%   { transform: translate( 38vw,  -20px); }
+  73%   { transform: translate( 46vw,  -40px); }
+  83%   { transform: translate( 66vw,  -30px); }
+  100%  { transform: translate( 50vw,  -20px); }
 }
