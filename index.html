@@ -1584,10 +1584,19 @@ li:nth-child(2) {
       </nav>
     <main role="main">
     <p>Proin tincidunt ac odio vel consequat. Pellentesque tristique leo nec tempus gravida. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce dapibus elementum leo et ultricies.</p>
+    <pre><code lang="css">.container { display: flex; }
+label nav { flex-basis: 0; overflow: hidden; }
+label:checked ~ nav { flex-basis: 5em; }
+main { flex:1; }</code></pre>
   </main>
   </div>
 </section>
 
+<section class="slide  flex-column ">
+  <h1>References</h1>
+  <p>css-tricks.com/snippets/css/a-guide-to-flexbox/</p>
+  <p>css-tricks.com/the-checkbox-hack/</p>
+</section>
 
 </div>
 <div class="footer">

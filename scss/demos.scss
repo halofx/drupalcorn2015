@@ -29,8 +29,8 @@
     transition: flex-basis 2s;
     font-size: .7em;
     line-height: 1.75em;
-    font-weight: normal;
-    font-family: 'Segoe UI Light', Frutiger, sans-serif;
+    font-weight: 300;
+    font-family: 'Lato', Frutiger, sans-serif;
     color: black;
   }
   nav {
@@ -45,15 +45,13 @@
     padding: 0px;
   }
   li {
-    font-family: 'Segoe UI', Frutiger, Arial, sans-serif;
+    font-family: 'Lato', Frutiger, Arial, sans-serif;
     font-size: .6em;
-    padding: 1em 1em;
+    padding: 1em 40px;
     white-space: nowrap;
     border-bottom: 1px solid #777;
   }
-  li:first-child {
-    border-top: 1px solid #777;
-  }
+  li:first-child { border-top: 1px solid #777; }
   a { color: #000099; }
   .hamburger-label {
     position: absolute;
@@ -68,5 +66,10 @@
       flex-basis: 5em;
       transition: flex-basis 2s;
     }
+  }
+  pre {
+    color: white;
+    margin-top: 2em;
+    background: rgba(0,0,0,0.8);
   }
 }
