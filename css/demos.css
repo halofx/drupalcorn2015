@@ -1,0 +1,81 @@
+.demo1 ul.between {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.demo1 ul.around {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.demo2 .container {
+  display: flex;
+  height: 70vh;
+  background-color: #dedede;
+  position: relative;
+}
+
+.demo2 main {
+  flex: 1;
+  padding: 100px 40px 0px 40px;
+  transition: flex-basis 2s;
+  font-size: .7em;
+  line-height: 1.75em;
+  font-weight: normal;
+  font-family: 'Segoe UI Light', Frutiger, sans-serif;
+  color: black;
+}
+
+.demo2 nav {
+  overflow: hidden;
+  flex-basis: 0;
+  background-color: #aaa;
+  padding-top: 4em;
+  transition: flex-basis 2s;
+}
+
+.demo2 ul {
+  list-style: none;
+  padding: 0px;
+}
+
+.demo2 li {
+  font-family: 'Segoe UI', Frutiger, Arial, sans-serif;
+  font-size: .6em;
+  padding: 1em 1em;
+  white-space: nowrap;
+  border-bottom: 1px solid #777;
+}
+
+.demo2 li:first-child {
+  border-top: 1px solid #777;
+}
+
+.demo2 a {
+  color: #000099;
+}
+
+.demo2 .hamburger-label {
+  position: absolute;
+  top: 55px;
+  left: 40px;
+  font: 24px/20px "Segoe UI";
+  cursor: pointer;
+  color: #000099;
+}
+
+.demo2 .hamburger-checkbox {
+  position: absolute;
+  opacity: 0;
+}
+
+.demo2 .hamburger-checkbox:checked ~ nav {
+  flex-basis: 5em;
+  transition: flex-basis 2s;
+}
+
+/*# sourceMappingURL=demos.css.map */
