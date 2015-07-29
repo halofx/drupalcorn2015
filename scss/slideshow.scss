@@ -225,51 +225,51 @@ iframe.csss-import.show {
   // transition:1s transform;
 }
 
-.show-thumbnails.headers-only .slide {
-  display: none;
-}
+// .show-thumbnails.headers-only .slide {
+//   display: none;
+// }
 
-.show-thumbnails.headers-only header.slide {
-  display: block;
-}
+// .show-thumbnails.headers-only header.slide {
+//   display: block;
+// }
 
-.show-thumbnails .slide .delayed,
-.presenter .slide:target + .slide .delayed {
-  opacity: 1;
-}
+// .show-thumbnails .slide .delayed,
+// .presenter .slide:target + .slide .delayed {
+//   opacity: 1;
+// }
 
-.show-thumbnails .slide:hover,
-.show-thumbnails .slide:target,
-.presenter .slide:target + .slide {
-  outline: 20px solid rgba(255, 255, 255, .6);
-  outline-radius:5px;
+// .show-thumbnails .slide:hover,
+// .show-thumbnails .slide:target,
+// .presenter .slide:target + .slide {
+//   outline: 20px solid rgba(255, 255, 255, .6);
+//   outline-radius:5px;
 
-  box-shadow: 5px 5px 10px black;
-}
+//   box-shadow: 5px 5px 10px black;
+// }
 
-.show-thumbnails .slide:target {
-  outline-color: rgba(255, 255, 255, .3);
-}
+// .show-thumbnails .slide:target {
+//   outline-color: rgba(255, 255, 255, .3);
+// }
 
-.show-thumbnails .slide:target:hover {
-  outline-color: rgba(255, 255, 255, .9);
-}
+// .show-thumbnails .slide:target:hover {
+//   outline-color: rgba(255, 255, 255, .9);
+// }
 
-/* Display titles */
-.show-thumbnails .slide[data-title]:after {
-  content: attr(data-title);
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: .1em 0;
-  background: rgba(0,0,0,.5);
-  color: white;
-  font-size: 250%;
-  text-align: center;
-  text-shadow: .05em .05em .1em black;
-  transform: none;
-}
+// /* Display titles */
+// .show-thumbnails .slide[data-title]:after {
+//   content: attr(data-title);
+//   position: absolute;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   padding: .1em 0;
+//   background: rgba(0,0,0,.5);
+//   color: white;
+//   font-size: 250%;
+//   text-align: center;
+//   text-shadow: .05em .05em .1em black;
+//   transform: none;
+// }
 
 /* Hide all elements in slide by hitting Ctrl + J or Shift + J */
 .hide-elements .slide:target > * {
@@ -327,8 +327,8 @@ iframe.csss-import.show {
   max-height: 40em;
   overflow-y: scroll;
   padding: .6em 1em;
-  font-size: 24px;
-  line-height: 1.3;
+  font-size: 30px;
+  line-height: 1.5;
   font-weight: normal;
   resize:vertical;
   background: rgba(255, 255, 255, .5);
@@ -337,16 +337,28 @@ iframe.csss-import.show {
   // box-shadow: .1em .1em .3em rgba(0,0,0,.5) inset;
 }
 
-.presenter .presentation {
-  height: 50vh;
-  width: 90vw;
-  position: absolute;
-  top: 0;
-  h1 {
-    font-size: 85%;
+
+.presenter {
+  .tower, .trees {
+    display: none;
   }
-  pre {
-    font-size: 75%;
+  .presentation {
+    width: 90vw;
+    position: absolute;
+    top: 0;
+    h1 { font-size: 85%; }
+    pre { font-size: 75%; }
+    .axis {
+      // width: 20vw;
+      top: -10vh;
+      left: 0vw;
+    }
+    .slide ul {
+      height: 40vh;
+    }
+    .slide.flex-row pre {
+      font-size: 75%;
+    }
   }
 }
 

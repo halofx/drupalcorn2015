@@ -22,7 +22,7 @@ $intro-vmin: 9.953vmin;
 $title-vmin: 6.912vmin;
 $big-vmin: 5.76vmin;
 $med-vmin: 4.8vmin;
-$small-vmin: 4vmin;
+$small-vmin: 3.6vmin;
 
 
 html {
@@ -37,9 +37,6 @@ html {
   color: white;
   // @include rem(16.18);
   font-size: $small-vmin;
-      @media screen and (aspect-ratio: 16/10) {
-    font-size: 2.125rem;
-  }
 }
 
 h1, h2, h3 {

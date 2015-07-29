@@ -21,13 +21,7 @@ html {
 .presentation {
   font-family: 'Lato', sans-serif;
   color: white;
-  font-size: 4vmin;
-}
-
-@media screen and (aspect-ratio: 16/10) {
-  .presentation {
-    font-size: 2.125rem;
-  }
+  font-size: 3.6vmin;
 }
 
 h1, h2, h3 {
@@ -75,7 +69,7 @@ dl dt {
 dl dd {
   padding-bottom: .75em;
   margin-left: 2em;
-  font-size: 4vmin;
+  font-size: 3.6vmin;
 }
 
 textarea.live {

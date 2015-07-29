@@ -46,6 +46,7 @@
   &lt;td>Footer&lt;/td>
  &lt;/tr>
 &lt;/table></code></pre>
+  <p class="presenter-notes">When I first started building sites, this was what we had for layout. But it was never designed for layout.</p>
 </section>
 
 <section class="slide flex-column"> <!-- 3 -->
@@ -64,6 +65,7 @@
   &lt;td>Footer&lt;/td>
  &lt;/tr>
 &lt;/table></code></pre>
+  <p class="presenter-notes">I am curious how many have built a site with this kind of markup? This was very common back in the late 90's! I am proud to say I couldn't write this from memory and had to look it up.</p>
 </section>
 
 <section class="slide flex-row"> <!-- 4 -->
@@ -91,7 +93,7 @@ float: left;
 clear: both;
 margin: 25%;
 margin: -25%;</code></pre>
-  <p class="presenter-notes">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p class="presenter-notes">CSS gave us lots of new tools that we could use for layout! No more tables, but none of them were real layout tools. So we abused them.</p>
 </section>
 
 <section class="slide flex-column"> <!-- 5 -->
@@ -103,6 +105,7 @@ margin: -25%;</code></pre>
   }
   </style>
   <h1>display: flex;</h1>
+  <p class="presenter-notes">Flexbox is another display property, much like block, inline-block, or table. Except it was actually meant to be used for layout!</p>
 </section>
 
 <section class="slide flex-column"> <!-- 6 -->
@@ -116,6 +119,7 @@ margin: -25%;</code></pre>
   </style>
   <h1>Support</h1>
   <img src="/img/caniuse.png">
+  <p class="presenter-notes">Flexbox has been in the works for about 6 yrs now, and is supported by over 90% of browsers world wide. IE9 is the hangup, but CANIUSE puts IE9 at just 1.5% usage, so there isn't much keeping us from using Flexbox right now.</p>
 </section>
 
 <section class="slide flex-column"><!-- 7 -->
@@ -128,6 +132,7 @@ margin: -25%;</code></pre>
     <dt>2012 current - <span class="string">display: flex;</span></dt>
     <dd>Chrome 31, Firefox 22, IE 11, Safari 6.1, Opera 12.1</dd>
   </dl>
+  <p class="presenter-notes">Been in development since the days of Firefox 2 and Chrome 4, it has undergone some changes.<br /> There are 3 versions of the syntax that you might encounter. The first one, Display: Box is pretty much defunct at this point.<br/>Display: Flexbox is often referred to as the TWEENER syntax. It is important to keep it in mind, since it is supported by IE10.<br/>The current version, Display: Flex has been pretty stable since 2012, and is supported by all current browsers.</p>
 </section>
 
 <section class="slide flex-column"> <!-- 8 -->
@@ -146,6 +151,7 @@ margin: -25%;</code></pre>
      -ms-flex-wrap: wrap;
          flex-wrap: wrap;
 }</code></pre>
+  <p class="presenter-notes">With the 3 different syntax, and the possibility that something could change in the future, Prefixing is really important to maximize compatibility. A tool like AutoPrefixer has no problem handling things, including the tweenwe syntax for IE10.</p>
 </section>
 
 <section class="slide flex-column"><!-- 9 -->
@@ -160,11 +166,12 @@ margin: -25%;</code></pre>
       background-color: #ffaaaa;
       color: black;
     }
-    p { flex: 1 0 100%; padding-bottom: .5em;}
+    p { flex: 1 0 100%; padding: 1em;}
     .child {
       flex: 0 1 20%;
       border: 2px solid yellow;
       padding: .5em;
+      margin-bottom: 1em;
       background-color: #ffffaa;
       color: black;
     }
@@ -172,24 +179,26 @@ margin: -25%;</code></pre>
   <h1>Parent - Child</h1>
   <div>
     <div class="flex">
-      <p>Parent</p>
-      <div class="child">Child</div>
-      <div class="child">Child</div>
-      <div class="child">Child</div>
-      <div class="child">Child</div>
+      <p>Flex Container</p>
+      <div class="child">Flex Item</div>
+      <div class="child">Flex Item</div>
+      <div class="child">Flex Item</div>
+      <div class="child">Flex Item</div>
     </div>
   </div>
+  <p class="presenter-notes">Flexbox uses a Parent - Child model. The parent "Flex container" contains the child "Flex Items". So the atributes of the "Flex container" effect all the "Flex Items", but each "Flex Item" can also have its own individual attributes.</p>
 </section>
 
 <section class="slide flex-column"> <!-- 10 -->
   <h1>Family Values</h1>
-  <h2>Parent</h2>
+  <h2>"Parent" Flex Container</h2>
   <pre><code lang="css">display: flex;
 flex-direction: row;
 flex-wrap: nowrap;
 justify-content: flex-start;
 align-items: stretch;
 align-content: stretch;</code></pre>
+  <p class="presenter-notes">The parent containers properties only effect its direct children. These are the defaults and are kind of broad strokes. I am going to run through them quickly, so we can get to the samples which are more interesting. </p>
 </section>
 
 <section class="slide flex-column"> <!-- 11 -->
@@ -208,6 +217,7 @@ align-content: stretch;</code></pre>
   <p>Parent is a block</p>
   <h2>display: inline-flex;</h2>
   <p>Parent is a inline-block</p>
+  <p class="presenter-notes">Display: Flex is the property that puts things into motion. But there are actually 2 options for the display property. Both effect the flex children the same. Flex is the most commonly used, and makes the parent behaive like a block. Inline-flex behaives like an inline block. This is the only attribute that has any effect on the parennt container.</p>
 </section>
 
 <section class="slide flex-row"> <!-- 12 -->
@@ -246,6 +256,7 @@ align-content: stretch;</code></pre>
 }</code></pre>
     </div>
   </div>
+  <p class="presenter-notes">Here is some simple markup we will use to see the effects of each flexbox property.</p>
 </section>
 
 <section class="slide flex-row"> <!-- 13 -->
@@ -264,17 +275,16 @@ align-content: stretch;</code></pre>
   </ul></div>
   <pre><code lang="css">ul {
  display: flex;
+ flex-direction: row;
  /*
-  flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: stretch;
   align-content: stretch;
  */
 }</code></pre>
-  <p class="note">Controls direction of children on main axis.</p>
-  <p class="presenter-notes">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p class="note">Controls direction of children on main axis. Horizontal flow.</p>
+  <p class="presenter-notes">Simply adding Display: flex puts things into action and implements those defaults.<br />The first one we will look at is Flex-Direction, which defaults to Row.<br/> Flexbox uses the concept of a Main Axis and a Cross Axis.<br>By default the Main Axis runs horizontally, Left to Right. And the Cross Axis Runs Top to Bottom. Row lines the items up along that Horizontal Main Axis.</p>
 </section>
 
 <section class="slide flex-row"> <!-- 14 -->
@@ -305,6 +315,8 @@ align-content: stretch;</code></pre>
   align-content: stretch;
  */
 }</code></pre>
+  <p class="note">Swaps Main Axis and Cross Axis. Vertical flow.</p>
+  <p class="presenter-notes">Changing the Flex-Direction to Column Changes the Main Axis to Vertical Top to Bottom, and the Cross Axis to Left ot Right. <br> So now the Items are stacked vertically, in columns. </p>
 </section>
 
 <section class="slide flex-row"> <!-- 15 -->
@@ -332,6 +344,8 @@ align-content: stretch;</code></pre>
   align-content: stretch;
  */
 }</code></pre>
+  <p class="note">Reverses the direction of the main axis.</p>
+  <p class="presenter-notes">Row reverse Flips the Main Axis from its default to now run Right to Left. <br> So now the items are in reverse order.</p>
 </section>
 
 <section class="slide flex-row"> <!-- 16 -->
@@ -359,6 +373,8 @@ align-content: stretch;</code></pre>
   align-content: stretch;
  */
 }</code></pre>
+  <p class="note">Reverses the direction of the main axis.</p>
+  <p class="presenter-notes">So you can probably guess that Column Reverse changes the Main Axis to Run Bottom to Top. <br><br>So now we can see how the axis effect items and how to control them.</p>
 </section>
 
 <section class="slide flex-row"> <!-- 17 -->
@@ -375,15 +391,16 @@ align-content: stretch;</code></pre>
   </ul></div>
   <pre><code lang="css">ul {
  display: flex;
+ flex-wrap: nowrap;
  /*
   flex-direction: row;
-  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: stretch;
   align-content: stretch;
  */
 }</code></pre>
-  <p class="note">Controls if children can wrap to a new line inside parent.</p>
+  <p class="note">Controls items abilty to wrap if not enough space.</p>
+  <p class="presenter-notes">By default items do not wrap, and will display in a single row or column. <br><br>I have made the content bigger to see the effect</p>
 </section>
 
 <section class="slide flex-row"> <!-- 18 -->
@@ -392,6 +409,7 @@ align-content: stretch;</code></pre>
       display: flex;
       flex-wrap: wrap;
     }
+    li { border-bottom: 15px solid yellow; }
   </style>
   <h1>flex-wrap: wrap</h1>
   <div class="axis"><img src="/img/axis-row.svg"></div>
@@ -411,6 +429,8 @@ align-content: stretch;</code></pre>
   align-content: stretch;
  */
 }</code></pre>
+  <p class="note">Allows items to wrap to a new line, if needed.</p>
+  <p class="presenter-notes">Another Flexbox concept is the "Line".<br>When items wrap, they have multiple lines. Lines always run parallel to the Main Axis, and stack along the Cross Axis.<br><br>The Lines are marked in Yellow. </p>
 </section>
 
 <section class="slide flex-row"> <!-- 19 -->
@@ -420,7 +440,7 @@ align-content: stretch;</code></pre>
       flex-direction: row-reverse;
       flex-wrap: wrap;
     }
-    p { padding-top: .5em; }
+    li { border-bottom: 15px solid yellow; }
   </style>
   <h1>flex-wrap: wrap</h1>
   <div class="axis"><img src="/img/axis-row-rev.svg"></div>
@@ -440,6 +460,7 @@ align-content: stretch;</code></pre>
   align-content: stretch;
  */
 }</code></pre>
+  <p class="presenter-notes">Combining Row Reverse with a Wrap, we can see the effect of the Main Axis changing directions has.</p>
 </section>
 
 <section class="slide flex-row"> <!-- 20 -->
@@ -449,9 +470,9 @@ align-content: stretch;</code></pre>
       flex-direction: row-reverse;
       flex-wrap: wrap-reverse;
     }
-    p { padding-top: .5em; }
+    li { border-top: 15px solid yellow; }
   </style>
-  <h1>flex-wrap: wrap</h1>
+  <h1>flex-wrap: wrap-reverse</h1>
   <div class="axis"><img src="/img/axis-row-rev-wrap-rev.svg"></div>
   <div><ul class="none">
     <li>one hundred</li>
@@ -469,6 +490,8 @@ align-content: stretch;</code></pre>
   align-content: stretch;
  */
 }</code></pre>
+  <p class="note">Reverse the stacking order of the lines.</p>
+  <p class="presenter-notes">Wrap-Reverse reverses the order that the lines stack in.<br>So now our items are starting in the bottom right towards the top left.</p>
 </section>
 
 <section class="slide flex-row"> <!-- 21 -->
@@ -500,6 +523,7 @@ align-content: stretch;</code></pre>
   align-content: stretch;
  */
 }</code></pre>
+  <p class="presenter-notes">Columns wrap following the same rules, but now the lines are vertical.</p>
 </section>
 
 <section class="slide flex-row"> <!-- 22 -->
@@ -509,7 +533,7 @@ align-content: stretch;</code></pre>
       flex-direction: column;
       flex-wrap: wrap;
     }
-    li { padding: 2em; }
+    li { padding: 2em; border-right: 15px solid yellow; }
   </style>
   <h1>flex-wrap: wrap</h1>
   <div class="axis"><img src="/img/axis-col.svg"></div>
@@ -532,6 +556,7 @@ align-content: stretch;</code></pre>
   align-content: stretch;
  */
 }</code></pre>
+  <p class="presenter-notes">The lines are now vertically on the right, following the Cross axis.</p>
 </section>
 
 <section class="slide flex-row"> <!-- 23 -->
@@ -541,7 +566,7 @@ align-content: stretch;</code></pre>
       flex-direction: column-reverse;
       flex-wrap: wrap;
     }
-    li { padding: 2em; }
+    li { padding: 2em; border-right: 15px solid yellow; }
   </style>
   <h1>flex-wrap: wrap</h1>
   <div class="axis"><img src="/img/axis-col-rev.svg"></div>
@@ -564,6 +589,7 @@ align-content: stretch;</code></pre>
   align-content: stretch;
  */
 }</code></pre>
+  <p class="presenter-notes">It should be fairly predictable as to what we will see when reversing the columns Axis.</p>
 </section>
 
 <section class="slide flex-row"> <!-- 24 -->
@@ -573,7 +599,7 @@ align-content: stretch;</code></pre>
       flex-direction: column-reverse;
       flex-wrap: wrap-reverse;
     }
-    li { padding: 2em; }
+    li { padding: 2em; border-left: 15px solid yellow; }
   </style>
   <h1>flex-wrap: wrap</h1>
   <div class="axis"><img src="/img/axis-col-rev-wrap-rev.svg"></div>
@@ -596,6 +622,7 @@ align-content: stretch;</code></pre>
   align-content: stretch;
  */
 }</code></pre>
+  <p class="presenter-notes">And here we swap both of the columns Axis directions </p>
 </section>
 
 <section class="slide flex-column"> <!-- 25 -->
@@ -608,6 +635,7 @@ align-content: stretch;</code></pre>
     <h2><span class="property">flex-flow</span>: <span class="attr-name">row-reverse</span> <span class="attr-value">wrap</span>;</h2>
     <h2><span class="property">flex-flow</span>: <span class="attr-name">column</span> <span class="attr-value">wrap-reverse</span>;</h2>
     <p>Shorthand for <span class="property">flex-direction</span> and <span class="property">flex-wrap</span></p>
+    <p class="presenter-notes">Flex Flow is a shorthand way to combine all the various combinations for "Flex-Direction" and "Flex-Wrap".</p>
 </section>
 
 <section class="slide flex-row"> <!-- 26 -->
@@ -635,7 +663,8 @@ align-content: stretch;</code></pre>
   align-content: stretch;
  */
 }</code></pre>
-  <p class="note">Controls how extra space is used along main axis.</p>
+  <p class="note">Controls how extra space is distributed along main axis.</p>
+  <p class="presenter-notes">Justify-Content controls how any extra space gets distributed along the Main Axis.<br><br>The default of Flex-Start moves the content to the Start of the Main Axis.</p>
 </section>
 
 <section class="slide flex-row"> <!-- 27 -->
@@ -663,9 +692,40 @@ align-content: stretch;</code></pre>
   align-content: stretch;
  */
 }</code></pre>
+  <p class="presenter-notes">Flex-End Moves the Items to the End of the Main Axis, note that they are still in order, unlike when Row-Reverse was used with Flex-Direction.</p>
 </section>
 
 <section class="slide flex-row"> <!-- 28 -->
+  <style scoped>
+    ul {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row-reverse;
+    }
+  </style>
+  <h1>justify-content: flex-start</h1>
+  <div class="axis"><img src="/img/axis-row-rev.svg"></div>
+  <div><ul class="none">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul></div>
+  <pre><code lang="css">ul {
+ display: flex;
+ flex-direction: row-reverse;
+ justify-content: flex-start;
+ /*
+  flex-wrap: nowrap;
+  align-items: stretch;
+  align-content: stretch;
+ */
+}</code></pre>
+  <p class="note">Start and End, not Top/Bottom or Left/Right.</p>
+  <p class="presenter-notes">It is important to note that Justify Content is referring to the Main Axis. Results might not be as expected if the Main Axis is reversed.<br><br>Even though Justify-Content is set to Flex-Start, the items are still on the rigth, but in reverse order, because Fles-Direction is now set to Row-Reverse.</p>
+</section>
+
+<section class="slide flex-row"> <!-- 29 -->
   <style scoped>
     ul {
       display: flex;
@@ -690,9 +750,11 @@ align-content: stretch;</code></pre>
   align-content: stretch;
  */
 }</code></pre>
+  <p class="note">Extra space is equally distributed to both sides of the items.</p>
+  <p class="presenter-notes">Center then splits the extra space up equally on both sides of the items.</p>
 </section>
 
-<section class="slide flex-row"> <!-- 29 -->
+<section class="slide flex-row"> <!-- 30 -->
   <style scoped>
     ul {
       display: flex;
@@ -717,9 +779,11 @@ align-content: stretch;</code></pre>
   align-content: stretch;
  */
 }</code></pre>
+  <p class="note">Extra space is equally distributed between the items.</p>
+  <p class="presenter-notes">Space Between equally divides the space in between the items.</p>
 </section>
 
-<section class="slide flex-row"> <!-- 30 -->
+<section class="slide flex-row"> <!-- 31 -->
   <style scoped>
     ul {
       display: flex;
@@ -744,9 +808,11 @@ align-content: stretch;</code></pre>
   align-content: stretch;
  */
 }</code></pre>
+  <p class="note">Evenly distributes the extra space to each side of the individual items.</p>
+  <p class="presenter-notes">Space Around equally divides the space to each side of each item. So the the space before the first item, and after the last item are half the space inbetween items.</p>
 </section>
 
-<section class="slide flex-row"> <!-- 31 -->
+<section class="slide flex-row"> <!-- 32 -->
   <style scoped>
     ul {
       display: flex;
@@ -775,7 +841,7 @@ align-content: stretch;</code></pre>
   <p class="note">Controls how children are displayed along cross axis.</p>
 </section>
 
-<section class="slide flex-row"> <!-- 32 -->
+<section class="slide flex-row"> <!-- 33 -->
   <style scoped>
     ul {
       display: flex;
@@ -804,7 +870,7 @@ align-content: stretch;</code></pre>
 }</code></pre>
 </section>
 
-<section class="slide flex-row"> <!-- 33 -->
+<section class="slide flex-row"> <!-- 34 -->
   <style scoped>
     ul {
       display: flex;
@@ -833,7 +899,7 @@ align-content: stretch;</code></pre>
 }</code></pre>
 </section>
 
-<section class="slide flex-row"> <!-- 34 -->
+<section class="slide flex-row"> <!-- 35 -->
   <style scoped>
     ul {
       display: flex;
@@ -862,7 +928,7 @@ align-content: stretch;</code></pre>
 }</code></pre>
 </section>
 
-<section class="slide flex-row"> <!-- 35 -->
+<section class="slide flex-row"> <!-- 36 -->
   <style scoped>
     ul {
       display: flex;
@@ -891,7 +957,7 @@ align-content: stretch;</code></pre>
 }</code></pre>
 </section>
 
-<section class="slide flex-row"> <!-- 36 -->
+<section class="slide flex-row"> <!-- 37 -->
   <style scoped>
     ul {
       display: flex;
@@ -928,7 +994,7 @@ align-content: stretch;</code></pre>
   <p class="note">Controls how extra space along the cross axis is used with multiple lines.</p>
 </section>
 
-<section class="slide flex-row"> <!-- 37 -->
+<section class="slide flex-row"> <!-- 38 -->
   <style scoped>
     ul {
       display: flex;
@@ -965,7 +1031,7 @@ align-content: stretch;</code></pre>
 }</code></pre>
 </section>
 
-<section class="slide flex-row"> <!-- 38 -->
+<section class="slide flex-row"> <!-- 39 -->
   <style scoped>
     ul {
       display: flex;
@@ -1003,7 +1069,7 @@ align-content: stretch;</code></pre>
 }</code></pre>
 </section>
 
-<section class="slide flex-row"> <!-- 39 -->
+<section class="slide flex-row"> <!-- 40 -->
   <style scoped>
     ul {
       display: flex;
@@ -1040,7 +1106,7 @@ align-content: stretch;</code></pre>
 }</code></pre>
 </section>
 
-<section class="slide flex-row"> <!-- 40 -->
+<section class="slide flex-row"> <!-- 41 -->
   <style scoped>
     ul {
       display: flex;
@@ -1078,7 +1144,7 @@ align-content: stretch;</code></pre>
 }</code></pre>
 </section>
 
-<section class="slide flex-row"> <!-- 41 -->
+<section class="slide flex-row"> <!-- 42 -->
   <style scoped>
     ul {
       display: flex;
@@ -1115,7 +1181,7 @@ align-content: stretch;</code></pre>
 }</code></pre>
 </section>
 
-<section class="slide flex-row"> <!-- 42 -->
+<section class="slide flex-row"> <!-- 43 -->
   <style scoped>
     ul {
       display: flex;
