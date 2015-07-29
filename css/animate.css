@@ -1,28 +1,3 @@
-.presentation ~ .footer .killroy {
-  position: absolute;
-  bottom: -40px;
-  z-index: -10;
-  animation-fill-mode: forwards;
-}
-
-.presentation ~ .footer #goggles {
-  left: 5vw;
-  animation: goggles 36s infinite;
-  position: absolute;
-  bottom: -30px;
-  z-index: -10;
-  animation-fill-mode: forwards;
-}
-
-.presentation ~ .footer #dries {
-  left: 5vw;
-  animation: dries 36s infinite;
-  position: absolute;
-  bottom: -55px;
-  z-index: -10;
-  animation-fill-mode: forwards;
-}
-
 header#intro {
   z-index: -100;
 }
@@ -264,5 +239,3 @@ header#intro .goggles {
     transform: translate(50vw, -20px);
   }
 }
-
-/*# sourceMappingURL=animate.css.map */

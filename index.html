@@ -1632,32 +1632,36 @@ li:nth-child(2) {
     font-size: 9.708vmin;
     text-align: center;
   }
+  a {text-decoration: none;}
   </style>
-  <h1>Example Uses</h1>
+  <h1><a href="demos.html">Example Uses</a></h1>
   <p class="presenter-notes">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </section>
 
 <section class="slide demo flex-column demo1"> <!-- 62 -->
   <h1>Navigation</h1>
-  <nav>
+    <nav>
+      <div class="buttons">
+      <div class="small">Small</div>
+      <div class="med">Medium</div>
+      <div class="wide">Wide</div>
+    </div>
     <ul>
-      <li><a href="#">Item 01</a></li>
-      <li><a href="#">Item 02</a></li>
-      <li><a href="#">Item 03</a></li>
-      <li><a href="#">Item 04</a></li>
-      <li><a href="#">Item 05</a></li>
-      <li><a href="#">Item 06</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Service</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
       <li class="icons">
-        <a href="http://twitter.com/wesbos"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
       </li>
       <li class="icons">
-        <a href="http://facebook.com/wesbos.developer"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a>
       </li>
       <li class="icons">
-        <a href="http://github.com/wesbos"><i class="fa fa-github"></i></a>
+        <a href="#"><i class="fa fa-github"></i></a>
       </li>
       <li class="icons">
-        <a href="http://instagram.com/wesbos"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
       </li>
     </ul>
   </nav>
@@ -1670,7 +1674,6 @@ li:nth-child(2) {
       <label for="hamburger" class="hamburger-label" role="button" aria-labelledby="menu">Menu</label>
       <nav>
         <ul>
-          <li>Home</li>
           <li>Products</li>
           <li>Service</li>
           <li>About</li>
