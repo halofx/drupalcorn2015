@@ -10,6 +10,7 @@
   <link href="/css/type.css" rel="stylesheet" />
   <link href="/css/animate.css" rel="stylesheet" />
   <link href="/css/demos.css"rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
   <script src="prefixfree.min.js"></script>
 </head>
 <body>
@@ -276,13 +277,13 @@ align-content: stretch;</code></pre>
   <pre><code lang="css">ul {
  display: flex;
  flex-direction: row;
- /*
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: stretch;
- */
-}</code></pre>
+}
+/*
+ flex-wrap: nowrap;
+ justify-content: flex-start;
+ align-items: stretch;
+ align-content: stretch;
+*/</code></pre>
   <p class="note">Controls direction of children on main axis. Horizontal flow.</p>
   <p class="presenter-notes">Simply adding Display: flex puts things into action and implements those defaults.<br />The first one we will look at is Flex-Direction, which defaults to Row.<br/> Flexbox uses the concept of a Main Axis and a Cross Axis.<br>By default the Main Axis runs horizontally, Left to Right. And the Cross Axis Runs Top to Bottom. Row lines the items up along that Horizontal Main Axis.</p>
 </section>
@@ -308,13 +309,13 @@ align-content: stretch;</code></pre>
   <pre><code lang="css">ul {
  display: flex;
  flex-direction: column;
- /*
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: stretch;
- */
-}</code></pre>
+}
+/*
+ flex-wrap: nowrap;
+ justify-content: flex-start;
+ align-items: stretch;
+ align-content: stretch;
+*/</code></pre>
   <p class="note">Swaps Main Axis and Cross Axis. Vertical flow.</p>
   <p class="presenter-notes">Changing the Flex-Direction to Column Changes the Main Axis to Vertical Top to Bottom, and the Cross Axis to Left ot Right. <br> So now the Items are stacked vertically, in columns. </p>
 </section>
@@ -337,13 +338,13 @@ align-content: stretch;</code></pre>
   <pre><code lang="css">ul {
  display: flex;
  flex-direction: row-reverse;
- /*
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: stretch;
- */
-}</code></pre>
+}
+/*
+ flex-wrap: nowrap;
+ justify-content: flex-start;
+ align-items: stretch;
+ align-content: stretch;
+*/</code></pre>
   <p class="note">Reverses the direction of the main axis.</p>
   <p class="presenter-notes">Row reverse Flips the Main Axis from its default to now run Right to Left. <br> So now the items are in reverse order.</p>
 </section>
@@ -366,13 +367,13 @@ align-content: stretch;</code></pre>
   <pre><code lang="css">ul {
  display: flex;
  flex-direction: column-reverse;
- /*
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: stretch;
- */
-}</code></pre>
+}
+/*
+ flex-wrap: nowrap;
+ justify-content: flex-start;
+ align-items: stretch;
+ align-content: stretch;
+*/</code></pre>
   <p class="note">Reverses the direction of the main axis.</p>
   <p class="presenter-notes">So you can probably guess that Column Reverse changes the Main Axis to Run Bottom to Top. <br><br>So now we can see how the axis effect items and how to control them.</p>
 </section>
@@ -392,13 +393,13 @@ align-content: stretch;</code></pre>
   <pre><code lang="css">ul {
  display: flex;
  flex-wrap: nowrap;
- /*
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: stretch;
- */
-}</code></pre>
+}
+/*
+ flex-direction: row;
+ justify-content: flex-start;
+ align-items: stretch;
+ align-content: stretch;
+*/</code></pre>
   <p class="note">Controls items abilty to wrap if not enough space.</p>
   <p class="presenter-notes">By default items do not wrap, and will display in a single row or column. <br><br>I have made the content bigger to see the effect</p>
 </section>
@@ -422,13 +423,13 @@ align-content: stretch;</code></pre>
   <pre><code lang="css">ul {
  display: flex;
  flex-wrap: wrap;
- /*
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: stretch;
- */
-}</code></pre>
+}
+/*
+ flex-direction: row;
+ justify-content: flex-start;
+ align-items: stretch;
+ align-content: stretch;
+*/</code></pre>
   <p class="note">Allows items to wrap to a new line, if needed.</p>
   <p class="presenter-notes">Another Flexbox concept is the "Line".<br>When items wrap, they have multiple lines. Lines always run parallel to the Main Axis, and stack along the Cross Axis.<br><br>The Lines are marked in Yellow. </p>
 </section>
@@ -454,12 +455,12 @@ align-content: stretch;</code></pre>
  display: flex;
  flex-direction: row-reverse;
  flex-wrap: wrap;
- /*
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: stretch;
- */
-}</code></pre>
+}
+/*
+ justify-content: flex-start;
+ align-items: stretch;
+ align-content: stretch;
+*/</code></pre>
   <p class="presenter-notes">Combining Row Reverse with a Wrap, we can see the effect of the Main Axis changing directions has.</p>
 </section>
 
@@ -484,12 +485,12 @@ align-content: stretch;</code></pre>
  display: flex;
  flex-direction: row-reverse;
  flex-wrap: wrap-reverse;
- /*
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: stretch;
- */
-}</code></pre>
+}
+/*
+ justify-content: flex-start;
+ align-items: stretch;
+ align-content: stretch;
+*/</code></pre>
   <p class="note">Reverse the stacking order of the lines.</p>
   <p class="presenter-notes">Wrap-Reverse reverses the order that the lines stack in.<br>So now our items are starting in the bottom right towards the top left.</p>
 </section>
@@ -516,13 +517,13 @@ align-content: stretch;</code></pre>
   <pre><code lang="css">ul {
  display: flex;
  flex-direction: column;
- /*
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: stretch;
- */
-}</code></pre>
+}
+/*
+ flex-wrap: nowrap;
+ justify-content: flex-start;
+ align-items: stretch;
+ align-content: stretch;
+*/</code></pre>
   <p class="presenter-notes">Columns wrap following the same rules, but now the lines are vertical.</p>
 </section>
 
@@ -550,12 +551,12 @@ align-content: stretch;</code></pre>
  display: flex;
  flex-direction: column;
  flex-wrap: wrap;
- /*
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: stretch;
- */
-}</code></pre>
+}
+/*
+ justify-content: flex-start;
+ align-items: stretch;
+ align-content: stretch;
+*/</code></pre>
   <p class="presenter-notes">The lines are now vertically on the right, following the Cross axis.</p>
 </section>
 
@@ -583,12 +584,12 @@ align-content: stretch;</code></pre>
  display: flex;
  flex-direction: column-reverse;
  flex-wrap: wrap;
- /*
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: stretch;
- */
-}</code></pre>
+}
+/*
+ justify-content: flex-start;
+ align-items: stretch;
+ align-content: stretch;
+*/</code></pre>
   <p class="presenter-notes">It should be fairly predictable as to what we will see when reversing the columns Axis.</p>
 </section>
 
@@ -616,12 +617,12 @@ align-content: stretch;</code></pre>
  display: flex;
  flex-direction: column-reverse;
  flex-wrap: wrap-reverse;
- /*
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: stretch;
- */
-}</code></pre>
+}
+/*
+ justify-content: flex-start;
+ align-items: stretch;
+ align-content: stretch;
+*/</code></pre>
   <p class="presenter-notes">And here we swap both of the columns Axis directions </p>
 </section>
 
@@ -656,13 +657,13 @@ align-content: stretch;</code></pre>
   <pre><code lang="css">ul {
  display: flex;
  justify-content: flex-start;
- /*
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: stretch;
-  align-content: stretch;
- */
-}</code></pre>
+}
+/*
+ flex-direction: row;
+ flex-wrap: nowrap;
+ align-items: stretch;
+ align-content: stretch;
+*/</code></pre>
   <p class="note">Controls how extra space is distributed along main axis.</p>
   <p class="presenter-notes">Justify-Content controls how any extra space gets distributed along the Main Axis.<br><br>The default of Flex-Start moves the content to the Start of the Main Axis.</p>
 </section>
@@ -685,13 +686,13 @@ align-content: stretch;</code></pre>
   <pre><code lang="css">ul {
  display: flex;
  justify-content: flex-end;
- /*
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: stretch;
-  align-content: stretch;
- */
-}</code></pre>
+}
+/*
+ flex-direction: row;
+ flex-wrap: nowrap;
+ align-items: stretch;
+ align-content: stretch;
+*/</code></pre>
   <p class="presenter-notes">Flex-End Moves the Items to the End of the Main Axis, note that they are still in order, unlike when Row-Reverse was used with Flex-Direction.</p>
 </section>
 
@@ -715,12 +716,12 @@ align-content: stretch;</code></pre>
  display: flex;
  flex-direction: row-reverse;
  justify-content: flex-start;
- /*
-  flex-wrap: nowrap;
-  align-items: stretch;
-  align-content: stretch;
- */
-}</code></pre>
+}
+/*
+ flex-wrap: nowrap;
+ align-items: stretch;
+ align-content: stretch;
+*/</code></pre>
   <p class="note">Start and End, not Top/Bottom or Left/Right.</p>
   <p class="presenter-notes">It is important to note that Justify Content is referring to the Main Axis. Results might not be as expected if the Main Axis is reversed.<br><br>Even though Justify-Content is set to Flex-Start, the items are still on the rigth, but in reverse order, because Fles-Direction is now set to Row-Reverse.</p>
 </section>
@@ -743,13 +744,13 @@ align-content: stretch;</code></pre>
   <pre><code lang="css">ul {
  display: flex;
  justify-content: center;
- /*
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: stretch;
-  align-content: stretch;
- */
-}</code></pre>
+}
+/*
+ flex-direction: row;
+ flex-wrap: nowrap;
+ align-items: stretch;
+ align-content: stretch;
+*/</code></pre>
   <p class="note">Extra space is equally distributed to both sides of the items.</p>
   <p class="presenter-notes">Center then splits the extra space up equally on both sides of the items.</p>
 </section>
@@ -772,13 +773,13 @@ align-content: stretch;</code></pre>
   <pre><code lang="css">ul {
  display: flex;
  justify-content: space-between;
- /*
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: stretch;
-  align-content: stretch;
- */
-}</code></pre>
+}
+/*
+ flex-direction: row;
+ flex-wrap: nowrap;
+ align-items: stretch;
+ align-content: stretch;
+*/</code></pre>
   <p class="note">Extra space is equally distributed between the items.</p>
   <p class="presenter-notes">Space Between equally divides the space in between the items.</p>
 </section>
@@ -801,13 +802,13 @@ align-content: stretch;</code></pre>
   <pre><code lang="css">ul {
  display: flex;
  justify-content: space-around;
- /*
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: stretch;
-  align-content: stretch;
- */
-}</code></pre>
+}
+/*
+ flex-direction: row;
+ flex-wrap: nowrap;
+ align-items: stretch;
+ align-content: stretch;
+*/</code></pre>
   <p class="note">Evenly distributes the extra space to each side of the individual items.</p>
   <p class="presenter-notes">Space Around equally divides the space to each side of each item. So the the space before the first item, and after the last item are half the space inbetween items.</p>
 </section>
@@ -832,13 +833,14 @@ align-content: stretch;</code></pre>
  display: flex;
  justify-content: space-around;
  align-items: stretch;
- /*
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: stretch;
- */
-}</code></pre>
+}
+/*
+ flex-direction: row;
+ flex-wrap: nowrap;
+ align-content: stretch;
+*/</code></pre>
   <p class="note">Controls how children are displayed along cross axis.</p>
+  <p class="presenter-notes">Space Around equally divides the space to each side of each item. So the the space before the first item, and after the last item are half the space inbetween items.</p>
 </section>
 
 <section class="slide flex-row"> <!-- 33 -->
@@ -862,12 +864,12 @@ align-content: stretch;</code></pre>
  display: flex;
  justify-content: space-around;
  align-items: flex-start;
- /*
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: stretch;
- */
-}</code></pre>
+}
+/*
+ flex-direction: row;
+ flex-wrap: nowrap;
+ align-content: stretch;
+*/</code></pre>
 </section>
 
 <section class="slide flex-row"> <!-- 34 -->
@@ -891,12 +893,12 @@ align-content: stretch;</code></pre>
  display: flex;
  justify-content: space-around;
  align-items: flex-end;
- /*
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: stretch;
- */
-}</code></pre>
+}
+/*
+ flex-direction: row;
+ flex-wrap: nowrap;
+ align-content: stretch;
+*/</code></pre>
 </section>
 
 <section class="slide flex-row"> <!-- 35 -->
@@ -920,12 +922,12 @@ align-content: stretch;</code></pre>
  display: flex;
  justify-content: space-around;
  align-items: center;
- /*
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: stretch;
- */
-}</code></pre>
+}
+/*
+ flex-direction: row;
+ flex-wrap: nowrap;
+ align-content: stretch;
+*/</code></pre>
 </section>
 
 <section class="slide flex-row"> <!-- 36 -->
@@ -949,12 +951,12 @@ align-content: stretch;</code></pre>
  display: flex;
  justify-content: space-around;
  align-items: baseline;
- /*
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: stretch;
- */
-}</code></pre>
+}
+/*
+ flex-direction: row;
+ flex-wrap: nowrap;
+ align-content: stretch;
+*/</code></pre>
 </section>
 
 <section class="slide flex-row"> <!-- 37 -->
@@ -985,12 +987,12 @@ align-content: stretch;</code></pre>
  display: flex;
  flex-wrap: wrap;
  align-content: stretch;
- /*
-  flex-direction: row;
-  justify-content: stretch;
-  align-items: stretch;
- */
-}</code></pre>
+}
+/*
+ flex-direction: row;
+ justify-content: stretch;
+ align-items: stretch;
+*/</code></pre>
   <p class="note">Controls how extra space along the cross axis is used with multiple lines.</p>
 </section>
 
@@ -1023,12 +1025,12 @@ align-content: stretch;</code></pre>
  display: flex;
  flex-wrap: wrap;
  align-content: flex-start;
- /*
-  flex-direction: row;
-  justify-content: stretch;
-  align-items: stretch;
- */
-}</code></pre>
+}
+/*
+ flex-direction: row;
+ justify-content: stretch;
+ align-items: stretch;
+*/</code></pre>
 </section>
 
 <section class="slide flex-row"> <!-- 39 -->
@@ -1062,11 +1064,11 @@ align-content: stretch;</code></pre>
  flex-wrap: wrap;
  align-content: flex-start;
  align-items: flex-end;
- /*
-  flex-direction: row;
-  justify-content: stretch;
- */
-}</code></pre>
+}
+/*
+ flex-direction: row;
+ justify-content: stretch;
+*/</code></pre>
 </section>
 
 <section class="slide flex-row"> <!-- 40 -->
@@ -1098,12 +1100,12 @@ align-content: stretch;</code></pre>
  display: flex;
  flex-wrap: wrap;
  align-content: flex-end;
- /*
-  flex-direction: row;
-  justify-content: stretch;
-  align-items: stretch;
- */
-}</code></pre>
+}
+/*
+ flex-direction: row;
+ justify-content: stretch;
+ align-items: stretch;
+*/</code></pre>
 </section>
 
 <section class="slide flex-row"> <!-- 41 -->
@@ -1137,11 +1139,11 @@ align-content: stretch;</code></pre>
  flex-wrap: wrap;
  align-content: center;
  align-items: center;
- /*
-  flex-direction: row;
-  justify-content: stretch;
- */
-}</code></pre>
+}
+/*
+ flex-direction: row;
+ justify-content: stretch;
+*/</code></pre>
 </section>
 
 <section class="slide flex-row"> <!-- 42 -->
@@ -1173,12 +1175,12 @@ align-content: stretch;</code></pre>
  display: flex;
  flex-wrap: wrap;
  align-content: space-between;
- /*
-  flex-direction: row;
-  justify-content: stretch;
-  align-items: stretch;
- */
-}</code></pre>
+}
+/*
+ flex-direction: row;
+ justify-content: stretch;
+ align-items: stretch;
+*/</code></pre>
 </section>
 
 <section class="slide flex-row"> <!-- 43 -->
@@ -1210,15 +1212,15 @@ align-content: stretch;</code></pre>
  display: flex;
  flex-wrap: wrap;
  align-content: space-around;
- /*
-  flex-direction: row;
-  justify-content: stretch;
-  align-items: stretch;
- */
-}</code></pre>
+}
+/*
+ flex-direction: row;
+ justify-content: stretch;
+ align-items: stretch;
+*/</code></pre>
 </section>
 
-<section class="slide flex-column"> <!-- 43 -->
+<section class="slide flex-column"> <!-- 44 -->
   <h1>Family Values</h1>
   <h2>Children</h2>
   <pre><code lang="css">order: 0;
@@ -1228,7 +1230,7 @@ flex-basis: auto;
 align-self: auto;</code></pre>
 </section>
 
-<section class="slide flex-row"> <!-- 44 -->
+<section class="slide flex-row"> <!-- 45 -->
   <style scoped>
     ul {display: flex;}
     li:nth-child(1) { order: 1; }
@@ -1246,19 +1248,20 @@ align-self: auto;</code></pre>
     <li>5<br><br>-2</li>
   </ul></div>
   <pre><code lang="css">li:nth-child(1) { order: 1; }
+li:nth-child(1) { order: 1; }
 li:nth-child(3) { order: -1; }
 li:nth-child(4) { order: -2; }
- /*
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  align-self: auto;
- */
-}</code></pre>
+li:nth-child(5) { order: -2; }
+/*
+ flex-grow: 0;
+ flex-shrink: 1;
+ flex-basis: auto;
+ align-self: auto;
+*/</code></pre>
   <p class="note">Overrides source order of child inside the parent. Alters the DOM.</p>
 </section>
 
-<section class="slide flex-row"> <!-- 45 -->
+<section class="slide flex-row"> <!-- 46 -->
   <style scoped>
     ul {display: flex;}
     li { flex-basis: auto; }
@@ -1272,17 +1275,16 @@ li:nth-child(4) { order: -2; }
     <li>4</li>
   </ul></div>
   <pre><code lang="css">li { flex-basis: auto; }
- /*
-  order: 0;
-  flex-grow: 0;
-  flex-shrink: 1;
-  align-self: auto;
- */
-}</code></pre>
+/*
+ order: 0;
+ flex-grow: 0;
+ flex-shrink: 1;
+ align-self: auto;
+*/</code></pre>
   <p class="note">Initial size of a child before free space is distributed.</p>
 </section>
 
-<section class="slide flex-row"> <!-- 46 -->
+<section class="slide flex-row"> <!-- 47 -->
   <style scoped>
     ul {display: flex;}
     li { flex-basis: 75px; }
@@ -1296,18 +1298,17 @@ li:nth-child(4) { order: -2; }
     <li>4</li>
   </ul></div>
   <pre><code lang="css">li { flex-basis: 75px; }
- /*
-  order: 0;
-  flex-grow: 0;
-  flex-shrink: 1;
-  align-self: auto;
- */
-}</code></pre>
+/*
+ order: 0;
+ flex-grow: 0;
+ flex-shrink: 1;
+ align-self: auto;
+*/</code></pre>
   <p class="note">Initial size of a child before free space is distributed.</p>
 </section>
 
 
-<section class="slide flex-row"> <!-- 47 -->
+<section class="slide flex-row"> <!-- 48 -->
   <style scoped>
     ul {display: flex;}
     li { flex-grow: 0; }
@@ -1321,17 +1322,16 @@ li:nth-child(4) { order: -2; }
     <li>4</li>
   </ul></div>
   <pre><code lang="css">li { flex-grow: 0; }
- /*
-  order: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  align-self: auto;
- */
-}</code></pre>
+/*
+ order: 0;
+ flex-shrink: 1;
+ flex-basis: auto;
+ align-self: auto;
+*/</code></pre>
   <p class="note">Controls the ability for a child to grow if extra space is available.</p>
 </section>
 
-<section class="slide flex-row"> <!-- 48 -->
+<section class="slide flex-row"> <!-- 49 -->
   <style scoped>
     ul {display: flex;}
     li { flex-grow: 1; }
@@ -1345,17 +1345,16 @@ li:nth-child(4) { order: -2; }
     <li>4</li>
   </ul></div>
   <pre><code lang="css">li { flex-grow: 1; }
- /*
-  order: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  align-self: auto;
- */
-}</code></pre>
+/*
+ order: 0;
+ flex-shrink: 1;
+ flex-basis: auto;
+ align-self: auto;
+*/</code></pre>
   <p class="note">Each child gets an equal share of the free space in the parent.</p>
 </section>
 
-<section class="slide flex-row"> <!-- 49 -->
+<section class="slide flex-row"> <!-- 50 -->
   <style scoped>
     ul {display: flex;}
     li:nth-child(2) { flex-grow: 1; }
@@ -1369,17 +1368,16 @@ li:nth-child(4) { order: -2; }
     <li>4</li>
   </ul></div>
   <pre><code lang="css">li:nth-child(2) { flex-grow: 1; }
- /*
-  order: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  align-self: auto;
- */
-}</code></pre>
+/*
+ order: 0;
+ flex-shrink: 1;
+ flex-basis: auto;
+ align-self: auto;
+*/</code></pre>
   <p class="note">2nd child gets all the free space.</p>
 </section>
 
-<section class="slide flex-row"> <!-- 50 -->
+<section class="slide flex-row"> <!-- 51 -->
   <style scoped>
     ul {display: flex;}
     li { flex-grow: 1; }
@@ -1395,17 +1393,45 @@ li:nth-child(4) { order: -2; }
   </ul></div>
   <pre><code lang="css">li { flex-grow: 1; }
 li:nth-child(2) { flex-grow: 2; }
- /*
-  order: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  align-self: auto;
- */
-}</code></pre>
+/*
+ order: 0;
+ flex-shrink: 1;
+ flex-basis: auto;
+ align-self: auto;
+*/</code></pre>
   <p class="note">2nd child gets twice as much of the free space as other children.</p>
 </section>
 
-<section class="slide flex-row"> <!-- 51 -->
+<section class="slide flex-row"> <!-- 52 -->
+  <style scoped>
+    ul {display: flex;}
+    li { flex-grow: 1; flex-basis: 250px;}
+    li:nth-child(2) { flex-grow: 2; }
+  </style>
+  <h1>flex-grow: ratio</h1>
+  <div class="axis"><img src="/img/axis-row.svg"></div>
+  <div><ul class="none">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul></div>
+  <pre><code lang="css">li {
+ flex-grow: 1;
+ flex-basis: 250px;
+}
+li:nth-child(2) {
+ flex-grow: 2;
+}
+/*
+ order: 0;
+ flex-shrink: 1;
+ align-self: auto;
+*/</code></pre>
+  <p class="note">2nd child gets twice as much of the free space as other children.</p>
+</section>
+
+<section class="slide flex-row"> <!-- 53 -->
   <style scoped>
     ul {display: flex;}
     li { flex-shrink: 1; }
@@ -1419,17 +1445,16 @@ li:nth-child(2) { flex-grow: 2; }
     <li>4</li>
   </ul></div>
   <pre><code lang="css">li { flex-shrink: 1; }
- /*
-  order: 0;
-  flex-grow: 0;
-  flex-basis: auto;
-  align-self: auto;
- */
-}</code></pre>
+/*
+ order: 0;
+ flex-grow: 0;
+ flex-basis: auto;
+ align-self: auto;
+*/</code></pre>
   <p class="note">How much a child will shrink if there isn't enough space for children in parent.</p>
 </section>
 
-<section class="slide flex-row"> <!-- 52 -->
+<section class="slide flex-row"> <!-- 54 -->
   <style scoped>
     ul {display: flex;}
     li { flex-shrink: 1; flex-basis: 200px; }
@@ -1446,16 +1471,15 @@ li:nth-child(2) { flex-grow: 2; }
  flex-shrink: 1;
  flex-basis: 200px;
 }
- /*
-  order: 0;
-  flex-grow: 0;
-  align-self: auto;
- */
-}</code></pre>
+/*
+ order: 0;
+ flex-grow: 0;
+ align-self: auto;
+*/</code></pre>
   <p class="note">How much a child will shrink if there isn't enough space for children in parent.</p>
 </section>
 
-<section class="slide flex-row"> <!-- 53 -->
+<section class="slide flex-row"> <!-- 55 -->
   <style scoped>
     ul {display: flex;}
     li { flex-shrink: 1; flex-basis: 200px; }
@@ -1472,16 +1496,15 @@ li:nth-child(2) { flex-grow: 2; }
   <pre><code lang="css">li:nth-child(2) {
  flex-shrink: 2;
 }
- /*
-  order: 0;
-  flex-grow: 0;
-  align-self: auto;
- */
-}</code></pre>
+/*
+ order: 0;
+ flex-grow: 0;
+ align-self: auto;
+*/</code></pre>
   <p class="note">How much a child will shrink if there isn't enough space for children in parent.</p>
 </section>
 
-<section class="slide flex-column"> <!-- 54 -->
+<section class="slide flex-column"> <!-- 56 -->
   <style scoped>
     p { padding-top: .5em; }
   </style>
@@ -1493,7 +1516,7 @@ li:nth-child(2) { flex-grow: 2; }
     <p><span class="property">flex: none;</span> is equivilant to <span class="property">flex: 0 0 auto;</span></p>
 </section>
 
-<section class="slide flex-row"> <!-- 55 -->
+<section class="slide flex-row"> <!-- 57 -->
   <style scoped>
     ul {display: flex; flex-direction: column;}
     li { flex-basis: auto; }
@@ -1509,17 +1532,16 @@ li:nth-child(2) { flex-grow: 2; }
   </ul></div>
   <pre><code lang="css">ul { flex-flow: column wrap; }
 li { align-self: auto; }
- /*
-  order: 0;
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
- */
-}</code></pre>
+/*
+ order: 0;
+ flex-grow: 0;
+ flex-shrink: 1;
+ flex-basis: auto;
+*/</code></pre>
   <p class="note">Initial size of a child before free space is distributed.</p>
 </section>
 
-<section class="slide flex-row"> <!-- 56 -->
+<section class="slide flex-row"> <!-- 58 -->
   <style scoped>
     ul {display: flex; flex-direction: column;}
     li { flex-basis: auto; }
@@ -1538,17 +1560,16 @@ li { align-self: auto; }
 li:nth-child(2) {
  align-self: flex-start;
 }
- /*
-  order: 0;
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
- */
-}</code></pre>
+/*
+ order: 0;
+ flex-grow: 0;
+ flex-shrink: 1;
+ flex-basis: auto;
+*/</code></pre>
   <p class="note">Initial size of a child before free space is distributed.</p>
 </section>
 
-<section class="slide flex-row"> <!-- 57 -->
+<section class="slide flex-row"> <!-- 59 -->
   <style scoped>
     ul {display: flex; flex-direction: column;}
     li { flex-basis: auto; }
@@ -1567,17 +1588,16 @@ li:nth-child(2) {
 li:nth-child(2) {
  align-self: flex-end;
 }
- /*
-  order: 0;
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
- */
-}</code></pre>
+/*
+ order: 0;
+ flex-grow: 0;
+ flex-shrink: 1;
+ flex-basis: auto;
+*/</code></pre>
   <p class="note">Initial size of a child before free space is distributed.</p>
 </section>
 
-<section class="slide flex-row"> <!-- 58 -->
+<section class="slide flex-row"> <!-- 60 -->
   <style scoped>
     ul {display: flex; flex-direction: column;}
     li { flex-basis: auto; }
@@ -1596,17 +1616,16 @@ li:nth-child(2) {
 li:nth-child(2) {
  align-self: start;
 }
- /*
-  order: 0;
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
- */
-}</code></pre>
+/*
+ order: 0;
+ flex-grow: 0;
+ flex-shrink: 1;
+ flex-basis: auto;
+*/</code></pre>
   <p class="note">Initial size of a child before free space is distributed.</p>
 </section>
 
-<section class="slide flex-column"> <!-- 59 -->
+<section class="slide flex-column"> <!-- 61 -->
   <style scoped>
   h1 {
     padding-top: 12%;
@@ -1618,25 +1637,33 @@ li:nth-child(2) {
   <p class="presenter-notes">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </section>
 
-<section class="slide demo flex-column demo1"> <!-- 60 -->
+<section class="slide demo flex-column demo1"> <!-- 62 -->
   <h1>Navigation</h1>
-  <ul class="none between">
-    <li>Home</li>
-    <li>Products</li>
-    <li>Service</li>
-    <li>About</li>
-    <li>Contact</li>
-  </ul>
-    <ul class="none around">
-    <li>Home</li>
-    <li>Products</li>
-    <li>Service</li>
-    <li>About</li>
-    <li>Contact</li>
-  </ul>
+  <nav>
+    <ul>
+      <li><a href="#">Item 01</a></li>
+      <li><a href="#">Item 02</a></li>
+      <li><a href="#">Item 03</a></li>
+      <li><a href="#">Item 04</a></li>
+      <li><a href="#">Item 05</a></li>
+      <li><a href="#">Item 06</a></li>
+      <li class="icons">
+        <a href="http://twitter.com/wesbos"><i class="fa fa-twitter"></i></a>
+      </li>
+      <li class="icons">
+        <a href="http://facebook.com/wesbos.developer"><i class="fa fa-facebook"></i></a>
+      </li>
+      <li class="icons">
+        <a href="http://github.com/wesbos"><i class="fa fa-github"></i></a>
+      </li>
+      <li class="icons">
+        <a href="http://instagram.com/wesbos"><i class="fa fa-instagram"></i></a>
+      </li>
+    </ul>
+  </nav>
 </section>
 
-<section class="slide demo flex-column demo2"> <!-- 61 Off screen nav -->
+<section class="slide demo flex-column demo2"> <!-- 63 Off screen nav -->
   <h1>Off Screen Navigation</h1>
   <div class="container">
     <input id="hamburger" type="checkbox" class="hamburger-checkbox">
