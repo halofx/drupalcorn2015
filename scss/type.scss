@@ -17,17 +17,6 @@
   @extend %normal;
 }
 
-// $base-font-size: 10px;
-// $rem-ratio: $base-font-size / 1rem;
-
-// @mixin rem($size) {
-//   $base-font-size: 10px !default;
-//   @if (unitless($size)) {
-//     $size: $size * 1px;
-//   }
-//   font-size: $size;
-//   font-size: ($size / $base-font-size) * 1rem;
-// }
 
 $intro-vmin: 9.953vmin;
 $title-vmin: 6.912vmin;
@@ -48,6 +37,9 @@ html {
   color: white;
   // @include rem(16.18);
   font-size: $small-vmin;
+      @media screen and (aspect-ratio: 16/10) {
+    font-size: 2.125rem;
+  }
 }
 
 h1, h2, h3 {
@@ -57,11 +49,8 @@ h1, h2, h3 {
 
 #intro {
   text-align: center;
-  // h1 { @include rem(68.53); text-shadow: 4px 4px 4px #000; }
   h1 { font-size: $intro-vmin; text-shadow: 4px 4px 4px #000; }
-  // h2 { @include rem(42.36); }
   h2 { font-size: $title-vmin; margin-bottom: 1em;}
-  // p  { @include rem(26.18); }
   p { font-size: $med-vmin; }
 }
 
@@ -70,7 +59,6 @@ h1 {
   text-shadow: 4px 4px 4px #000;
   margin: .25em 0 .75em 0;
   flex: 0 0 100%;
-  // height: 2em;
   }
 
 h2 {
@@ -78,7 +66,6 @@ h2 {
   text-shadow: 2px 2px 2px #000;
   margin: .25em 0px;
   flex: 0 0 100%;
-  // height: 2em;
   }
 
 strong, b {

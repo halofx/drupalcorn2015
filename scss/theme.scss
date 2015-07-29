@@ -35,6 +35,11 @@ section, header {
       position: absolute;
       left: .75vw;
       top: 15vh;
+      @media screen and (aspect-ratio: 16/10) {
+        width: 38vw;
+        left: .5vw;
+        top: 18vh;
+      }
       img { width: 100%; }
     }
   }

@@ -44,6 +44,14 @@ section.flex-row .axis, header.flex-row .axis {
   top: 15vh;
 }
 
+@media screen and (aspect-ratio: 16/10) {
+  section.flex-row .axis, header.flex-row .axis {
+    width: 38vw;
+    left: .5vw;
+    top: 18vh;
+  }
+}
+
 section.flex-row .axis img, header.flex-row .axis img {
   width: 100%;
 }
