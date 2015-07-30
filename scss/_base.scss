@@ -1,0 +1,50 @@
+* {
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: linear-gradient(#004b77,#2e8bc6);
+  margin: 0;
+  padding: 0;
+  .scroll {
+    overflow: scroll;
+  }
+  .hidden {
+    overflow: hidden;
+  }
+}
+
+body {
+  margin: 0px;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  width: 80vw;
+}
+
+footer {
+  position: relative;
+  margin-top: auto;
+  .trees {
+    img {
+      width: 100%;
+    }
+  }
+  .tower {
+    position: absolute;
+    bottom: 0px;
+    right: 10vw;
+    img {
+      width: 3vw;
+    }
+  }
+}
+

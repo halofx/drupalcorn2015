@@ -1,0 +1,107 @@
+.slide.demo.demo1 {
+  @keyframes small {
+    0% transform
+  }
+  .buttons {
+    display: flex;
+    justify-content: space-around;
+    div {
+      padding: 1em 0;
+      &.small:hover {
+        animation: small 2s;
+      }
+    }
+  }
+  a {
+    display: inline-block;
+    width: 100%;
+    padding: 1em;
+    text-decoration: none;
+    text-align: center;
+  }
+  ul {
+    border:1px solid black;
+    list-style: none;
+    // margin: 0;
+    // padding: 0;
+    display:flex;
+    flex-wrap: wrap;
+    font-size: 80%;
+  }
+  li {
+    flex-basis: 0;
+    // padding: 1em;
+  }
+  @media all and (min-width: 500px) {
+    ul { flex-wrap: wrap; }
+    li { flex: 1 1 50%; }
+    .icons { flex: 1 1 25%; }
+  }
+  @media all and (min-width: 1000px) {
+    li { flex:3; }
+    .icons { flex:1; }
+  }
+}
+
+.demo2 {
+  .container {
+    display: flex;
+    height: 70vh;
+    background-color: #dedede;
+    // border: 1px solid red;
+    position: relative;
+  }
+  main {
+    flex: 1;
+    padding: 100px 40px 0px 40px;
+    transition: flex-basis 2s;
+    font-size: .7em;
+    line-height: 1.75em;
+    font-weight: 300;
+    font-family: 'Lato', Frutiger, sans-serif;
+    color: black;
+  }
+  nav {
+    overflow: hidden;
+    flex-basis: 0;
+    background-color: #aaa;
+    padding-top: 4em;
+    transition: flex-basis 2s;
+  }
+  ul {
+    list-style: none;
+    padding: 0px;
+  }
+  li {
+    font-family: 'Lato', Frutiger, Arial, sans-serif;
+    font-size: .6em;
+    padding: 1em 40px;
+    white-space: nowrap;
+    border-bottom: 1px solid #777;
+  }
+  li:first-child { border-top: 1px solid #777; }
+  a { color: #000099; }
+  .hamburger-label {
+    position: absolute;
+    top: 55px; left: 40px;
+    font: 24px/20px 'Segoe UI';
+    cursor: pointer;
+    color: #000099;
+  }
+  .hamburger-checkbox {
+    position: absolute; opacity: 0;
+    &:checked ~ nav {
+      flex-basis: 5em;
+      transition: flex-basis 2s;
+    }
+  }
+  pre {
+    color: white;
+    margin-top: 2em;
+    background: rgba(0,0,0,0.8);
+  }
+}
+
+.demo3 {
+
+}
