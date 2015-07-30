@@ -12,11 +12,11 @@ html {
   padding: 0;
 }
 
-html .scroll {
+html.scroll {
   overflow: scroll;
 }
 
-html .hidden {
+html.hidden {
   overflow: hidden;
 }
 
@@ -30,7 +30,7 @@ body {
 }
 
 main {
-  width: 80vw;
+  width: 90vw;
 }
 
 footer {
@@ -92,7 +92,7 @@ h1 {
 
 code {
   font-family: 'Consolas', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.0rem;
 }
 
 ul {
@@ -265,4 +265,120 @@ dd {
 
 .demo3 pre .hljs {
   overflow: hidden;
+}
+
+.demo4 ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 0;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.demo4 li {
+  flex: 1 1 150px;
+  box-sizing: border-box;
+  margin: 10px;
+  border: 3px solid #999;
+  background-color: #fff;
+}
+
+.demo4 img {
+  width: 100%;
+  height: auto;
+  padding: 5%;
+}
+
+.demo4 .flex {
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+
+.demo4 pre {
+  margin-top: 1em;
+}
+
+.demo4 pre.one {
+  flex: 1 1 18em;
+}
+
+.demo4 pre.two {
+  flex: 1 1 23em;
+}
+
+.demo4 pre .hljs {
+  overflow: hidden;
+}
+
+.demo5 .container {
+  display: flex;
+  height: 50vh;
+  background-color: #dedede;
+  position: relative;
+}
+
+.demo5 .main {
+  flex: 1 0 0%;
+  padding: 100px 40px 0px 40px;
+  transition: flex-basis 2s;
+  font-size: .7em;
+  line-height: 1.75em;
+  font-weight: 300;
+  font-family: 'Lato', Frutiger, sans-serif;
+  color: black;
+}
+
+.demo5 nav {
+  overflow: hidden;
+  flex: 0 1 0%;
+  background-color: #aaa;
+  padding-top: 4em;
+  transition: flex-basis 2s;
+}
+
+.demo5 ul {
+  list-style: none;
+  padding: 0px;
+}
+
+.demo5 li {
+  font-family: 'Lato', Frutiger, Arial, sans-serif;
+  font-size: .4em;
+  padding: 1em 40px;
+  white-space: nowrap;
+  border-bottom: 1px solid #777;
+}
+
+.demo5 li:first-child {
+  border-top: 1px solid #777;
+}
+
+.demo5 a {
+  color: #000099;
+}
+
+.demo5 .menu-label {
+  position: absolute;
+  top: 55px;
+  left: 40px;
+  font: 24px/20px "Segoe UI";
+  cursor: pointer;
+  color: #000099;
+}
+
+.demo5 .menu-checkbox {
+  position: absolute;
+  opacity: 0;
+}
+
+.demo5 .menu-checkbox:checked ~ nav {
+  flex: 0 1 5em;
+  transition: flex-basis 2s;
+}
+
+.demo5 pre {
+  color: white;
+  margin-top: 2em;
+  background: rgba(0, 0, 0, 0.8);
 }

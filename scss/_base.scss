@@ -9,10 +9,10 @@ html {
   background: linear-gradient(#004b77,#2e8bc6);
   margin: 0;
   padding: 0;
-  .scroll {
+  &.scroll {
     overflow: scroll;
   }
-  .hidden {
+  &.hidden {
     overflow: hidden;
   }
 }
@@ -27,7 +27,7 @@ body {
 }
 
 main {
-  width: 80vw;
+  width: 90vw;
 }
 
 footer {
