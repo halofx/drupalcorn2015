@@ -1,0 +1,54 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="/highlight/styles/monokai_sublime.css">
+  <script src="/highlight/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+  <main class="demo7">
+  <h1>Off Screen Navigation</h1>
+  <div class="container">
+    <input id="menu" type="checkbox" class="menu-checkbox">
+      <label for="menu" class="menu-label">Menu</label>
+      <nav>
+        <ul>
+          <li>Products</li>
+          <li>Service</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    <main class="main">
+    <p>Proin tincidunt ac odio vel consequat. Pellentesque tristique leo nec tempus gravida. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce dapibus elementum leo et ultricies.</p>
+    <pre><code lang="css">.container { display: flex; }
+.menu-checkbox:checked ~ nav { flex: 0 1 5em; }
+nav { flex: 0 1 0%; overflow: hidden; }
+main { flex:1; } /* flex: 1 0 0%; */</code></pre>
+  </main>
+  </div>
+  <pre><code lang="css">&lt;div class="container">
+  &lt;input id="menu" type="checkbox" class="menu-checkbox">
+    &lt;label for="menu" class="menu-label">Menu&lt;/label>
+    &lt;nav>
+      &lt;ul>
+        &lt;li>Products&lt;/li>
+        &lt;li>Service&lt;/li>
+        &lt;li>About&lt;/li>
+        &lt;li>Contact&lt;/li>
+      &lt;/ul>
+    &lt;/nav>
+  &lt;main>
+  &lt;p>...&lt;/p>
+&lt;/main>
+&lt;/div></code></pre>
+  </main>
+  <footer>
+    <div class="trees"><img src="/img/trees.png"></div>
+    <div class="tower"><a href="demo8.html"><img src="/img/tower_120.png"></a></div>
+
+  </footer>
+</body>
+</html>
