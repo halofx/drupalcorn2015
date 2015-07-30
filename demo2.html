@@ -9,7 +9,7 @@
 </head>
 <body>
   <main class="demo2">
-  <h1>Gallery - flex: 1 0 150px</h1>
+  <h1>Gallery - flex: 0 1 150px</h1>
       <ul>
         <li><img src="/img/corgi/corgi_a.jpg"></li>
         <li><img src="/img/corgi/corgi_b.jpg"></li>
@@ -21,7 +21,7 @@
         <li><img src="/img/corgi/corgi_h.jpg"></li>
         <li><img src="/img/corgi/corgi_i.jpg"></li>
       </ul>
-      <p>Min-width of 150px. Items will grow, until another item can be added at 150px.</p>
+      <p>Max-width of 150px. Items will wrap, when no more can fit at 150px.</p>
     <div class="flex">
       <pre class="one"><code class="html">&lt;ul>
   &lt;li>&lt;img src="corgi_a.jpg">&lt;/li>
@@ -37,9 +37,10 @@
         <pre class="two"><code class="css">ul {
   display:flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 li {
-  flex:  1 0 150px;
+  flex: 0 1 150px;
 }
 img {
   width: 100%;

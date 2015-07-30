@@ -1,4 +1,99 @@
 .demo1 {
+  ul {
+    list-style: none;
+    display:flex;
+    flex-wrap: wrap;
+    line-height: 0;
+  }
+  li {
+    flex:  1 0 150px;
+    box-sizing: border-box;
+    margin: 10px;
+    border: 3px solid #999;
+    background-color: #fff;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    padding: 5%;
+  }
+  .flex {
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+  pre {
+    &.one {flex: 1 1 18em;}
+    &.two { flex: 1 1 23em;
+    }margin-top: 1em;
+   .hljs { overflow: hidden; }
+ }
+}
+
+.demo2 {
+  ul {
+    list-style: none;
+    display:flex;
+    flex-wrap: wrap;
+    line-height: 0;
+    justify-content: space-around;
+  }
+  li {
+    flex: 0 1 150px;
+    box-sizing: border-box;
+    margin: 10px;
+    border: 3px solid #999;
+    background-color: #fff;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    padding: 5%;
+  }
+  .flex {
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+  pre {
+    &.one {flex: 1 1 18em;}
+    &.two { flex: 1 1 23em;
+    }margin-top: 1em;
+   .hljs { overflow: hidden; }
+ }
+}
+
+.demo3 {
+  ul {
+    list-style: none;
+    display:flex;
+    flex-wrap: wrap;
+    line-height: 0;
+    align-items: center;
+  }
+  li {
+    flex: 1 0 150px;
+    box-sizing: border-box;
+    margin: 10px;
+    border: 3px solid #999;
+    background-color: #fff;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    padding: 5%;
+  }
+  .flex {
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+  pre {
+    &.one {flex: 1 1 18em;}
+    &.two { flex: 1 1 23em;
+    }margin-top: 1em;
+   .hljs { overflow: hidden; }
+ }
+}
+
+.demo4 {
   a {
     display: inline-block;
     width: 100%;
@@ -43,25 +138,58 @@
  }
 }
 
-.demo2 {
+.demo1a {
+  a {
+    display: inline-block;
+    width: 100%;
+    padding: 1em;
+    text-decoration: none;
+    text-align: center;
+  }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
   ul {
+    border:1px solid black;
     list-style: none;
     display:flex;
     flex-wrap: wrap;
-    line-height: 0;
+    font-size: 80%;
+    background: rgba(0,0,0,.25);
+    &.links {
+      flex: 1 1 40em;
+      display: flex;
+      flex-direction: column;
+      li { flex: 1 0 8em; }
+    }
+    &.icons {
+      flex: 1 1 10em;
+      display: flex;
+      flex-direction: column;
+      li { flex: 1 0 4em; }
+    }
   }
   li {
-    flex:  1 0 150px;
-    box-sizing: border-box;
-    margin: 10px;
-    border: 3px solid #999;
-    background-color: #fff;
+    // width: 100%;
+    border: 1px solid black;
   }
-  img {
-    width: 100%;
-    height: auto;
-    padding: 5%;
+  .links li {
+    flex: 1 1 25%;
   }
+  .icons li { flex: 1 1 25%; }
+  // pre.one {display: none;}
+  // @media all and (min-width: 500px) {
+  //   pre.one {display: block;}
+  //   ul { flex-wrap: wrap; }
+  //   li { flex: 1 1 50%; }
+  // }
+  // @media all and (min-width: 1000px) {
+  //   .links li { flex:3; }
+  //   .icons li { flex:1; }
+  // }
+
   .flex {
     display: flex;
     flex-wrap: wrap-reverse;
@@ -70,74 +198,14 @@
     &.one {flex: 1 1 18em;}
     &.two { flex: 1 1 23em;
     }margin-top: 1em;
+    justify-content: space-between;
    .hljs { overflow: hidden; }
  }
 }
 
-.demo3 {
-  ul {
-    list-style: none;
-    display:flex;
-    flex-wrap: wrap;
-    line-height: 0;
-    justify-content: space-around;
-  }
-  li {
-    flex: 0 1 150px;
-    box-sizing: border-box;
-    margin: 10px;
-    border: 3px solid #999;
-    background-color: #fff;
-  }
-  img {
-    width: 100%;
-    height: auto;
-    padding: 5%;
-  }
-  .flex {
-    display: flex;
-    flex-wrap: wrap-reverse;
-  }
-  pre {
-    &.one {flex: 1 1 18em;}
-    &.two { flex: 1 1 23em;
-    }margin-top: 1em;
-   .hljs { overflow: hidden; }
- }
-}
 
-.demo4 {
-  ul {
-    list-style: none;
-    display:flex;
-    flex-wrap: wrap;
-    line-height: 0;
-    justify-content: space-around;
-    align-items: center;
-  }
-  li {
-    flex: 1 1 150px;
-    box-sizing: border-box;
-    margin: 10px;
-    border: 3px solid #999;
-    background-color: #fff;
-  }
-  img {
-    width: 100%;
-    height: auto;
-    padding: 5%;
-  }
-  .flex {
-    display: flex;
-    flex-wrap: wrap-reverse;
-  }
-  pre {
-    &.one {flex: 1 1 18em;}
-    &.two { flex: 1 1 23em;
-    }margin-top: 1em;
-   .hljs { overflow: hidden; }
- }
-}
+
+
 
 .demo5 {
   .container {

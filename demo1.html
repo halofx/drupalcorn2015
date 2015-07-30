@@ -9,45 +9,41 @@
 </head>
 <body>
   <main class="demo1">
-  <h1>Navigation</h1>
-    <nav>
+  <h1>Gallery - flex: 1 0 150px</h1>
       <ul>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">Service</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li class="icons"><a href="#"><i class="fa fa-twitter"></i></a></li>
-        <li class="icons"><a href="#"><i class="fa fa-facebook"></i></a></li>
-        <li class="icons"><a href="#"><i class="fa fa-github"></i></a></li>
-        <li class="icons"><a href="#"><i class="fa fa-instagram"></i></a></li>
+        <li><img src="/img/corgi/corgi_a.jpg"></li>
+        <li><img src="/img/corgi/corgi_b.jpg"></li>
+        <li><img src="/img/corgi/corgi_c.jpg"></li>
+        <li><img src="/img/corgi/corgi_d.jpg"></li>
+        <li><img src="/img/corgi/corgi_e.jpg"></li>
+        <li><img src="/img/corgi/corgi_f.jpg"></li>
+        <li><img src="/img/corgi/corgi_g.jpg"></li>
+        <li><img src="/img/corgi/corgi_h.jpg"></li>
+        <li><img src="/img/corgi/corgi_i.jpg"></li>
       </ul>
-    </nav>
-
+      <p>Min-width of 150px. Items will grow, until another item can be added at 150px.</p>
     <div class="flex">
       <pre class="one"><code class="html">&lt;ul>
-  &lt;li>Products&lt;/li>
-  &lt;li>Service&lt;/li>
-  &lt;li>About&lt;/li>
-  &lt;li>Contact&lt;/li>
-  &lt;li class="icons">&lt;/li>
-  &lt;li class="icons">&lt;/li>
-  &lt;li class="icons">&lt;/li>
-  &lt;li class="icons">&lt;/li>
+  &lt;li>&lt;img src="corgi_a.jpg">&lt;/li>
+  &lt;li>&lt;img src="corgi_b.jpg">&lt;/li>
+  &lt;li>&lt;img src="corgi_c.jpg">&lt;/li>
+  &lt;li>&lt;img src="corgi_d.jpg">&lt;/li>
+  &lt;li>&lt;img src="corgi_e.jpg">&lt;/li>
+  &lt;li>&lt;img src="corgi_f.jpg">&lt;/li>
+  &lt;li>&lt;img src="corgi_g.jpg">&lt;/li>
+  &lt;li>&lt;img src="corgi_h.jpg">&lt;/li>
+  &lt;li>&lt;img src="corgi_i.jpg">&lt;/li>
 &lt;/ul></code></pre>
         <pre class="two"><code class="css">ul {
   display:flex;
   flex-wrap: wrap;
 }
-li { flex: 0 1 100%; }
-.icons { flex: 1 1 25%; }
-
-@media all and (min-width: 500px) {
-  ul { flex-wrap: wrap; }
-  li { flex: 1 1 50%; }
+li {
+  flex:  1 0 150px;
 }
-@media all and (min-width: 1000px) {
-  li { flex:3; }
-  .icons { flex:1; }
+img {
+  width: 100%;
+  height: auto;
 }</code></pre></div>
   </main>
   <footer>

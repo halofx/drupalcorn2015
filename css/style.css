@@ -109,55 +109,25 @@ dd {
   padding-bottom: .75em;
 }
 
-.demo1 a {
-  display: inline-block;
-  width: 100%;
-  padding: 1em;
-  text-decoration: none;
-  text-align: center;
-}
-
 .demo1 ul {
-  border: 1px solid black;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  font-size: 80%;
-  background: rgba(0, 0, 0, 0.25);
+  line-height: 0;
 }
 
 .demo1 li {
+  flex: 1 0 150px;
+  box-sizing: border-box;
+  margin: 10px;
+  border: 3px solid #999;
+  background-color: #fff;
+}
+
+.demo1 img {
   width: 100%;
-  border: 1px solid black;
-}
-
-.demo1 .icons {
-  flex: 1 1 25%;
-}
-
-.demo1 pre.one {
-  display: none;
-}
-
-@media all and (min-width: 500px) {
-  .demo1 pre.one {
-    display: block;
-  }
-  .demo1 ul {
-    flex-wrap: wrap;
-  }
-  .demo1 li {
-    flex: 1 1 50%;
-  }
-}
-
-@media all and (min-width: 1000px) {
-  .demo1 li {
-    flex: 3;
-  }
-  .demo1 .icons {
-    flex: 1;
-  }
+  height: auto;
+  padding: 5%;
 }
 
 .demo1 .flex {
@@ -167,7 +137,6 @@ dd {
 
 .demo1 pre {
   margin-top: 1em;
-  justify-content: space-between;
 }
 
 .demo1 pre.one {
@@ -187,10 +156,11 @@ dd {
   display: flex;
   flex-wrap: wrap;
   line-height: 0;
+  justify-content: space-around;
 }
 
 .demo2 li {
-  flex: 1 0 150px;
+  flex: 0 1 150px;
   box-sizing: border-box;
   margin: 10px;
   border: 3px solid #999;
@@ -229,11 +199,11 @@ dd {
   display: flex;
   flex-wrap: wrap;
   line-height: 0;
-  justify-content: space-around;
+  align-items: center;
 }
 
 .demo3 li {
-  flex: 0 1 150px;
+  flex: 1 0 150px;
   box-sizing: border-box;
   margin: 10px;
   border: 3px solid #999;
@@ -267,27 +237,55 @@ dd {
   overflow: hidden;
 }
 
+.demo4 a {
+  display: inline-block;
+  width: 100%;
+  padding: 1em;
+  text-decoration: none;
+  text-align: center;
+}
+
 .demo4 ul {
+  border: 1px solid black;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  line-height: 0;
-  justify-content: space-around;
-  align-items: center;
+  font-size: 80%;
+  background: rgba(0, 0, 0, 0.25);
 }
 
 .demo4 li {
-  flex: 1 1 150px;
-  box-sizing: border-box;
-  margin: 10px;
-  border: 3px solid #999;
-  background-color: #fff;
+  width: 100%;
+  border: 1px solid black;
 }
 
-.demo4 img {
-  width: 100%;
-  height: auto;
-  padding: 5%;
+.demo4 .icons {
+  flex: 1 1 25%;
+}
+
+.demo4 pre.one {
+  display: none;
+}
+
+@media all and (min-width: 500px) {
+  .demo4 pre.one {
+    display: block;
+  }
+  .demo4 ul {
+    flex-wrap: wrap;
+  }
+  .demo4 li {
+    flex: 1 1 50%;
+  }
+}
+
+@media all and (min-width: 1000px) {
+  .demo4 li {
+    flex: 3;
+  }
+  .demo4 .icons {
+    flex: 1;
+  }
 }
 
 .demo4 .flex {
@@ -297,6 +295,7 @@ dd {
 
 .demo4 pre {
   margin-top: 1em;
+  justify-content: space-between;
 }
 
 .demo4 pre.one {
@@ -308,6 +307,83 @@ dd {
 }
 
 .demo4 pre .hljs {
+  overflow: hidden;
+}
+
+.demo1a a {
+  display: inline-block;
+  width: 100%;
+  padding: 1em;
+  text-decoration: none;
+  text-align: center;
+}
+
+.demo1a nav {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.demo1a ul {
+  border: 1px solid black;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 80%;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.demo1a ul.links {
+  flex: 1 1 40em;
+  display: flex;
+  flex-direction: column;
+}
+
+.demo1a ul.links li {
+  flex: 1 0 8em;
+}
+
+.demo1a ul.icons {
+  flex: 1 1 10em;
+  display: flex;
+  flex-direction: column;
+}
+
+.demo1a ul.icons li {
+  flex: 1 0 4em;
+}
+
+.demo1a li {
+  border: 1px solid black;
+}
+
+.demo1a .links li {
+  flex: 1 1 25%;
+}
+
+.demo1a .icons li {
+  flex: 1 1 25%;
+}
+
+.demo1a .flex {
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+
+.demo1a pre {
+  margin-top: 1em;
+  justify-content: space-between;
+}
+
+.demo1a pre.one {
+  flex: 1 1 18em;
+}
+
+.demo1a pre.two {
+  flex: 1 1 23em;
+}
+
+.demo1a pre .hljs {
   overflow: hidden;
 }
 

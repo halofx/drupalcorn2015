@@ -9,38 +9,38 @@
 </head>
 <body>
   <main class="demo3">
-  <h1>Gallery - flex: 0 1 150px</h1>
+  <h1>Gallery - flex: 1 0 150px</h1>
       <ul>
-        <li><img src="/img/corgi/corgi_a.jpg"></li>
-        <li><img src="/img/corgi/corgi_b.jpg"></li>
-        <li><img src="/img/corgi/corgi_c.jpg"></li>
-        <li><img src="/img/corgi/corgi_d.jpg"></li>
-        <li><img src="/img/corgi/corgi_e.jpg"></li>
-        <li><img src="/img/corgi/corgi_f.jpg"></li>
-        <li><img src="/img/corgi/corgi_g.jpg"></li>
-        <li><img src="/img/corgi/corgi_h.jpg"></li>
-        <li><img src="/img/corgi/corgi_i.jpg"></li>
+        <li><img src="/img/corgi/corgi_1.jpg"></li>
+        <li><img src="/img/corgi/corgi_2.jpg"></li>
+        <li><img src="/img/corgi/corgi_3.jpg"></li>
+        <li><img src="/img/corgi/corgi_4.jpg"></li>
+        <li><img src="/img/corgi/corgi_5.jpg"></li>
+        <li><img src="/img/corgi/corgi_6.jpg"></li>
+        <li><img src="/img/corgi/corgi_7.jpg"></li>
+        <li><img src="/img/corgi/corgi_8.jpg"></li>
+        <li><img src="/img/corgi/corgi_9.jpg"></li>
       </ul>
-      <p>Max-width of 150px. Items will wrap, when no more can fit at 150px.</p>
+      <p>Min-width of 150px. Mixed sizes, align-items: center.</p>
     <div class="flex">
       <pre class="one"><code class="html">&lt;ul>
-  &lt;li>&lt;img src="corgi_a.jpg">&lt;/li>
-  &lt;li>&lt;img src="corgi_b.jpg">&lt;/li>
-  &lt;li>&lt;img src="corgi_c.jpg">&lt;/li>
-  &lt;li>&lt;img src="corgi_d.jpg">&lt;/li>
-  &lt;li>&lt;img src="corgi_e.jpg">&lt;/li>
-  &lt;li>&lt;img src="corgi_f.jpg">&lt;/li>
-  &lt;li>&lt;img src="corgi_g.jpg">&lt;/li>
-  &lt;li>&lt;img src="corgi_h.jpg">&lt;/li>
-  &lt;li>&lt;img src="corgi_i.jpg">&lt;/li>
+  &lt;li>&lt;img src="corgi_1.jpg">&lt;/li>
+  &lt;li>&lt;img src="corgi_2.jpg">&lt;/li>
+  &lt;li>&lt;img src="corgi_3.jpg">&lt;/li>
+  &lt;li>&lt;img src="corgi_4.jpg">&lt;/li>
+  &lt;li>&lt;img src="corgi_5.jpg">&lt;/li>
+  &lt;li>&lt;img src="corgi_6.jpg">&lt;/li>
+  &lt;li>&lt;img src="corgi_7.jpg">&lt;/li>
+  &lt;li>&lt;img src="corgi_8.jpg">&lt;/li>
+  &lt;li>&lt;img src="corgi_9.jpg">&lt;/li>
 &lt;/ul></code></pre>
         <pre class="two"><code class="css">ul {
   display:flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  align-items: center;
 }
 li {
-  flex: 0 1 150px;
+  flex: 1 0 150px;
 }
 img {
   width: 100%;
