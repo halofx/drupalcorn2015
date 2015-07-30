@@ -120,13 +120,13 @@ p.note { padding: 2em 0; }
     padding: .75em .25em;
     border: solid 1px #555;
   }
-  @media all and ( min-width: 480px ) {
+  @media all and ( min-width: 600px ) {
     header { flex-direction: row; }
 }
-  @media all and ( min-width: 720px ) {
+  @media all and ( min-width: 750px ) {
     main { flex-direction: row; }
   }
-  @media all and ( min-width: 960px ) {
+  @media all and ( min-width: 900px ) {
     footer { flex-direction: row; }
   }
 

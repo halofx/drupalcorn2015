@@ -219,19 +219,19 @@ p.note {
   border: solid 1px #555;
 }
 
-@media all and (min-width: 480px) {
+@media all and (min-width: 600px) {
   .demo4 header {
     flex-direction: row;
   }
 }
 
-@media all and (min-width: 720px) {
+@media all and (min-width: 750px) {
   .demo4 main {
     flex-direction: row;
   }
 }
 
-@media all and (min-width: 960px) {
+@media all and (min-width: 900px) {
   .demo4 footer {
     flex-direction: row;
   }
