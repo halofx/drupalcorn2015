@@ -397,7 +397,7 @@ align-content: stretch;</code></pre>
  align-items: stretch;
  align-content: stretch;
 */</code></pre>
-  <p class="note">Controls items abilty to wrap if not enough space.</p>
+  <p class="note">Controls items abilty to wrap along the main axis, if not enough space.</p>
   <p class="presenter-notes">By default items do not wrap, and will display in a single row or column. <br><br>I have made the content bigger to see the effect</p>
 </section>
 
@@ -488,7 +488,7 @@ align-content: stretch;</code></pre>
  align-items: stretch;
  align-content: stretch;
 */</code></pre>
-  <p class="note">Reverse the stacking order of the lines.</p>
+  <p class="note">Reverse the cross axis, effecting the stacking order of the lines.</p>
   <p class="presenter-notes">Wrap-Reverse reverses the order that the lines stack in.<br>So now our items are starting in the bottom right towards the top left.</p>
 </section>
 
@@ -661,7 +661,7 @@ align-content: stretch;</code></pre>
  align-items: stretch;
  align-content: stretch;
 */</code></pre>
-  <p class="note">Controls how extra space is distributed along main axis.</p>
+  <p class="note">Controls how extra space is distributed along main axis. Items are grouped at the start of the Main Axis.</p>
   <p class="presenter-notes">Justify-Content controls how any extra space gets distributed along the Main Axis.<br><br>The default of Flex-Start moves the content to the Start of the Main Axis.</p>
 </section>
 
@@ -690,6 +690,7 @@ align-content: stretch;</code></pre>
  align-items: stretch;
  align-content: stretch;
 */</code></pre>
+  <p class="note">Items move to the end of the Main Axis.</p>
   <p class="presenter-notes">Flex-End Moves the Items to the End of the Main Axis, note that they are still in order, unlike when Row-Reverse was used with Flex-Direction.</p>
 </section>
 
@@ -836,8 +837,8 @@ align-content: stretch;</code></pre>
  flex-wrap: nowrap;
  align-content: stretch;
 */</code></pre>
-  <p class="note">Controls how children are displayed along cross axis.</p>
-  <p class="presenter-notes">Space Around equally divides the space to each side of each item. So the the space before the first item, and after the last item are half the space inbetween items.</p>
+  <p class="note">Controls how children are aligned along cross axis. Stretches to fill the Cross Axis.</p>
+  <p class="presenter-notes">xxx</p>
 </section>
 
 <section class="slide flex-row"> <!-- 33 -->
@@ -847,7 +848,7 @@ align-content: stretch;</code></pre>
       justify-content: space-around;
       align-items: flex-start;
     }
-    p { margin-top: 2em; }
+    li { border-top: 15px solid yellow; }
   </style>
   <h1>align-items: flex-start</h1>
   <div class="axis"><img src="/img/axis-row.svg"></div>
@@ -867,6 +868,7 @@ align-content: stretch;</code></pre>
  flex-wrap: nowrap;
  align-content: stretch;
 */</code></pre>
+  <p class="note">Items align along a line at the Start of the Cross Axis.</p>
 </section>
 
 <section class="slide flex-row"> <!-- 34 -->
@@ -876,7 +878,7 @@ align-content: stretch;</code></pre>
       justify-content: space-around;
       align-items: flex-end;
     }
-    p { margin-top: 2em; }
+    li { border-bottom: 15px solid yellow; }
   </style>
   <h1>align-items: flex-end</h1>
   <div class="axis"><img src="/img/axis-row.svg"></div>
@@ -896,6 +898,7 @@ align-content: stretch;</code></pre>
  flex-wrap: nowrap;
  align-content: stretch;
 */</code></pre>
+  <p class="note">Items align along a line at the End of the Cross Axis.</p>
 </section>
 
 <section class="slide flex-row"> <!-- 35 -->
@@ -905,11 +908,17 @@ align-content: stretch;</code></pre>
       justify-content: space-around;
       align-items: center;
     }
-    p { margin-top: 2em; }
+    .line {
+      position: absolute;;
+      height: 4px;
+      background-color: yellow;
+      top: 30vh;
+      width: 100%;
+    }
   </style>
   <h1>align-items: center</h1>
   <div class="axis"><img src="/img/axis-row.svg"></div>
-  <div><ul class="none">
+  <div style="position:relative;"><div class="line"></div><ul class="none">
     <li>1</li>
     <li>2<br>2</li>
     <li>3<br>3<br>3</li>
@@ -925,6 +934,7 @@ align-content: stretch;</code></pre>
  flex-wrap: nowrap;
  align-content: stretch;
 */</code></pre>
+  <p class="note">Items align along the center of a line at the Center of the Cross Axis.</p>
 </section>
 
 <section class="slide flex-row"> <!-- 36 -->
@@ -934,11 +944,17 @@ align-content: stretch;</code></pre>
       justify-content: space-around;
       align-items: baseline;
     }
-    p { margin-top: 2em; }
+    .line {
+      position: absolute;;
+      height: 4px;
+      background-color: yellow;
+      top: 15vh;
+      width: 100%;
+    }
   </style>
   <h1>align-items: baseline</h1>
   <div class="axis"><img src="/img/axis-row.svg"></div>
-  <div><ul class="none">
+  <div style="position:relative;"><div class="line"></div><ul class="none">
     <li style="font-size: 2em;">1</li>
     <li>2<br>2</li>
     <li style="font-size: 3em;">3<br>3<br>3</li>
@@ -954,6 +970,7 @@ align-content: stretch;</code></pre>
  flex-wrap: nowrap;
  align-content: stretch;
 */</code></pre>
+  <p class="note">Items align along a line at a common Baseline.</p>
 </section>
 
 <section class="slide flex-row"> <!-- 37 -->
@@ -990,7 +1007,7 @@ align-content: stretch;</code></pre>
  justify-content: stretch;
  align-items: stretch;
 */</code></pre>
-  <p class="note">Controls how extra space along the cross axis is used with multiple lines.</p>
+  <p class="note">Controls how extra space along the cross axis is used with multiple lines. Extra space is equally divided among all rows.</p>
 </section>
 
 <section class="slide flex-row"> <!-- 38 -->
@@ -1000,7 +1017,7 @@ align-content: stretch;</code></pre>
       flex-wrap: wrap;
       align-content: flex-start;
     }
-    p { margin-top: 2em; }
+    li { border-top: 15px solid yellow; }
   </style>
   <h1>align-content: flex-start</h1>
   <div class="axis"><img src="/img/axis-row.svg"></div>
