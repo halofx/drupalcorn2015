@@ -8,32 +8,64 @@
 </head>
 <body>
   <main class="demo5">
-  <h1>Layout - Wraps</h1>
+  <h1>Layout - Media Query</h1>
 
-  <section>
-      <header>Header</header>
-      <aside>Aside</aside>
-      <main>Content</main>
-      <footer>Footer</footer>
-  </section>
 
-<p class="note">Rows wrap based on flex-basis, instead of media queries.</p>
+    <section>
+      <header>
+        <div class="a">Logo</div>
+        <div class="b">Links</div>
+      </header>
+      <main>
+        <div class="c">Aside</div>
+        <div class="d content">Content</div>
+        <div class="e">Aside</div>
+      </main>
+      <footer>
+        <div class="a">Footer 1</div>
+        <div class="b">Footer 2</div>
+        <div class="c">Footer 3</div>
+        <div class="d">Footer 4</div>
+      </footer>
+    </section>
+
+<p class="note">Push Content up by changing order when stacked with a media query.</p>
+
     <div class="flex">
-      <pre class="one"><code class="html">&lt;body>
-  &lt;header>Header&lt;/header>
-  &lt;aside>Aside&lt;/aside>
-  &lt;main>Content&lt;/main>
-  &lt;footer>Footer&lt;/footer>
-&lt;/body></code></pre>
-        <pre class="two"><code class="css">body {
+      <pre class="one"><code class="html">&lt;header>
+  &lt;div>Logo&lt;/div>
+  &lt;div>Links&lt;/div>
+&lt;/header>
+&lt;main>
+  &lt;div>Aside&lt;/div>
+  &lt;div class="content">Content&lt;/div>
+  &lt;div>Aside&lt;/div>
+&lt;/main>
+&lt;footer>
+  &lt;div>Footer 1&lt;/div>
+  &lt;div>Footer 2&lt;/div>
+  &lt;div>Footer 3&lt;/div>
+  &lt;div>Footer 4&lt;/div>
+&lt;/footer></code></pre>
+        <pre class="two"><code class="css">header, main, footer {
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: column;
 }
 
-header { flex: 1 1 100%; }
-aside { flex: 1 1 200px; }
-main { flex: 3 1 400px; }
-footer { flex: 1 1 100%; }</code></pre></div>
+.content { order: -1; }
+
+@media all and ( min-width: 600px ) {
+  header { flex-direction: row; }
+}
+
+@media all and ( min-width: 750px ) {
+  main { flex-direction: row; }
+  .content {order: 0;}
+}
+
+@media all and ( min-width: 900px ) {
+  footer { flex-direction: row; }
+}</code></pre></div>
   </main>
   <footer>
     <div class="trees"><img src="/img/trees.png"></div>

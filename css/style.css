@@ -260,39 +260,104 @@ p.note {
 .demo5 section {
   border: solid 1px #554;
   color: black;
+}
+
+.demo5 main {
+  width: 100%;
+}
+
+.demo5 header, .demo5 main, .demo5 footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.demo5 section div {
+  flex: 1;
+  padding: 0.75em 0.25em;
+  border: solid 1px #555;
+}
+
+.demo5 .content {
+  order: -1;
+}
+
+@media all and (min-width: 600px) {
+  .demo5 header {
+    flex-direction: row;
+  }
+}
+
+@media all and (min-width: 750px) {
+  .demo5 main {
+    flex-direction: row;
+  }
+  .demo5 .content {
+    order: 0;
+  }
+}
+
+@media all and (min-width: 900px) {
+  .demo5 footer {
+    flex-direction: row;
+  }
+}
+
+.demo5 .a {
+  background-color: #aaffff;
+}
+
+.demo5 .b {
+  background-color: #aaaaff;
+}
+
+.demo5 .c {
+  background-color: #ffaaff;
+}
+
+.demo5 .d {
+  background-color: #ffaaaa;
+}
+
+.demo5 .e {
+  background-color: #ffffaa;
+}
+
+.demo6 section {
+  border: solid 1px #554;
+  color: black;
   display: flex;
   flex-flow: row wrap;
 }
 
-.demo5 header {
+.demo6 header {
   flex: 1 1 100%;
   padding: 0.75em 0.25em;
   border: solid 1px #555;
   background-color: #aaffff;
 }
 
-.demo5 aside {
+.demo6 aside {
   flex: 1 1 200px;
   padding: 0.75em 0.25em;
   border: solid 1px #555;
   background-color: #aaaaff;
 }
 
-.demo5 main {
+.demo6 main {
   flex: 3 1 400px;
   padding: 0.75em 0.25em;
   border: solid 1px #555;
   background-color: #ffaaaa;
 }
 
-.demo5 footer {
+.demo6 footer {
   flex: 1 1 100%;
   padding: 0.75em 0.25em;
   border: solid 1px #555;
   background-color: #ffaaff;
 }
 
-.demo6 a {
+.demo7 a {
   display: inline-block;
   width: 100%;
   padding: 1em;
@@ -300,7 +365,7 @@ p.note {
   text-align: center;
 }
 
-.demo6 ul {
+.demo7 ul {
   border: 1px solid black;
   list-style: none;
   display: flex;
@@ -309,70 +374,70 @@ p.note {
   background: rgba(0, 0, 0, 0.25);
 }
 
-.demo6 li {
+.demo7 li {
   width: 100%;
   border: 1px solid black;
 }
 
-.demo6 .icons {
+.demo7 .icons {
   flex: 1 1 25%;
 }
 
-.demo6 pre.one {
+.demo7 pre.one {
   display: none;
 }
 
 @media all and (min-width: 500px) {
-  .demo6 pre.one {
+  .demo7 pre.one {
     display: block;
   }
-  .demo6 ul {
+  .demo7 ul {
     flex-wrap: wrap;
   }
-  .demo6 li {
+  .demo7 li {
     flex: 1 1 50%;
   }
 }
 
 @media all and (min-width: 1000px) {
-  .demo6 li {
+  .demo7 li {
     flex: 3;
   }
-  .demo6 .icons {
+  .demo7 .icons {
     flex: 1;
   }
 }
 
-.demo6 .flex {
+.demo7 .flex {
   display: flex;
   flex-wrap: wrap-reverse;
 }
 
-.demo6 pre {
+.demo7 pre {
   margin-top: 1em;
   justify-content: space-between;
 }
 
-.demo6 pre.one {
+.demo7 pre.one {
   flex: 1 1 18em;
 }
 
-.demo6 pre.two {
+.demo7 pre.two {
   flex: 1 1 23em;
 }
 
-.demo6 pre .hljs {
+.demo7 pre .hljs {
   overflow: hidden;
 }
 
-.demo7 .container {
+.demo8 .container {
   display: flex;
   height: 50vh;
   background-color: #dedede;
   position: relative;
 }
 
-.demo7 .main {
+.demo8 .main {
   flex: 1 0 0%;
   padding: 100px 40px 0px 40px;
   transition: flex-basis 2s;
@@ -383,7 +448,7 @@ p.note {
   color: black;
 }
 
-.demo7 nav {
+.demo8 nav {
   overflow: hidden;
   flex: 0 1 0%;
   background-color: #aaa;
@@ -391,12 +456,12 @@ p.note {
   transition: flex-basis 2s;
 }
 
-.demo7 ul {
+.demo8 ul {
   list-style: none;
   padding: 0px;
 }
 
-.demo7 li {
+.demo8 li {
   font-family: 'Lato', Frutiger, Arial, sans-serif;
   font-size: .4em;
   padding: 1em 40px;
@@ -404,15 +469,15 @@ p.note {
   border-bottom: 1px solid #777;
 }
 
-.demo7 li:first-child {
+.demo8 li:first-child {
   border-top: 1px solid #777;
 }
 
-.demo7 a {
+.demo8 a {
   color: #000099;
 }
 
-.demo7 .menu-label {
+.demo8 .menu-label {
   position: absolute;
   top: 55px;
   left: 40px;
@@ -421,17 +486,17 @@ p.note {
   color: #000099;
 }
 
-.demo7 .menu-checkbox {
+.demo8 .menu-checkbox {
   position: absolute;
   opacity: 0;
 }
 
-.demo7 .menu-checkbox:checked ~ nav {
+.demo8 .menu-checkbox:checked ~ nav {
   flex: 0 1 5em;
   transition: flex-basis 2s;
 }
 
-.demo7 pre {
+.demo8 pre {
   color: white;
   margin-top: 2em;
   background: rgba(0, 0, 0, 0.8);
