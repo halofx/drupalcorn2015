@@ -1,3 +1,16 @@
+p.note { padding: 2em 0; }
+.flex {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  pre {
+    &.one {flex: 1 1 18em;}
+    &.two { flex: 1 1 23em;}
+    margin-top: 1em;
+      .hljs { overflow: hidden; }
+  }
+}
+
+
 .demo1 {
   ul {
     list-style: none;
@@ -17,16 +30,16 @@
     height: auto;
     padding: 5%;
   }
-  .flex {
-    display: flex;
-    flex-wrap: wrap-reverse;
-  }
-  pre {
-    &.one {flex: 1 1 18em;}
-    &.two { flex: 1 1 23em;
-    }margin-top: 1em;
-   .hljs { overflow: hidden; }
- }
+ //  .flex {
+ //    display: flex;
+ //    flex-wrap: wrap-reverse;
+ //  }
+ //  pre {
+ //    &.one {flex: 1 1 18em;}
+ //    &.two { flex: 1 1 23em;
+ //    }margin-top: 1em;
+ //   .hljs { overflow: hidden; }
+ // }
 }
 
 .demo2 {
@@ -49,16 +62,16 @@
     height: auto;
     padding: 5%;
   }
-  .flex {
-    display: flex;
-    flex-wrap: wrap-reverse;
-  }
-  pre {
-    &.one {flex: 1 1 18em;}
-    &.two { flex: 1 1 23em;
-    }margin-top: 1em;
-   .hljs { overflow: hidden; }
- }
+ //  .flex {
+ //    display: flex;
+ //    flex-wrap: wrap-reverse;
+ //  }
+ //  pre {
+ //    &.one {flex: 1 1 18em;}
+ //    &.two { flex: 1 1 23em;
+ //    }margin-top: 1em;
+ //   .hljs { overflow: hidden; }
+ // }
 }
 
 .demo3 {
@@ -81,19 +94,84 @@
     height: auto;
     padding: 5%;
   }
-  .flex {
-    display: flex;
-    flex-wrap: wrap-reverse;
-  }
-  pre {
-    &.one {flex: 1 1 18em;}
-    &.two { flex: 1 1 23em;
-    }margin-top: 1em;
-   .hljs { overflow: hidden; }
- }
+ //  .flex {
+ //    display: flex;
+ //    flex-wrap: wrap-reverse;
+ //  }
+ //  pre {
+ //    &.one {flex: 1 1 18em;}
+ //    &.two { flex: 1 1 23em;
+ //    }margin-top: 1em;
+ //   .hljs { overflow: hidden; }
+ // }
 }
 
 .demo4 {
+  section { border: solid 1px #554;
+    color: black;}
+  main { width: 100%; }
+
+  header, main, footer {
+    display: flex;
+    flex-direction: column;
+  }
+  section div {
+    flex: 1;
+    padding: .75em .25em;
+    border: solid 1px #555;
+  }
+  @media all and ( min-width: 480px ) {
+    header { flex-direction: row; }
+}
+  @media all and ( min-width: 720px ) {
+    main { flex-direction: row; }
+  }
+  @media all and ( min-width: 960px ) {
+    footer { flex-direction: row; }
+  }
+
+  .a {background-color: #aaffff;}
+  .b {background-color: #aaaaff;}
+  .c {background-color: #ffaaff;}
+  .d {background-color: #ffaaaa;}
+  .e {background-color: #ffffaa;}
+}
+
+.demo5 {
+  section {
+    border: solid 1px #554;
+    color: black;
+    display: flex; flex-flow: row wrap;
+  }
+
+  header {
+    flex: 1 1 100%;
+    padding: .75em .25em;
+    border: solid 1px #555;
+    background-color: #aaffff;
+  }
+  aside {
+    flex: 1 1 200px;
+    padding: .75em .25em;
+    border: solid 1px #555;
+    background-color: #aaaaff;
+  }
+  main {
+    flex: 3 1 400px;
+    padding: .75em .25em;
+    border: solid 1px #555;
+    background-color: #ffaaaa;
+  }
+  footer {
+    flex: 1 1 100%;
+    padding: .75em .25em;
+    border: solid 1px #555;
+    background-color: #ffaaff;
+  }
+}
+
+
+.demo6 {
   a {
     display: inline-block;
     width: 100%;
@@ -137,6 +215,74 @@
    .hljs { overflow: hidden; }
  }
 }
+
+.demo7 {
+  .container {
+    display: flex;
+    height: 50vh;
+    background-color: #dedede;
+    position: relative;
+  }
+  .main {
+    // flex: 1;
+    flex: 1 0 0%;
+    padding: 100px 40px 0px 40px;
+    transition: flex-basis 2s;
+    font-size: .7em;
+    line-height: 1.75em;
+    font-weight: 300;
+    font-family: 'Lato', Frutiger, sans-serif;
+    color: black;
+  }
+  nav {
+    overflow: hidden;
+    // flex-basis: 0;
+    flex: 0 1 0%;
+    background-color: #aaa;
+    padding-top: 4em;
+    transition: flex-basis 2s;
+  }
+  ul {
+    list-style: none;
+    padding: 0px;
+  }
+  li {
+    font-family: 'Lato', Frutiger, Arial, sans-serif;
+    font-size: .4em;
+    padding: 1em 40px;
+    white-space: nowrap;
+    border-bottom: 1px solid #777;
+    &:first-child {
+      border-top: 1px solid #777;
+    }
+  }
+  a { color: #000099; }
+  .menu-label {
+    position: absolute;
+    top: 55px;
+    left: 40px;
+    font: 24px/20px "Segoe UI";
+    cursor: pointer;
+    color: #000099;
+  }
+  .menu-checkbox {
+    position: absolute;
+    opacity: 0;
+    &:checked ~ nav {
+      // flex-basis: 5em;
+      flex: 0 1 5em;
+      transition: flex-basis 2s;
+    }
+  }
+  pre {
+    color: white;
+    margin-top: 2em;
+    background: rgba(0, 0, 0, 0.8);
+  }
+}
+
+
+
 
 .demo1a {
   a {
@@ -201,73 +347,4 @@
     justify-content: space-between;
    .hljs { overflow: hidden; }
  }
-}
-
-
-
-
-
-.demo5 {
-  .container {
-    display: flex;
-    height: 50vh;
-    background-color: #dedede;
-    position: relative;
-  }
-  .main {
-    // flex: 1;
-    flex: 1 0 0%;
-    padding: 100px 40px 0px 40px;
-    transition: flex-basis 2s;
-    font-size: .7em;
-    line-height: 1.75em;
-    font-weight: 300;
-    font-family: 'Lato', Frutiger, sans-serif;
-    color: black;
-  }
-  nav {
-    overflow: hidden;
-    // flex-basis: 0;
-    flex: 0 1 0%;
-    background-color: #aaa;
-    padding-top: 4em;
-    transition: flex-basis 2s;
-  }
-  ul {
-    list-style: none;
-    padding: 0px;
-  }
-  li {
-    font-family: 'Lato', Frutiger, Arial, sans-serif;
-    font-size: .4em;
-    padding: 1em 40px;
-    white-space: nowrap;
-    border-bottom: 1px solid #777;
-    &:first-child {
-      border-top: 1px solid #777;
-    }
-  }
-  a { color: #000099; }
-  .menu-label {
-    position: absolute;
-    top: 55px;
-    left: 40px;
-    font: 24px/20px "Segoe UI";
-    cursor: pointer;
-    color: #000099;
-  }
-  .menu-checkbox {
-    position: absolute;
-    opacity: 0;
-    &:checked ~ nav {
-      // flex-basis: 5em;
-      flex: 0 1 5em;
-      transition: flex-basis 2s;
-    }
-  }
-  pre {
-    color: white;
-    margin-top: 2em;
-    background: rgba(0, 0, 0, 0.8);
-  }
 }

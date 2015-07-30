@@ -109,6 +109,31 @@ dd {
   padding-bottom: .75em;
 }
 
+p.note {
+  padding: 2em 0;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+
+.flex pre {
+  margin-top: 1em;
+}
+
+.flex pre.one {
+  flex: 1 1 18em;
+}
+
+.flex pre.two {
+  flex: 1 1 23em;
+}
+
+.flex pre .hljs {
+  overflow: hidden;
+}
+
 .demo1 ul {
   list-style: none;
   display: flex;
@@ -128,27 +153,6 @@ dd {
   width: 100%;
   height: auto;
   padding: 5%;
-}
-
-.demo1 .flex {
-  display: flex;
-  flex-wrap: wrap-reverse;
-}
-
-.demo1 pre {
-  margin-top: 1em;
-}
-
-.demo1 pre.one {
-  flex: 1 1 18em;
-}
-
-.demo1 pre.two {
-  flex: 1 1 23em;
-}
-
-.demo1 pre .hljs {
-  overflow: hidden;
 }
 
 .demo2 ul {
@@ -173,27 +177,6 @@ dd {
   padding: 5%;
 }
 
-.demo2 .flex {
-  display: flex;
-  flex-wrap: wrap-reverse;
-}
-
-.demo2 pre {
-  margin-top: 1em;
-}
-
-.demo2 pre.one {
-  flex: 1 1 18em;
-}
-
-.demo2 pre.two {
-  flex: 1 1 23em;
-}
-
-.demo2 pre .hljs {
-  overflow: hidden;
-}
-
 .demo3 ul {
   list-style: none;
   display: flex;
@@ -216,28 +199,100 @@ dd {
   padding: 5%;
 }
 
-.demo3 .flex {
+.demo4 section {
+  border: solid 1px #554;
+  color: black;
+}
+
+.demo4 main {
+  width: 100%;
+}
+
+.demo4 header, .demo4 main, .demo4 footer {
   display: flex;
-  flex-wrap: wrap-reverse;
+  flex-direction: column;
 }
 
-.demo3 pre {
-  margin-top: 1em;
+.demo4 section div {
+  flex: 1;
+  padding: 0.75em 0.25em;
+  border: solid 1px #555;
 }
 
-.demo3 pre.one {
-  flex: 1 1 18em;
+@media all and (min-width: 480px) {
+  .demo4 header {
+    flex-direction: row;
+  }
 }
 
-.demo3 pre.two {
-  flex: 1 1 23em;
+@media all and (min-width: 720px) {
+  .demo4 main {
+    flex-direction: row;
+  }
 }
 
-.demo3 pre .hljs {
-  overflow: hidden;
+@media all and (min-width: 960px) {
+  .demo4 footer {
+    flex-direction: row;
+  }
 }
 
-.demo4 a {
+.demo4 .a {
+  background-color: #aaffff;
+}
+
+.demo4 .b {
+  background-color: #aaaaff;
+}
+
+.demo4 .c {
+  background-color: #ffaaff;
+}
+
+.demo4 .d {
+  background-color: #ffaaaa;
+}
+
+.demo4 .e {
+  background-color: #ffffaa;
+}
+
+.demo5 section {
+  border: solid 1px #554;
+  color: black;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.demo5 header {
+  flex: 1 1 100%;
+  padding: 0.75em 0.25em;
+  border: solid 1px #555;
+  background-color: #aaffff;
+}
+
+.demo5 aside {
+  flex: 1 1 200px;
+  padding: 0.75em 0.25em;
+  border: solid 1px #555;
+  background-color: #aaaaff;
+}
+
+.demo5 main {
+  flex: 3 1 400px;
+  padding: 0.75em 0.25em;
+  border: solid 1px #555;
+  background-color: #ffaaaa;
+}
+
+.demo5 footer {
+  flex: 1 1 100%;
+  padding: 0.75em 0.25em;
+  border: solid 1px #555;
+  background-color: #ffaaff;
+}
+
+.demo6 a {
   display: inline-block;
   width: 100%;
   padding: 1em;
@@ -245,7 +300,7 @@ dd {
   text-align: center;
 }
 
-.demo4 ul {
+.demo6 ul {
   border: 1px solid black;
   list-style: none;
   display: flex;
@@ -254,60 +309,132 @@ dd {
   background: rgba(0, 0, 0, 0.25);
 }
 
-.demo4 li {
+.demo6 li {
   width: 100%;
   border: 1px solid black;
 }
 
-.demo4 .icons {
+.demo6 .icons {
   flex: 1 1 25%;
 }
 
-.demo4 pre.one {
+.demo6 pre.one {
   display: none;
 }
 
 @media all and (min-width: 500px) {
-  .demo4 pre.one {
+  .demo6 pre.one {
     display: block;
   }
-  .demo4 ul {
+  .demo6 ul {
     flex-wrap: wrap;
   }
-  .demo4 li {
+  .demo6 li {
     flex: 1 1 50%;
   }
 }
 
 @media all and (min-width: 1000px) {
-  .demo4 li {
+  .demo6 li {
     flex: 3;
   }
-  .demo4 .icons {
+  .demo6 .icons {
     flex: 1;
   }
 }
 
-.demo4 .flex {
+.demo6 .flex {
   display: flex;
   flex-wrap: wrap-reverse;
 }
 
-.demo4 pre {
+.demo6 pre {
   margin-top: 1em;
   justify-content: space-between;
 }
 
-.demo4 pre.one {
+.demo6 pre.one {
   flex: 1 1 18em;
 }
 
-.demo4 pre.two {
+.demo6 pre.two {
   flex: 1 1 23em;
 }
 
-.demo4 pre .hljs {
+.demo6 pre .hljs {
   overflow: hidden;
+}
+
+.demo7 .container {
+  display: flex;
+  height: 50vh;
+  background-color: #dedede;
+  position: relative;
+}
+
+.demo7 .main {
+  flex: 1 0 0%;
+  padding: 100px 40px 0px 40px;
+  transition: flex-basis 2s;
+  font-size: .7em;
+  line-height: 1.75em;
+  font-weight: 300;
+  font-family: 'Lato', Frutiger, sans-serif;
+  color: black;
+}
+
+.demo7 nav {
+  overflow: hidden;
+  flex: 0 1 0%;
+  background-color: #aaa;
+  padding-top: 4em;
+  transition: flex-basis 2s;
+}
+
+.demo7 ul {
+  list-style: none;
+  padding: 0px;
+}
+
+.demo7 li {
+  font-family: 'Lato', Frutiger, Arial, sans-serif;
+  font-size: .4em;
+  padding: 1em 40px;
+  white-space: nowrap;
+  border-bottom: 1px solid #777;
+}
+
+.demo7 li:first-child {
+  border-top: 1px solid #777;
+}
+
+.demo7 a {
+  color: #000099;
+}
+
+.demo7 .menu-label {
+  position: absolute;
+  top: 55px;
+  left: 40px;
+  font: 24px/20px "Segoe UI";
+  cursor: pointer;
+  color: #000099;
+}
+
+.demo7 .menu-checkbox {
+  position: absolute;
+  opacity: 0;
+}
+
+.demo7 .menu-checkbox:checked ~ nav {
+  flex: 0 1 5em;
+  transition: flex-basis 2s;
+}
+
+.demo7 pre {
+  color: white;
+  margin-top: 2em;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .demo1a a {
@@ -385,76 +512,4 @@ dd {
 
 .demo1a pre .hljs {
   overflow: hidden;
-}
-
-.demo5 .container {
-  display: flex;
-  height: 50vh;
-  background-color: #dedede;
-  position: relative;
-}
-
-.demo5 .main {
-  flex: 1 0 0%;
-  padding: 100px 40px 0px 40px;
-  transition: flex-basis 2s;
-  font-size: .7em;
-  line-height: 1.75em;
-  font-weight: 300;
-  font-family: 'Lato', Frutiger, sans-serif;
-  color: black;
-}
-
-.demo5 nav {
-  overflow: hidden;
-  flex: 0 1 0%;
-  background-color: #aaa;
-  padding-top: 4em;
-  transition: flex-basis 2s;
-}
-
-.demo5 ul {
-  list-style: none;
-  padding: 0px;
-}
-
-.demo5 li {
-  font-family: 'Lato', Frutiger, Arial, sans-serif;
-  font-size: .4em;
-  padding: 1em 40px;
-  white-space: nowrap;
-  border-bottom: 1px solid #777;
-}
-
-.demo5 li:first-child {
-  border-top: 1px solid #777;
-}
-
-.demo5 a {
-  color: #000099;
-}
-
-.demo5 .menu-label {
-  position: absolute;
-  top: 55px;
-  left: 40px;
-  font: 24px/20px "Segoe UI";
-  cursor: pointer;
-  color: #000099;
-}
-
-.demo5 .menu-checkbox {
-  position: absolute;
-  opacity: 0;
-}
-
-.demo5 .menu-checkbox:checked ~ nav {
-  flex: 0 1 5em;
-  transition: flex-basis 2s;
-}
-
-.demo5 pre {
-  color: white;
-  margin-top: 2em;
-  background: rgba(0, 0, 0, 0.8);
 }
