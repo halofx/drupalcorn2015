@@ -21,7 +21,7 @@ html {
 .presentation {
   font-family: 'Lato', sans-serif;
   color: white;
-  font-size: 3.6vmin;
+  font-size: 3.2vmin;
 }
 
 h1, h2, h3 {
@@ -39,37 +39,37 @@ h1, h2, h3 {
 }
 
 #intro h2 {
-  font-size: 6.912vmin;
+  font-size: 5.5296vmin;
   margin-bottom: 1em;
 }
 
 #intro p {
-  font-size: 4.8vmin;
+  font-size: 3.84vmin;
 }
 
 h1 {
-  font-size: 6.912vmin;
+  font-size: 5.5296vmin;
   text-shadow: 4px 4px 4px #000;
   margin: 0.25em 0 0.75em 0;
   flex: 0 0 100%;
 }
 
 h2 {
-  font-size: 5.76vmin;
+  font-size: 4.608vmin;
   text-shadow: 2px 2px 2px #000;
   margin: 0.25em 0px;
   flex: 0 0 100%;
 }
 
 dl dt {
-  font-size: 5.76vmin;
+  font-size: 4.608vmin;
   text-shadow: 2px 2px 1px #000;
 }
 
 dl dd {
   padding-bottom: .75em;
   margin-left: 2em;
-  font-size: 3.6vmin;
+  font-size: 3.2vmin;
 }
 
 textarea.live {
