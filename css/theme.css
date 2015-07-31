@@ -37,11 +37,11 @@ section.flex-row div, header.flex-row div {
 }
 
 section.flex-row .axis, header.flex-row .axis {
-  width: 37vw;
+  width: 40vw;
   z-index: -5;
   position: absolute;
   left: .75vw;
-  top: 15vh;
+  top: 17vh;
 }
 
 @media screen and (aspect-ratio: 16/10) {
@@ -63,7 +63,7 @@ section.flex-column, header.flex-column {
 .slide ul {
   flex: 0 1 40%;
   border: 2px solid red;
-  height: 60vh;
+  height: 55vh;
 }
 
 .slide ul.none {
@@ -239,3 +239,5 @@ pre strong {
 .comment {
   font-size: 90%;
 }
+
+/*# sourceMappingURL=theme.css.map */
