@@ -108,7 +108,6 @@ section.flex-column, header.flex-column {
 .slide.flex-row pre {
   flex: 0 1 52%;
   margin-left: auto;
-  font-size: 95%;
 }
 
 .presentation {

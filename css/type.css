@@ -104,3 +104,8 @@ textarea.live {
   margin-left: auto;
   font-size: 95%;
 }
+
+code {
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+}
