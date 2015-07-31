@@ -30,11 +30,11 @@ section, header {
    flex-flow: row wrap;
    div { width: 40%; }
     .axis {
-      width: 37vw;
+      width: 40vw;
       z-index: -5;
       position: absolute;
       left: .75vw;
-      top: 15vh;
+      top: 17vh;
       @media screen and (aspect-ratio: 16/10) {
         width: 38vw;
         left: .5vw;
@@ -50,7 +50,7 @@ section, header {
 .slide ul {
   flex: 0 1 40%;
   border: 2px solid red;
-  height: 60vh;
+  height: 55vh;
   &.none {
     list-style: none;
     li {
