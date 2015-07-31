@@ -122,7 +122,7 @@ p.note { padding: 2em 0; }
   }
   @media all and ( min-width: 600px ) {
     header { flex-direction: row; }
-}
+  }
   @media all and ( min-width: 750px ) {
     main { flex-direction: row; }
   }
@@ -136,7 +136,6 @@ p.note { padding: 2em 0; }
   .d {background-color: #ffaaaa;}
   .e {background-color: #ffffaa;}
 }
-
 
 .demo5 {
   section { border: solid 1px #554;
@@ -157,7 +156,7 @@ p.note { padding: 2em 0; }
   }
   @media all and ( min-width: 600px ) {
     header { flex-direction: row; }
-}
+  }
   @media all and ( min-width: 750px ) {
     main { flex-direction: row; }
     .content {order: 0;}
