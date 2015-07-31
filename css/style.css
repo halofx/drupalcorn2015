@@ -67,20 +67,6 @@ footer .tower img {
 
 @font-face {
   font-family: 'Lato';
-  src: url("/fonts/Lato/Lato-Light.eot"), url("/fonts/Lato/Lato-Light.woff") format("woff"), url("/fonts/Lato/Lato-Light.ttf") format("truetype");
-  font-weight: light;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Lato';
-  src: url("/fonts/Lato/Lato-LightItalic.eot"), url("/fonts/Lato/Lato-LightItalic.woff") format("woff"), url("/fonts/Lato/Lato-LightItalic.ttf") format("truetype");
-  font-weight: light;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Lato';
   src: url("/fonts/Lato/Lato-Bold.eot"), url("/fonts/Lato/Lato-Bold.woff") format("woff"), url("/fonts/Lato/Lato-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
@@ -541,6 +527,51 @@ p.note {
   color: white;
   margin-top: 2em;
   background: rgba(0, 0, 0, 0.8);
+}
+
+.demo9 section {
+  width: 80%;
+  margin: 0 10%;
+}
+
+.demo9 h3 {
+  border-bottom: 1px solid #ccc;
+  margin: 40px 0;
+}
+
+.demo9 .note {
+  font-size: 60%;
+  color: #bbb;
+}
+
+.demo9 .abs {
+  position: relative;
+}
+
+.demo9 .abs .note {
+  position: absolute;
+  bottom: 2px;
+  right: 0;
+}
+
+.demo9 .float .note {
+  float: right;
+  position: relative;
+  top: 12px;
+}
+
+.demo9 .flex {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.demo9 .flex > span {
+  white-space: nowrap;
+}
+
+.demo9 .flex .main {
+  flex-grow: 1;
 }
 
 .demo1a a {

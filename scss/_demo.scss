@@ -315,7 +315,52 @@ p.note { padding: 2em 0; }
   }
 }
 
+.demo9 {
 
+  section {
+    width: 80%;
+    margin: 0 10%;
+  }
+
+  h3 {
+    border-bottom: 1px solid #ccc;
+    margin: 40px 0;
+  }
+  .note {
+    font-size: 60%;
+    color: #bbb;
+  }
+
+  .abs {
+    position: relative;
+    .note {
+      position: absolute;
+      bottom: 2px;
+      right: 0;
+    }
+  }
+
+  .float {
+    .note {
+      float: right;
+      position: relative;
+      top: 12px;
+    }
+  }
+
+
+  .flex {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    > span {
+      white-space: nowrap;
+    }
+    .main {
+      flex-grow: 1;
+    }
+  }
+}
 
 
 .demo1a {

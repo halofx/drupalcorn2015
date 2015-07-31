@@ -14,20 +14,6 @@
 
 @font-face {
   font-family: 'Lato';
-  src: url("/fonts/Lato/Lato-Light.eot"), url("/fonts/Lato/Lato-Light.woff") format("woff"), url("/fonts/Lato/Lato-Light.ttf") format("truetype");
-  font-weight: light;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Lato';
-  src: url("/fonts/Lato/Lato-LightItalic.eot"), url("/fonts/Lato/Lato-LightItalic.woff") format("woff"), url("/fonts/Lato/Lato-LightItalic.ttf") format("truetype");
-  font-weight: light;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Lato';
   src: url("/fonts/Lato/Lato-Bold.eot"), url("/fonts/Lato/Lato-Bold.woff") format("woff"), url("/fonts/Lato/Lato-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
@@ -41,7 +27,7 @@
 }
 
 h1, h2, h3, strong, b {
-  font-weight: 700;
+  font-weight: bold;
 }
 
 h1, h2, h3 {
