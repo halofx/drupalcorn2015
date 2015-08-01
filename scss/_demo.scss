@@ -338,61 +338,51 @@ p.note { padding: 2em 0; }
 }
 
 .demo10 {
+  .flexbox {
+    .abs {
+      display: flex;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      .sub {
+        white-space: nowrap;
+        position: relative;
+      }
+      .main {
+        flex-grow: 1;
+      }
+    }
 
+    .float {
+      display: flex;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      .sub {
+        white-space: nowrap;
+        top: 0px;
+      }
+      .main {
+        flex-grow: 1;
+      }
+    }
+  }
+}
+
+.modern {
   section {
-    width: 80%;
-    margin: 0 10%;
+    width: 80vw;
+    margin: 0 auto;
   }
-
-  h3 {
-    border-bottom: 1px solid #ccc;
-    margin: 40px 0;
+  img {
+    width: 100%;
   }
-  .sub {
-    font-size: 60%;
-    color: #bbb;
+}
+
+.references {
+  dt {
+    font-size: 2.5rem;
   }
-
-  .abs {
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    flex-wrap: wrap;
-    .sub {
-      white-space: nowrap;
-      position: absolute;
-      bottom: 2px;
-      right: 0;
-    }
-    .main {
-      flex-grow: 1;
-    }
-  }
-
-  .float {
-    display: flex;
-    align-items: flex-end;
-    flex-wrap: wrap;
-    .sub {
-      float: right;
-      position: relative;
-      top: 12px;
-    }
-    .main {
-      flex-grow: 1;
-    }
-  }
-
-
-  .flex {
-    display: flex;
-    align-items: flex-end;
-    flex-wrap: wrap;
-    .sub {
-      white-space: nowrap;
-    }
-    .main {
-      flex-grow: 1;
-    }
+  dd {
+    font-size: 2rem;
+    padding-left: 2em;
   }
 }
