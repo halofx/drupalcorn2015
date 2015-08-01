@@ -55,7 +55,7 @@
 
 
 $intro-vmin: 9.953vmin;
-$title-vmin: 5.5296vmin;
+$title-vmin: 7vmin;
 $big-vmin: 4.608vmin;
 $med-vmin: 3.84vmin;
 $small-vmin: 3.2vmin;
@@ -83,8 +83,8 @@ h1, h2, h3 {
 #intro {
   text-align: center;
   h1 { font-size: $intro-vmin; text-shadow: 4px 4px 4px #000; }
-  h2 { font-size: $title-vmin; margin-bottom: 1em;}
-  p { font-size: $med-vmin; }
+  h2 { font-size: 3rem; margin-bottom: 1em;}
+  p { font-size: 2.5rem; line-height: 4rem; }
 }
 
 h1 {
@@ -107,14 +107,14 @@ strong, b {
 
 dl {
   dt {
-    font-size: $big-vmin;
+    font-size: 2em;
     text-shadow: 2px 2px 1px #000;
 
   }
   dd {
     padding-bottom: .75em;
     margin-left: 2em;
-    font-size: $small-vmin;
+    font-size: 1.4em;
   }
 }
 
