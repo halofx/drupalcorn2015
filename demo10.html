@@ -10,44 +10,38 @@
 <body>
   <main class="demo10">
   <h1>Fallbacks</h1>
-  <div class="container">
-    <input id="menu" type="checkbox" class="menu-checkbox">
-      <label for="menu" class="menu-label">Menu</label>
-      <nav>
-        <ul>
-          <li>Products</li>
-          <li>Service</li>
-          <li>About</li>
-          <li>Contact</li>
-        </ul>
-      </nav>
+    <section>
+      <h3 class="abs">
+        <span class="main">Main Title Here</span>
+        <span class="sub">This is absolutely positioned.</span>
+      </h3>
+
+      <h3 class="float">
+        <span class="main">Main Title Here</span>
+        <span class="sub">This subtitle is floated.</span>
+      </h3>
+
+    </section>
     <main class="main">
-    <p>Proin tincidunt ac odio vel consequat. Pellentesque tristique leo nec tempus gravida. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce dapibus elementum leo et ultricies.</p>
-    <pre><code lang="css">.container { display: flex; }
-.menu-checkbox:checked ~ nav { flex: 0 1 5em; }
-nav { flex: 0 1 0%; overflow: hidden; }
-main { flex:1; } /* flex: 1 0 0%; */</code></pre>
+    <pre><code lang="css">.abs { position: relative; }
+.abs .note {
+ position: absolute;
+ bottom: 2px;
+ right: 0;
+}
+
+.float .note {
+ float: right;
+ position: relative;
+ top: 12px;
+}
+</code></pre>
   </main>
   </div>
-  <pre><code lang="css">&lt;div class="container">
-  &lt;input id="menu" type="checkbox" class="menu-checkbox">
-    &lt;label for="menu" class="menu-label">Menu&lt;/label>
-    &lt;nav>
-      &lt;ul>
-        &lt;li>Products&lt;/li>
-        &lt;li>Service&lt;/li>
-        &lt;li>About&lt;/li>
-        &lt;li>Contact&lt;/li>
-      &lt;/ul>
-    &lt;/nav>
-  &lt;main>
-  &lt;p>...&lt;/p>
-&lt;/main>
-&lt;/div></code></pre>
   </main>
   <footer>
     <div class="trees"><img src="/img/trees.png"></div>
-    <div class="tower"><a href="references.html"><img src="/img/tower_120.png"></a></div>
+    <div class="tower"><a href="demo10.html"><img src="/img/tower_120.png"></a></div>
 
   </footer>
 </body>

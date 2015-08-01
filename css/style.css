@@ -397,7 +397,7 @@ p.note {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  font-size: 80%;
+  font-size: 60%;
   background: rgba(0, 0, 0, 0.25);
 }
 
@@ -426,7 +426,7 @@ p.note {
   }
 }
 
-@media all and (min-width: 1000px) {
+@media all and (min-width: 720px) {
   .demo7 li {
     flex: 3;
   }
@@ -457,9 +457,16 @@ p.note {
   overflow: hidden;
 }
 
+.demo7 .ico {
+  margin: auto;
+  background-color: white;
+  height: 10px;
+  width: 10px;
+}
+
 .demo8 .container {
   display: flex;
-  height: 50vh;
+  height: 60vh;
   background-color: #dedede;
   position: relative;
 }
@@ -539,7 +546,7 @@ p.note {
   margin: 40px 0;
 }
 
-.demo9 .note {
+.demo9 .sub {
   font-size: 60%;
   color: #bbb;
 }
@@ -548,13 +555,13 @@ p.note {
   position: relative;
 }
 
-.demo9 .abs .note {
+.demo9 .abs .sub {
   position: absolute;
   bottom: 2px;
   right: 0;
 }
 
-.demo9 .float .note {
+.demo9 .float .sub {
   float: right;
   position: relative;
   top: 12px;
@@ -566,10 +573,73 @@ p.note {
   flex-wrap: wrap;
 }
 
-.demo9 .flex > span {
+.demo9 .flex .sub {
   white-space: nowrap;
 }
 
 .demo9 .flex .main {
+  flex-grow: 1;
+}
+
+.demo10 section {
+  width: 80%;
+  margin: 0 10%;
+}
+
+.demo10 h3 {
+  border-bottom: 1px solid #ccc;
+  margin: 40px 0;
+}
+
+.demo10 .sub {
+  font-size: 60%;
+  color: #bbb;
+}
+
+.demo10 .abs {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.demo10 .abs .sub {
+  white-space: nowrap;
+  position: absolute;
+  bottom: 2px;
+  right: 0;
+}
+
+.demo10 .abs .main {
+  flex-grow: 1;
+}
+
+.demo10 .float {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.demo10 .float .sub {
+  float: right;
+  position: relative;
+  top: 12px;
+}
+
+.demo10 .float .main {
+  flex-grow: 1;
+}
+
+.demo10 .flex {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.demo10 .flex .sub {
+  white-space: nowrap;
+}
+
+.demo10 .flex .main {
   flex-grow: 1;
 }
